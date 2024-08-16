@@ -1,8 +1,8 @@
 # Analise-e-Projeto-de-Software
 ## ODS Contempladas
-- 2 - Fome zero e agricultura sustentável
-- 3 - Saúde e Bem estar
-- 12 - Consumo e produção responsável
+- **2** - **Fome zero e agricultura sustentável**
+- **3** - **Saúde e Bem estar**
+- **12** - **Consumo e produção responsável**
 
 ## Integrantes do Grupo
 - Roberto Regis
@@ -12,12 +12,13 @@
 - Maria Luiza
 - Miguel Reis
 - Salomão Pernambucano
+- Gabriel Martins
 - Gabriela Lemos 
 - Rafael Sampaio
-- Gabriel Martins
 
 
 
 
+### Link para o protótipo de baixa fidalidade:
 https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6
 
