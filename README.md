@@ -1,5 +1,8 @@
 # Analise-e-Projeto-de-Software
 ## ODS Contempladas
+- 2 - Fome zero e agricultura sustentável
+- 3 - Saúde e Bem estar
+- 12 - Consumo e produção responsável
 
 ## Integrantes do Grupo
 - Roberto Regis
