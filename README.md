@@ -31,6 +31,7 @@ Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sust
 
 ### Contribuidores
 
+<!---[<img src="https://github.com/GabrielaRBLemos.png" width="8.25%;" height="auto" style="border-radius:50%"/> Gabriela R. B. Lemos](https://github.com/GabrielaRBLemos/GabrielaRBLemos) -->
 - Gabriel Martins
 - Gabriela Lemos
 - Maria Luiza
