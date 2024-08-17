@@ -42,9 +42,9 @@ Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sunt
 - Victor Hugo
 - Vinícius Martins
 
-  ## Insenção de Responsabilidade
+## Insenção de Responsabilidade
 
-  O conteúdo desta publicação não foi aprovado pelas Nações Unidas e não reflete as opiniões das Nações Unidas, de seus funcionários ou dos Estados-Membros.
+O conteúdo desta publicação não foi aprovado pelas Nações Unidas e não reflete as opiniões das Nações Unidas, de seus funcionários ou dos Estados-Membros.
 
 
 
