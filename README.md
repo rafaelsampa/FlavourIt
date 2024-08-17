@@ -31,17 +31,24 @@ Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sust
 
 ### Contribuidores
 
-<!---[<img src="https://github.com/GabrielaRBLemos.png" width="8.25%;" height="auto" style="border-radius:50%"/> Gabriela R. B. Lemos](https://github.com/GabrielaRBLemos/GabrielaRBLemos) -->
-- Gabriel Martins
-- Gabriela Lemos
-- Maria Luiza
-- Matheus Veríssimo
-- Miguel Reis
-- Rafael Sampaio
-- Roberto Regis
-- Salomão Pernambucano
-- Victor Hugo
-- Vinícius Martins
+<table>
+  <tbody>
+    <tr>
+      <td>Gabriel Martins</td>
+      <td align="center"><a href="https://github.com/GabrielaRBLemos/GabrielaRBLemos"><img src="https://github.com/GabrielaRBLemos.png" width="auto" height="8.25%"/><br>Gabriela R. B. Lemos</a></td>
+      <td align="center"><a href="https://github.com/mlrlima/mlrlima"><img src="https://github.com/mlrlima.png" width="auto" height="8.25%"/><br>Maria Luiza</a></td>
+      <td>Matheus Veríssimo</td>
+      <td>Miguel Reis</td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/rafaelsampa/rafaelsampa"><img src="https://github.com/rafaelsampa.png" width="auto" height="8.25%"/><br>Rafael Sampaio</a></td>
+      <td align="center"><a href="https://github.com/Roberto20deluxe/Roberto20deluxe"><img src="https://github.com/Roberto20deluxe.png" width="auto" height="8.25%"/><br>Roberto Regis</a></td>
+      <td>Salomão Pernambucano</td>
+      <td align="center"><a href="https://github.com/VictorHugoJSS/VictorHugoJSS"><img src="https://github.com/VictorHugoJSS.png" width="auto" height="8.25%"/><br>Victor Hugo José Sales da Silva</a></td>
+      <td align="center"><a href="https://github.com/vini-mgan/vini-mgan"><img src="https://github.com/vini-mgan.png" width="auto" height="8.25%"/><br>Vinícius Martins</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Insenção de Responsabilidade
 
