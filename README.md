@@ -15,9 +15,17 @@ Por enquanto, você pode acessar o nosso [protótipo de baixa fidelidade](https:
 
 Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Suntetável (ODS):
 
-- 12.3 - By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses
-- 4.7 - By 2030, ensure that all learners acquire the knowledge and skills needed to promote sustainable development, including, among others, through education for sustainable development and sustainable lifestyles, human rights, gender equality, promotion of a culture of peace and non-violence, global citizenship and appreciation of cultural diversity and of culture’s contribution to sustainable development
-- 3.4 - By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being
+<img src="readme_graphics/E_GIF_03.gif" width="16.5%"></img>
+<img src="readme_graphics/E_GIF_04.gif" width="16.5%"></img>
+<img src="readme_graphics/E_GIF_12.gif" width="16.5%"></img>
+
+<img src="readme_graphics/E_WEB_INVERTED_03.png" width="16.5%"></img>
+<img src="readme_graphics/E_WEB_INVERTED_04.png" width="16.5%"></img>
+<img src="readme_graphics/E_WEB_INVERTED_12.png" width="16.5%"></img>
+
+- **Meta 3.4** - Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, e promover a saúde mental e o bem-estar.
+- **Meta 4.7** - Até 2030, garantir que todos os alunos adquiram conhecimentos e habilidades necessárias para promover o desenvolvimento sustentável, inclusive, entre outros, por meio da educação para o desenvolvimento sustentável e estilos de vida sustentáveis, direitos humanos, igualdade de gênero, promoção de uma cultura de paz e não violência, cidadania global e valorização da diversidade cultural e da contribuição da cultura para o desenvolvimento sustentável.
+- **Meta 12.3** - Até 2030, reduzir pela metade o desperdício de alimentos per capita mundial, nos níveis de varejo e do consumidor, e reduzir as perdas de alimentos ao longo das cadeias de produção e abastecimento, incluindo as perdas pós-colheita.
 
 ## Créditos
 
@@ -33,4 +41,10 @@ Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sunt
 - Salomão Pernambucano
 - Victor Hugo
 - Vinícius Martins
+
+  ## Insenção de Responsabilidade
+
+  O conteúdo desta publicação não foi aprovado pelas Nações Unidas e não reflete as opiniões das Nações Unidas, de seus funcionários ou dos Estados-Membros.
+
+
 
