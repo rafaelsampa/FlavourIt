@@ -13,7 +13,7 @@ Por enquanto, você pode acessar o nosso [protótipo de baixa fidelidade](https:
 
 ## Impacto
 
-Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Suntetável (ODS):
+Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sustetável (ODS):
 
 <img src="readme_graphics/E_GIF_03.gif" width="16.5%"></img>
 <img src="readme_graphics/E_GIF_04.gif" width="16.5%"></img>
