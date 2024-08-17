@@ -34,7 +34,7 @@
 
 <h3 align="center">Contribuidores</h3>
 
-<table width = "100vw">
+<table>
   <tbody>
     <tr>
       <td>Gabriel Martins</td>
