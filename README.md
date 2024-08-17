@@ -19,12 +19,6 @@
   <img src="readme_graphics/E_GIF_04.gif" width="16.5%"></img>
   <img src="readme_graphics/E_GIF_12.gif" width="16.5%"></img>
 </p>
-<br>
-<p align = "center">
-  <img src="readme_graphics/E_WEB_INVERTED_03.png" width="16.5%"></img>
-  <img src="readme_graphics/E_WEB_INVERTED_04.png" width="16.5%"></img>
-  <img src="readme_graphics/E_WEB_INVERTED_12.png" width="16.5%"></img>
-</p>
 
 - **Meta 3.4** - Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, e promover a saúde mental e o bem-estar.
 - **Meta 4.7** - Até 2030, garantir que todos os alunos adquiram conhecimentos e habilidades necessárias para promover o desenvolvimento sustentável, inclusive, entre outros, por meio da educação para o desenvolvimento sustentável e estilos de vida sustentáveis, direitos humanos, igualdade de gênero, promoção de uma cultura de paz e não violência, cidadania global e valorização da diversidade cultural e da contribuição da cultura para o desenvolvimento sustentável.
