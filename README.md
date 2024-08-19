@@ -34,7 +34,7 @@
       <td>Gabriel Martins</td>
       <td align="center"><a href="https://github.com/GabrielaRBLemos"><img src="https://github.com/GabrielaRBLemos.png" width="auto" height="8.25%"/><br>Gabriela R. B. Lemos</a></td>
       <td align="center"><a href="https://github.com/mlrlima/"><img src="https://github.com/mlrlima.png" width="auto" height="8.25%"/><br>Maria Luiza</a></td>
-      <td>Matheus Veríssimo</td>
+      <td align="center"><a href="https://github.com/nodemi-alt"><img src="https://github.com/nodemi-alt.png" width="auto" height="8.25%"/><br>Matheus Veríssimo</td>
       <td>Miguel Reis</td>
     </tr>
     <tr>
