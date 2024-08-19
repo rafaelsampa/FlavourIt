@@ -2,7 +2,7 @@
 
 <!--insira a logo aqui-->
 
-<h1 align="center"> Flavourite </h1>
+<h1 align="center"> $$\Huge{{\color{#497729}Flavour\color{#FF9900}ite}}$$ </h1>
 
 <h4 align = "center">Crie pratos incríveis com os ingredientes que você já tem em casa.</h4>
 
