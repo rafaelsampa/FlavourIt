@@ -2,7 +2,7 @@
 
 <!--insira a logo aqui-->
 
-$\Huge{\textbf{\color{#497729}Flavour\color{#FF9900}It}}$
+<h1 align = "center">FlavourIt</h1>
 
 <h4 align = "center">Crie pratos incríveis com os ingredientes que você já tem em casa.</h4>
 
