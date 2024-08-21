@@ -8,7 +8,7 @@
 
 <ul>
   <li> Ache receitas que usam ingredientes e utensílios que você já tem e que podem ser feitas no tempo que você tem disponível</li>
-  <li> Escolha entre pesquisar com apenas ingredientes selecionados ou permita receitas com outros ingredientes também</li>
+  <li> Escolha entre pesquisar com apenas ingredientes e utensílios selecionados ou permita receitas com outros ingredientes e utensílios também</li>
   <li> Pesquise receitas pelo nome</li>
   <li> Favorite receitas para acessa-las depois</li>
   <li> Visualize os nutirentes de cada receita</li>
@@ -18,10 +18,16 @@
 <h2>Como usar</h2>
 <p>Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo</a>.</p>
 
-  <p align = "center"><img src="readme_graphics//searching_ingredients.gif" width="16.5%"></img></p>
-  <p align = "center"><img src="readme_graphics/choice.gif" width="16.5%"></img></p>
-  <p align = "center"><img src="readme_graphics/search_name.gif" width="16.5%"></img></p>
-  <p align = "center"><img src="readme_graphics/favouriting.gif" width="16.5%"></img></p>
+  <p align = "center">1. <img src="readme_graphics/searching_ingredients.gif" width="16.5%">2. <img src="readme_graphics/choice.gif" width="16.5%">3. <img src="readme_graphics/search_name.gif" width="16.5%">4. <img src="readme_graphics/favouriting.gif" width="16.5%"></p>
+<ol>
+  <li> Pesquise receitas por ingredientes, utensílios e tempo</li>
+  <li> Ative apenas ingredientes selecionados ou permita receitas com outros ingredientes também</li>
+  <li> Pesquise receitas pelo nome</li>
+  <li> Favorite receitas para acessa-las depois</li>
+  <li> Visualize os nutirentes de cada receita</li>
+  <li> Exporte a receita como PDF</li>
+</ol>
+  
 <h2>Impacto</h2>
 
 <p>Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sustetável (ODS):</p>
