@@ -10,6 +10,7 @@
   <li> Ache receitas que usam ingredientes  e utensílios que você já tem e que podem ser feitas no tempo que você tem disponível</li>
   <p align = "center"><img src="readme_graphics//searching_ingredients.gif" width="16.5%"></img></p>
   <li> Escolha entre pesquisar com apenas ingredientes selecionados ou permita receitas com outros ingredientes também</li>
+  <p align = "center"><img src="readme_graphics/choice.gif" width="16.5%"></img></p>
   <li> Pesquise receitas pelo nome</li>
   <li> Favorite receitas para acessa-las depois</li>
   <p align = "center"><img src="readme_graphics/favouriting.gif" width="16.5%"></img></p>
