@@ -18,7 +18,7 @@
 <h2>Como usar</h2>
 <p>Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo</a>.</p>
 
-<details>
+<details open>
   <summary>Pesquise receitas por ingredientes, utensílios e tempo</summary>
   <img src="readme_graphics/searching_ingredients.gif" width="16.5%">
 </details>
@@ -50,21 +50,6 @@
 
 <details>
   <summary>Exporte uma receita como PDF</summary>
-</details>
-
-<details>
-    <summary>Demonstrações visuais </summary>
-    <p align = "center">1. <img src="readme_graphics/searching_ingredients.gif" width="16.5%">2. <img src="readme_graphics/choice.gif" width="16.5%">3. <img src="readme_graphics/search_name.gif" width="16.5%"><br>4. <img src="readme_graphics/favouriting.gif" width="16.5%">5.<img src="readme_graphics/view_fav.gif" width="16.5%">6.<img src="readme_graphics/nutrients.gif" width="16.5%"></p>
-
-  <ol>
-    <li> Pesquise receitas por ingredientes, utensílios e tempo</li>
-    <li> Ative ou desative incluir apenas receitas ingredientes ou utensílios selecionados</li>
-    <li> Pesquise receitas pelo nome</li>
-    <li> Favorite receitas</li>
-    <li> Acesse receitas favoritadas</li>
-    <li> Visualize os nutirentes de uma receita</li>
-    <li> Exporte uma receita como PDF</li>
-  </ol>
 </details>
   
 <h2>Impacto</h2>
