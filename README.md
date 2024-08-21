@@ -21,11 +21,12 @@
   <p align = "center">1. <img src="readme_graphics/searching_ingredients.gif" width="16.5%">2. <img src="readme_graphics/choice.gif" width="16.5%">3. <img src="readme_graphics/search_name.gif" width="16.5%">4. <img src="readme_graphics/favouriting.gif" width="16.5%"></p>
 <ol>
   <li> Pesquise receitas por ingredientes, utensílios e tempo</li>
-  <li> Ative apenas ingredientes selecionados ou permita receitas com outros ingredientes também</li>
+  <li> Ative ou desative incluir apenas receitas ingredientes ou utensílios selecionados</li>
   <li> Pesquise receitas pelo nome</li>
-  <li> Favorite receitas para acessa-las depois</li>
-  <li> Visualize os nutirentes de cada receita</li>
-  <li> Exporte a receita como PDF</li>
+  <li> Favorite receitas</li>
+  <li> Acesse receitas favoritadas</li>
+  <li> Visualize os nutirentes de uma receita</li>
+  <li> Exporte uma receita como PDF</li>
 </ol>
   
 <h2>Impacto</h2>
