@@ -9,7 +9,7 @@
 <h2 align="center">Funcionalidades</h2>
 
 <h2 align="center">Como usar</h2>
-<p align="center">Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo de baixa fidelidade</a>.</p>
+<p align="center">Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo</a>.</p>
 <h2 align="center">Impacto</h2>
 
 <p align="center">Esse projeto visa contribuir para os seguintes Objetivos de Desenvolvimento Sustetável (ODS):</p>
@@ -46,6 +46,11 @@
     </tr>
   </tbody>
 </table>
+
+Este projeto inclui recursos gráficos das seguintes fontes:
+- Foto de uma sopa de tomate por [Alina Matveycheva](https://www.pexels.com/photo/photo-of-tomato-soup-in-a-bowl-15529479/)
+- Ícone de livro de receita por [Icons8](https://icons8.com/icon/jfWkE5iEM4Jq/cooking-book)
+- Ícone de talheres por [Icons8](https://icons8.com/icon/102892/tableware)
 
 <h2 align="center">Insenção de Responsabilidade</h2>
 
