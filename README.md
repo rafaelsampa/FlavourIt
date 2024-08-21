@@ -1,4 +1,4 @@
-<h1 align = "center">FlavourIt</h1>
+<h1 align = "center"><img src="readme_graphics/Logo.svg" alt="FlavourIt"></img></h1>
 
 <!--insira a logo aqui-->
 
@@ -11,7 +11,7 @@
   <li> Escolha entre pesquisar com apenas ingredientes selecionados ou permita receitas com outros ingredientes também</li>
   <li> Pesquise receitas pelo nome</li>
   <li> Favorite receitas para acessa-las depois</li>
-  <p align = "center"><img src="readme_graphics//favouriting.gif" width="16.5%"></img></p>
+  <p align = "center"><img src="readme_graphics/favouriting.gif" width="16.5%"></img></p>
   <li> Exporte a receita como PDF</li>
   <li> Visualize os nutirentes de cada receita</li>
 </ul>
