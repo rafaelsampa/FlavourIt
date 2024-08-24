@@ -50,6 +50,7 @@
 
 <details>
   <summary>Exporte uma receita como PDF</summary>
+  <img src="readme_graphics/export.gif" width="16.5%">
 </details>
   
 <h2>Impacto</h2>
