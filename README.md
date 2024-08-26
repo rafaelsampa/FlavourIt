@@ -1,4 +1,4 @@
-<h1 align = "center"><img src="readme_graphics/Logo.svg" alt="FlavourIt"></img></h1>
+<h1 align = "center"><img src="readme_graphics/Logo.svg" alt="FlavourIt logo"></img><br><img src="readme_graphics/Logo-full.svg" alt="FlavourIt"></img></h1>
 
 <p align="center"><img alt="Figma Badge" src="https://img.shields.io/badge/made_with-figma-FF3B00?logo=Figma&logoColor=white"><img alt="Python Badge" src="https://img.shields.io/badge/made_with-python-FFD43B?logo=Python&logoColor=white"><img alt="Django Badge" src="https://img.shields.io/badge/made_with-django-092E20?logo=Django&logoColor=white"></p>
 
