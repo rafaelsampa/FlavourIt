@@ -11,7 +11,7 @@
   <li> Ache receitas que usam ingredientes e utensílios que você já tem e que podem ser feitas no tempo que você tem disponível</li>
   <li> Escolha entre pesquisar com apenas ingredientes e utensílios selecionados ou permita receitas com outros ingredientes e utensílios também</li>
   <li> Pesquise receitas pelo nome</li>
-  <li> Favorite receitas para acessa-las depois</li>
+  <li> Favorite receitas para acessá-las depois</li>
   <li> Visualize os nutirentes de cada receita</li>
   <li> Exporte a receita como PDF</li>
 </ul>
