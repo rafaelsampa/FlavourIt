@@ -103,6 +103,7 @@
   <li><b>Foto</b> de faca de cozinha por <a href="https://www.pexels.com/photo/kitchen-knife-on-white-surface-4226864/" target="_blank" rel="noopener noreferrer">Karolina Kaboompics</a></li>
   <li><b>Ícone</b> de livro de receita por <a href="https://icons8.com/icon/jfWkE5iEM4Jq/cooking-book" target="_blank" rel="noopener noreferrer">Icons8</a></li>
   <li><b>Ícone</b> de talheres por <a href="https://icons8.com/icon/102892/tableware" target="_blank" rel="noopener noreferrer">Icons8</a></li>
+  <li><b>Ícone</b> de ordem ascendente por <a href="https://icons8.com/icon/102892/ascending-sorting" target="_blank" rel="noopener noreferrer">Icons8</a></li>
 </ul>
 
 <h2>Insenção de Responsabilidade</h2>
