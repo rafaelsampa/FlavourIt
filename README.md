@@ -70,6 +70,9 @@
   <li><b>Meta 12.3</b> - Até 2030, reduzir pela metade o desperdício de alimentos per capita mundial, nos níveis de varejo e do consumidor, e reduzir as perdas de alimentos ao longo das cadeias de produção e abastecimento, incluindo as perdas pós-colheita.</li>
 </ul>
 
+<h2>Entrega 1</h2>
+<p><a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Quadro</a> de histórias de usuário:</p>
+
 <h2>Créditos</h2>
 
 <h3>Contribuidores</h3>
