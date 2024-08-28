@@ -72,6 +72,7 @@
 
 <h2>Entrega 1</h2>
 <p><a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Quadro</a> de histórias de usuário:</p>
+<img src="readme_graphics/Mapa_de_historias_FlavourIt.png" width="100%">
 
 <h2>Créditos</h2>
 
