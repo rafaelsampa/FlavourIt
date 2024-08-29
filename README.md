@@ -88,7 +88,7 @@
 <table>
   <tbody>
     <tr>
-      <td>Gabriel Martins</td>
+      <td align="center"><a href="https://github.com/Jubiebo"><img src="https://github.com/Jubiebo.png" width="auto" height="8.25%"/><br>Gabriel Martins</a></td>
       <td align="center"><a href="https://github.com/GabrielaRBLemos"><img src="https://github.com/GabrielaRBLemos.png" width="auto" height="8.25%"/><br>Gabriela R. B. Lemos</a></td>
       <td align="center"><a href="https://github.com/mlrlima/"><img src="https://github.com/mlrlima.png" width="auto" height="8.25%"/><br>Maria Luiza Lima</a></td>
       <td align="center"><a href="https://github.com/nodemi-alt"><img src="https://github.com/nodemi-alt.png" width="auto" height="8.25%"/><br>Matheus Veríssimo</td>
