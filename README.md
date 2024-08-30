@@ -18,41 +18,6 @@
 
 <h2>Como usar</h2>
 <p>Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo</a>.</p>
-
-<details open>
-  <summary>Pesquise receitas por ingredientes, utensílios e tempo</summary>
-  <img src="readme_graphics/searching_ingredients.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Ative ou desative incluir apenas receitas ingredientes ou utensílios selecionados</summary>
-  <img src="readme_graphics/choice.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Pesquise receitas pelo nome</summary>
-  <img src="readme_graphics/search_name.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Favorite receitas</summary>
-  <img src="readme_graphics/favouriting.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Acesse receitas favoritadas</summary>
-  <img src="readme_graphics/view_fav.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Visualize os nutirentes de uma receita</summary>
-  <img src="readme_graphics/nutrients.gif" width="16.5%">
-</details>
-
-<details>
-  <summary>Exporte uma receita como PDF</summary>
-  <img src="readme_graphics/export.gif" width="16.5%">
-</details>
   
 <h2>Impacto</h2>
 
