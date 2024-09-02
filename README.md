@@ -44,7 +44,7 @@
     <img src="readme_graphics/Mapa_de_historias_FlavourIt.png" width="100%">
   </details>
 
-  <li>Backlog do Jira</li>
+  <li>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a></li>
 
   <details>
     <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 02/09/2024 </summary>
