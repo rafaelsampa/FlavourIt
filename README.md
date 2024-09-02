@@ -44,6 +44,14 @@
     <img src="readme_graphics/Mapa_de_historias_FlavourIt.png" width="100%">
   </details>
 
+  <li>Backlog do Jira</li>
+
+  <details>
+    <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 02/09/2024 </summary>
+    <img src="readme_graphics/printJiraSprint1Set2.png" width="100%">
+    <img src="readme_graphics/printJiraBacklogSet2.png" width="100%">
+  </details>
+
 </ul>
 
 <h2>Créditos</h2>
