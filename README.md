@@ -51,6 +51,18 @@
     <img src="readme_graphics/printJiraSprint1Set2.png" width="100%">
     <img src="readme_graphics/printJiraBacklogSet2.png" width="100%">
   </details>
+  
+  <details>
+  <summary> Sketch do produto </summary>
+  <img src="readme_graphics/sketch01.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch02.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch03.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch04.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch05.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch06.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch07.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch08.gif" width="16.5%"> </img> </br>
+  </details>
 
 </ul>
 
