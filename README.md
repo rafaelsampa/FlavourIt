@@ -47,7 +47,7 @@
   <li>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a></li>
 
   <details>
-    <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 02/09/2024 </summary>
+    <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 04/09/2024 </summary>
     <img src="readme_graphics/printJiraSprint1Set2.png" width="100%">
     <img src="readme_graphics/printJiraBacklogSet2.png" width="100%">
   </details>
