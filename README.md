@@ -54,14 +54,14 @@
   
   <details>
   <summary> Sketch do produto </summary>
-  <img src="readme_graphics/sketch01.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch02.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch03.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch04.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch05.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch06.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch07.gif" width="16.5%"> </img> </br>
-  <img src="readme_graphics/sketch08.gif" width="16.5%"> </img> </br>
+  <img src="readme_graphics/sketch01.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch02.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch03.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch04.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch05.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch06.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch07.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch08.gif" width="20%"> </img> </br>
   </details>
 
 </ul>
