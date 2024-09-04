@@ -41,7 +41,7 @@
 
   <details>
     <summary>Imagem do Storyboard </summary>
-    <img src="readme_graphics/Mapa_de_historias_FlavourIt.png" width="100%">
+    <img src="readme_graphics/mapa_de_historias_FlavourIt_1.png" width="100%">
   </details>
 
   <li>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a></li>
