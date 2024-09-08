@@ -37,31 +37,27 @@
 
 <h2>Entrega 1</h2>
 
-  <p><a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Quadro</a> de histórias de usuário</p>
-  
-  <p>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a>
-
   <details>
-    <summary>Imagem do Storyboard </summary>
+    <summary>Imagem do <a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Storyboard</a> </summary>
     <img src="readme_graphics/mapa_de_historias_FlavourIt_1.png" width="100%">
   </details>
     
   <details>
-    <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 04/09/2024 </summary>
+    <summary>Imagens do Sprint 1 e do <a href="https://unicap-team-flavour.atlassian.net/jira/software/projects/KAN/boards/1/backlog">Backlog</a> do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a>, na data de 04/09/2024 </summary>
     <img src="readme_graphics/printJiraSprint1Set2.png" width="100%">
     <img src="readme_graphics/printJiraBacklogSet2.png" width="100%">
   </details>
   
   <details>
   <summary> Sketch do produto </summary>
-  <img src="readme_graphics/sketch01.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch02.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch03.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch04.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch05.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch06.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch07.gif" width="20%"> </img> </br>
-  <img src="readme_graphics/sketch08.gif" width="20%"> </img> </br>
+  <img src="readme_graphics/sketch01.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch02.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch03.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch04.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch05.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch06.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch07.gif" width="20vw"> </img> </br>
+  <img src="readme_graphics/sketch08.gif" width="20vw"> </img> </br>
   </details>
 
 <details>
@@ -75,7 +71,6 @@
       <li>A pesquisa deve ser case-insensitive.​</li>
       <li>Se não houver receitas compatíveis, aparece um aviso em vez de receitas.​</li>
     </ul>
-
     <h4>2# Busca por ingredientes​​</h4>
     <h5>Descrição:</h5>
     <p>Como usuário, eu gostaria de visualizar receitas que contenham os ingredientes especificados por mim para utilizar ingredientes que eu já tenho em casa.​</p>
@@ -85,10 +80,9 @@
       <li>O usuário pode selecionar quantos ingredientes quiser, sem restrição de quantidade.​​</li>
       <li>Caso nenhum ingrediente seja selecionado, a filtragem por ingredientes não será considerada ao mostrar os resultados da pesquisa.​</li>
     </ul>
-
     <h4>3# Filtragem por Utensílios​​</h4>
     <h5>Descrição:</h5>
-    <p>Como usuário, eu gostaria de visualizar receitas que contenham os utensílios especificados por mim.​</p>
+    <p>Como usuário, eu gostaria de visualizar receitas que contenham os utensílios especificados por mim para que eu possa encontrar receitas que se adaptem ao que tenho disponível.​</p>
     <h5>Critérios de Aceitação:​</h5>
     <ul>
       <li>Receitas que utilizam utensílios selecionados  aparecem na lista de resultados.</li>
@@ -96,7 +90,6 @@
       <li>O usuário pode selecionar quantos utensílios quiser, sem restrição de quantidade.​</li>
       <li>Caso nenhum utensílio seja selecionado, a filtragem por utensílios não será considerada ao mostrar os resultados da pesquisa.​​</li>
     </ul>
-
     <h4>4# Filtragem por Tempo​</h4>
     <h5>Descrição:</h5>
     <p>Como usuário, eu gostaria de visualizar apenas as receitas que podem ser concluídas dentro de um período de tempo específico para evitar escolher uma receita que demore mais tempo do que eu tenho.​</p>
@@ -106,7 +99,6 @@
       <li>A opção de ordenação por tempo deve estar disponível e funcionar corretamente tanto na ordem crescente como decrescente.​</li>
       <li>Caso um período de tempo não seja especificado, a filtragem por tempo de preparo não será considerada ao mostrar os resultados da pesquisa.​​</li>
     </ul>
-
     <h4>5# Busca Exclusiva​​</h4>
     <h5>Descrição:</h5>
     <p>Como usuário, eu gostaria de escolher esconder receitas que contenham os ingredientes e/ou utensílios não selecionados para ver apenas recitas que eu posso fazer sem precisar ir ao mercado ou pedir algo emprestado.​</p>
@@ -114,6 +106,49 @@
     <ul>
       <li>Nenhuma receita que contém ingredientes e/ou utensílios não selecionados aparece na lista de resultados quando as respectivas opções estão ativadas.​</li>
       <li>Se não houver receitas compatíveis, aparece um aviso em vez de receitas.​</li>
+    </ul>
+    <h4>6# Porções​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de visualizar a quantidade de porções médias que eu posso fazer com a quantidade de ingredientes que eu registrei para que eu possa planejar melhor a quantidade de comida que vou preparar.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>A quantidade de porções possíveis baseado na quantidade de ingredientes visível na lista de resultados e no card da receita selecionada.​​</li>
+      <li>O próprio algoritmo deve calcular automaticamente de acordo com os ingredientes da receita e na quantidade registrada pelo usuário.​​</li>
+      <li>Caso a quantidade registrada pelo usuário seja insuficiente para uma receita, a quantidade consta como 0.​</li>
+    </ul>
+    <h4>7# Favoritos​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de guardar minhas receitas favoritas para acessá-las mais rápido.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Receitas marcadas como favoritas estão visíveis na lista de receitas favoritas.​​</li>
+      <li>O usuário pode marcar quantas receitas quiser como favoritas, sem restrição de quantidade.​</li>
+      <li>As receitas aparecem listadas na seção de favoritas.​</li>
+    </ul>
+    <h4>8# Informações Nutricionais​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de saber sobre as informações nutricionais de cada receita para fazer escolhas alimentares mais informadas.​​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Informações corretas estão disponíveis no card nutricional da receita.​​</li>
+      <li>As informações serão equivalentes a uma porção da receita.​​</li>
+    </ul>
+    <h4>9# Perfil​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de ter um perfil pessoal para visualizar valores diários personalizados baseados nos meus dados para adequar minha alimentação às minhas necessidades objetivos de saúde indivíduais.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Valores diários no card nutricional da receita estão de acordo com as informações do usuário.​</li>
+      <li>O próprio algoritmo deve calcular automaticamente de acordo com as informações do usuário e da receitas.​</li>
+      <li>O usuário deve ser capaz de alterar suas informações sempre que desejar.​</li>
+    </ul>
+    <h4>10# Exportação​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de compartilhar uma receita para além do site, para que eu possa mostrar minhas descobertas para amigos ou vizualizar-lás fora da plataforma.</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>O usuário poderá escolher compartilhar a receita por meio de PDF ou link para a receita no próprio site.​</li>
+      <li>O botão "Export" cria uma versão em PDF da receita que pode ser baixada pelo usuário.​</li>
     </ul>
   </details>
 
