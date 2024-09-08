@@ -36,16 +36,16 @@
 </ul>
 
 <h2>Entrega 1</h2>
-<ul>
-  <li><a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Quadro</a> de histórias de usuário</li>
+
+  <p><a href="https://www.canva.com/design/DAGOfxs_Dc8/nC_RbrV_sZUsEBCPSfeCKA/edit?utm_content=DAGOfxs_Dc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Quadro</a> de histórias de usuário</p>
+  
+  <p>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a>
 
   <details>
     <summary>Imagem do Storyboard </summary>
     <img src="readme_graphics/mapa_de_historias_FlavourIt_1.png" width="100%">
   </details>
-
-  <li>Backlog do <a href="https://unicap-team-flavour.atlassian.net/">Jira</a></li>
-
+    
   <details>
     <summary>Imagens do Sprint 1 e do Backlog, respectivamente, na data de 04/09/2024 </summary>
     <img src="readme_graphics/printJiraSprint1Set2.png" width="100%">
@@ -64,7 +64,58 @@
   <img src="readme_graphics/sketch08.gif" width="20%"> </img> </br>
   </details>
 
-</ul>
+<details>
+    <summary>Histórias de usuário </summary>
+    <h4>1# Busca por nome​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de poder pesquisar as receitas disponíveis por nome para acessar intruções de uma receita que já sei que quero usar mas não lembro como fazer.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Apenas receitas que contêm o termo pesquisado em seu título aparecem na lista de resultados.​</li>
+      <li>A pesquisa deve ser case-insensitive.​</li>
+      <li>Se não houver receitas compatíveis, aparece um aviso em vez de receitas.​</li>
+    </ul>
+
+    <h4>2# Busca por ingredientes​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de visualizar receitas que contenham os ingredientes especificados por mim para utilizar ingredientes que eu já tenho em casa.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Apenas receitas que contêm ingredientes selecionados  aparecem na lista de resultados.​</li>
+      <li>O usuário pode selecionar quantos ingredientes quiser, sem restrição de quantidade.​​</li>
+      <li>Caso nenhum ingrediente seja selecionado, a filtragem por ingredientes não será considerada ao mostrar os resultados da pesquisa.​</li>
+    </ul>
+
+    <h4>3# Filtragem por Utensílios​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de visualizar receitas que contenham os utensílios especificados por mim.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Receitas que utilizam utensílios selecionados  aparecem na lista de resultados.</li>
+      <li>Receitas contendo outros utensílios aparecem após as receitas acima.​</li>
+      <li>O usuário pode selecionar quantos utensílios quiser, sem restrição de quantidade.​</li>
+      <li>Caso nenhum utensílio seja selecionado, a filtragem por utensílios não será considerada ao mostrar os resultados da pesquisa.​​</li>
+    </ul>
+
+    <h4>4# Filtragem por Tempo​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de visualizar apenas as receitas que podem ser concluídas dentro de um período de tempo específico para evitar escolher uma receita que demore mais tempo do que eu tenho.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Apenas receitas com tempo de preparo igual ou menor ao tempo inserido aparecem na lista de resultados.​</li>
+      <li>A opção de ordenação por tempo deve estar disponível e funcionar corretamente tanto na ordem crescente como decrescente.​</li>
+      <li>Caso um período de tempo não seja especificado, a filtragem por tempo de preparo não será considerada ao mostrar os resultados da pesquisa.​​</li>
+    </ul>
+
+    <h4>5# Busca Exclusiva​​</h4>
+    <h5>Descrição:</h5>
+    <p>Como usuário, eu gostaria de escolher esconder receitas que contenham os ingredientes e/ou utensílios não selecionados para ver apenas recitas que eu posso fazer sem precisar ir ao mercado ou pedir algo emprestado.​</p>
+    <h5>Critérios de Aceitação:​</h5>
+    <ul>
+      <li>Nenhuma receita que contém ingredientes e/ou utensílios não selecionados aparece na lista de resultados quando as respectivas opções estão ativadas.​</li>
+      <li>Se não houver receitas compatíveis, aparece um aviso em vez de receitas.​</li>
+    </ul>
+  </details>
 
 <h2>Créditos</h2>
 
