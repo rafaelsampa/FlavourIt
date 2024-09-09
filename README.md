@@ -152,6 +152,10 @@
     </ul>
   </details>
 
+  <details>
+    <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Sreencast</a> do protótipo </summary>
+  </details>
+
 <h2>Créditos</h2>
 
 <h3>Contribuidores</h3>
