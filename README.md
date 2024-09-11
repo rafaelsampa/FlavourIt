@@ -155,6 +155,77 @@
   <details>
     <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Sreencast</a> do protótipo </summary>
   </details>
+<h2>Entrega 2</h2>
+<details>
+    <summary>Modelo Conceitual</summary>
+    <img src="readme_graphics/Conceitual.png" width="100%">
+  </details>
+  <details>
+    <summary>Modelo Lógico</summary>
+    <img src="readme_graphics/Lógico.png" width="100%">
+  </details>
+  <details>
+    <summary>Modelo Físico</summary>
+    
+```sql
+    
+CREATE TABLE Cliente (
+    Id TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL,
+    Altura REAL,
+    Peso REAL,
+    Atividade TEXT
+);
+
+CREATE TABLE Favoritado (
+    Id TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL,
+    Tempo TIME,
+    Instruções TEXT
+);
+
+CREATE TABLE Ingrediente (
+    Id TEXT PRIMARY KEY,
+    Id_Receita TEXT,
+    Id_Val_Nutri TEXT,
+    Quantidade REAL,
+    Unidade TEXT,
+    FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
+    FOREIGN KEY (Id_Val_Nutri) REFERENCES Valores_Nutricionais(Id)
+);
+
+CREATE TABLE Valores_Nutricionais (
+    Id TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL,
+    Gordura REAL,
+    Carboidrato REAL,
+    Proteina REAL,
+    Porção REAL,
+    Unidade TEXT
+);
+
+CREATE TABLE Receita_Utensilio (
+    Id TEXT PRIMARY KEY,
+    Id_Receita TEXT,
+    Id_Utensilio TEXT,
+    FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
+    FOREIGN KEY (Id_Utensilio) REFERENCES Utensilio(Id)
+);
+
+CREATE TABLE Utensilio (
+    Id TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL
+);
+
+CREATE TABLE Receita (
+    Id TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL,
+    Tempo TEXT NOT NULL,
+    Instruções TEXT NOT NULL
+);
+
+```
+  </details>
 
 <h2>Créditos</h2>
 
