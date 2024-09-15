@@ -153,7 +153,7 @@
   </details>
 
   <details>
-    <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Sreencast</a> do protótipo </summary>
+    <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Screencast</a> do protótipo </summary>
   </details>
 <h2>Entrega 2</h2>
 
