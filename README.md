@@ -156,6 +156,12 @@
     <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Sreencast</a> do protótipo </summary>
   </details>
 <h2>Entrega 2</h2>
+
+<details>
+    <summary>Diagrama de Atividade do Sistema</summary>
+    <img src="readme_graphics/Atividades.png" width="100%">
+  </details>
+
 <details>
     <summary>Modelo Conceitual</summary>
     <img src="readme_graphics/Conceitual.png" width="100%">
