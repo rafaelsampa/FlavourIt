@@ -17,7 +17,7 @@
 </ul>
 
 <h2>Como usar</h2>
-<p>Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/design/iFTLAaMosDRRr7w8U86GS6/remi?m=auto&t=3E2VNKbCzpQkGDym-6">protótipo</a>.</p>
+<p>Por enquanto, você pode acessar o nosso <a href="https://www.figma.com/proto/iFTLAaMosDRRr7w8U86GS6/remi?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=133-458&starting-point-node-id=133%3A458">protótipo</a>.</p>
   
 <h2>Impacto</h2>
 
