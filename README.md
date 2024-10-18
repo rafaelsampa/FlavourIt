@@ -176,59 +176,59 @@
 ```sql
     
 CREATE TABLE Cliente (
-    Id TEXT PRIMARY KEY,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL,
     Altura REAL,
     Peso REAL,
     Atividade TEXT
-);
+
 
 CREATE TABLE Favoritado (
-    Id TEXT PRIMARY KEY,
-    Nome TEXT NOT NULL,
-    Tempo TIME,
-    Instruções TEXT
-);
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Id_Receita INT,
+    Id_Cliente INT,
+    FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
+    FOREIGN KEY (Id_Cliente) REFERENCES Cliente(Id)
+
 
 CREATE TABLE Ingrediente (
-    Id TEXT PRIMARY KEY,
-    Id_Receita TEXT,
-    Id_Val_Nutri TEXT,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Id_Receita INT,
+    Id_Val_Nutri INT,
     Quantidade REAL,
     Unidade TEXT,
     FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
     FOREIGN KEY (Id_Val_Nutri) REFERENCES Valores_Nutricionais(Id)
-);
+
 
 CREATE TABLE Valores_Nutricionais (
-    Id TEXT PRIMARY KEY,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL,
     Gordura REAL,
     Carboidrato REAL,
     Proteina REAL,
     Porção REAL,
     Unidade TEXT
-);
+
 
 CREATE TABLE Receita_Utensilio (
-    Id TEXT PRIMARY KEY,
-    Id_Receita TEXT,
-    Id_Utensilio TEXT,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Id_Receita INT,
+    Id_Utensilio INT,
     FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
     FOREIGN KEY (Id_Utensilio) REFERENCES Utensilio(Id)
-);
+
 
 CREATE TABLE Utensilio (
-    Id TEXT PRIMARY KEY,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL
-);
+
 
 CREATE TABLE Receita (
-    Id TEXT PRIMARY KEY,
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL,
     Tempo TEXT NOT NULL,
     Instruções TEXT NOT NULL
-);
 
 ```
   </details>
