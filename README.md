@@ -259,6 +259,8 @@ CREATE TABLE Receita (
 
 <p>Este projeto inclui recursos gráficos das seguintes fontes:</p>
 
+<h4>Protótipo:</h4>
+
 <ul>
   <li><b>Foto</b> de uma sopa de tomate por <a href="https://www.pexels.com/photo/photo-of-tomato-soup-in-a-bowl-15529479/" target="_blank" rel="noopener noreferrer">Alina Matveycheva</a></li>
   <li><b>Foto</b> de tomate por <a href="https://www.pexels.com/photo/tomato-400958/" target="_blank" rel="noopener noreferrer">Monicore</a></li>
@@ -267,6 +269,9 @@ CREATE TABLE Receita (
   <li><b>Ícone</b> de talheres por <a href="https://icons8.com/icon/102892/tableware" target="_blank" rel="noopener noreferrer">Icons8</a></li>
   <li><b>Ícone</b> de ordem ascendente por <a href="https://icons8.com/icon/102892/ascending-sorting" target="_blank" rel="noopener noreferrer">Icons8</a></li>
 </ul>
+
+<h4>Produto Final:</h4>
+<li><b>Ilustração</b> de um telefone é uma versão editada de uma imagem disponível <a href="https://commons.wikimedia.org/wiki/File:San_Francisco_and_Bay_counties_telephone_directory_(1917)_(14754322934).jpg"> via Wikimedia Commons</a></li>
 
 <h2>Insenção de Responsabilidade</h2>
 
