@@ -270,7 +270,8 @@ CREATE TABLE Receita (
 </ul>
 
 <h4>Produto Final:</h4>
-<li><b>Ilustração</b> de um telefone é uma versão editada de uma imagem disponível <a href="https://commons.wikimedia.org/wiki/File:San_Francisco_and_Bay_counties_telephone_directory_(1917)_(14754322934).jpg"> via Wikimedia Commons</a></li>
+<li><b>Ilustração</b> de um telefone é uma versão editada de uma imagem disponível via <a href="https://commons.wikimedia.org/wiki/File:San_Francisco_and_Bay_counties_telephone_directory_(1917)_(14754322934).jpg"> Wikimedia Commons</a></li>
+<li><b>Ícones</b> por <a href="https://github.com/tabler/tabler-icons">Tabler</a></li>
 
 <h2>Insenção de Responsabilidade</h2>
 
