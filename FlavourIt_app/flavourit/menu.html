@@ -1,0 +1,9 @@
+{% extends 'flavourit/base.html' %}
+{% block conteudo %}
+<div class="main-menu">
+    {% load static %}
+    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Ingredients</button>
+    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Name</button>
+    <a href=""><p>Exit Account</p></a>
+</div>
+{% endblock %}
