@@ -1,0 +1,119 @@
+:root{
+    --tertiary-fixed: #dbe8b5;
+    --tertiary: #58633a;
+    --on-surface-variant: #51453a;
+    --on-variant: #ffffff;
+    }
+    
+    body {
+        background-color: var(--tertiary-fixed);
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: var(--on-surface-variant);
+    }
+    
+    /* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+    
+    /*se a altura for maior que a largura*/
+    .mobile-frame{
+        width: 100vw;
+        height: 100vh;
+    
+    }
+    .landscape-mobile-warning{
+        visibility: hidden; /*esconde o aviso para virar o dispositivo*/
+        width: 0;
+        height: 0;
+    }
+    
+    /*se a largura for maior que a altura e a largura for maior que a largura de mobile*/
+    @media (orientation: landscape) and (min-width: 915px){
+        
+        .mobile-frame{
+            height: 100vh;
+            width: 56.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical*/
+        }
+        .landscape-mobile-warning{
+            visibility: hidden; /*esconde o aviso para virar o dispositivo*/
+            width: 0;
+            height: 0;
+        }
+    }
+    
+    /*se a largura for maior que a altura e a largura é uma largura de mobile*/
+    @media (orientation: landscape) and (max-width: 915px){   
+        .mobile-frame{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+        .landscape-mobile-warning{
+            visibility: visible;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+    
+    /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+    
+    /*TAGS HTML*/
+    
+    p{
+        margin: 0;
+    }
+
+    button{
+        background-color: var(--tertiary);
+        color: var(--on-variant);
+        border: none;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /*FIM DE TAGS HTML*/
+    
+    /*CLASSES*/
+    
+    .mobile-frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .main-menu{
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5vh;
+    }
+
+    .landscape-mobile-warning{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8.4vh;
+    }
+
+    .landscape-mobile-warning img{
+        width: 30vw;
+        height: 30vh;
+        transform: rotate(-90deg);
+        animation: turning 1s ease infinite alternate;
+    }
+
+    /*FIM DE CLASSES*/
+
+    /*ANIMAÇÔES*/
+    @keyframes turning {
+        0% {transform: rotate(-90deg);}
+        100% {transform: rotate(0deg);}
+    }
+    /*FIM DE ANIMAÇÔES*/
