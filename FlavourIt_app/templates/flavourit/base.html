@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <!--<script src=""></script>-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FlavourIt</title>
+        <meta name="description" content="Create incredible dishes with ingredients you already have at home.">
+        <meta name="author" content="G">
+        <!-- <link rel="icon" href=""> -->
+
+    </head>
+    <body>
+
+        <div class="mobile-frame">
+            {% block conteudo %} 
+            {% endblock %}
+        </div>
+        <div class="landscape-mobile-warning"><p>Turn your device around to enter portrait mode!</p><img src="{% static 'graphics/phone_illustration.svg'%}"></div>
+    </body>
+
+</html>
