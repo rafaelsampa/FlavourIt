@@ -265,7 +265,6 @@ CREATE TABLE Receita (
   <li><b>Foto</b> de uma sopa de tomate por <a href="https://www.pexels.com/photo/photo-of-tomato-soup-in-a-bowl-15529479/" target="_blank" rel="noopener noreferrer">Alina Matveycheva</a></li>
   <li><b>Foto</b> de tomate por <a href="https://www.pexels.com/photo/tomato-400958/" target="_blank" rel="noopener noreferrer">Monicore</a></li>
   <li><b>Foto</b> de faca de cozinha por <a href="https://www.pexels.com/photo/kitchen-knife-on-white-surface-4226864/" target="_blank" rel="noopener noreferrer">Karolina Kaboompics</a></li>
-  <li><b>Ícone</b> de livro de receita por <a href="https://icons8.com/icon/jfWkE5iEM4Jq/cooking-book" target="_blank" rel="noopener noreferrer">Icons8</a></li>
   <li><b>Ícone</b> de talheres por <a href="https://icons8.com/icon/102892/tableware" target="_blank" rel="noopener noreferrer">Icons8</a></li>
   <li><b>Ícone</b> de ordem ascendente por <a href="https://icons8.com/icon/102892/ascending-sorting" target="_blank" rel="noopener noreferrer">Icons8</a></li>
 </ul>
