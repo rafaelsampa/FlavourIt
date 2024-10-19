@@ -6,20 +6,22 @@
     }
     
     body {
+        height: 100vh;
         background-color: var(--tertiary-fixed);
         margin: 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         color: var(--on-surface-variant);
+        font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
     }
     
     /* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
     
     /*se a altura for maior que a largura*/
     .mobile-frame{
-        width: 100vw;
-        height: 100vh;
+        width: 93vw; /*100 -7 por causa do padding*/
+        height: 93vh; /*100 -7 por causa do padding*/
     
     }
     .landscape-mobile-warning{
@@ -32,8 +34,8 @@
     @media (orientation: landscape) and (min-width: 915px){
         
         .mobile-frame{
-            height: 100vh;
-            width: 56.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical*/
+            height: 93vh; /*100-7 por causa do padding*/
+            width: 49.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical. -7 por causa do padding*/
         }
         .landscape-mobile-warning{
             visibility: hidden; /*esconde o aviso para virar o dispositivo*/
@@ -51,8 +53,9 @@
         }
         .landscape-mobile-warning{
             visibility: visible;
-            width: 100vw;
-            height: 100vh;
+            font-size: 4.34vh;/*pq troca de portrait para landscape ent a largura fica maior que a altura*/
+            width: 93vw;/*100 -7 por causa do padding*/
+            height: 93vh;/*100 -7 por causa do padding*/
         }
     }
     
@@ -65,14 +68,23 @@
     }
 
     button{
+        height: 5.5vh;
         background-color: var(--tertiary);
         color: var(--on-variant);
         border: none;
         border-radius: 24px;
+        font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
+        padding:1vh 3vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 0.85vh;
+    }
+
+    button img{
+        height: 3vh;
+        width: 3vh;
     }
     
     /*FIM DE TAGS HTML*/
@@ -80,18 +92,10 @@
     /*CLASSES*/
     
     .mobile-frame{
+        padding: 3.5vh 3.5vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    
-    .main-menu{
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3.5vh;
     }
 
     .landscape-mobile-warning{
@@ -107,6 +111,43 @@
         height: 30vh;
         transform: rotate(-90deg);
         animation: turning 1s ease infinite alternate;
+    }
+
+    .main-menu{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5vh;
+    }
+
+    .top-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    .left-top-bar{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+    }
+
+    .right-top-bar{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content:right;
+        gap: 2vh;
+    }
+
+    .logout-button{
+        background: none;
+        color: var(--on-surface-variant);
+        text-decoration: underline;
     }
 
     /*FIM DE CLASSES*/
