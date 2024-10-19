@@ -1,5 +1,5 @@
 """
-WSGI config for flavorit_site project.
+WSGI config for FlavourIt project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flavorit_site.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "FlavourIt.settings")
 
 application = get_wsgi_application()
