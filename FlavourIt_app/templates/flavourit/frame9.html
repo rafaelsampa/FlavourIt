@@ -14,7 +14,7 @@
 <div class="recipe-frame">
     
     <div class="recipe-header">
-        <h2>{{ recipe.name }}</h2>
+        <h2>Ratatouille</h2>
         <button class="more-options">⋮</button>
     </div>
 
@@ -55,11 +55,6 @@
         </div>
     </div>
 </div>
-    
-<div class="back-icon">
-    <img src="{% static 'graphics/back.svg' %}" alt="Back Icon">
-    
-</div>
 
 <style>
     
@@ -68,7 +63,7 @@
         width: 35px;
         height: 35px;
         margin-bottom: 12px;
-        background-color: #58633A;
+        background-color: transparent;
         border: 25px;
         font-size: 1.5rem;
         cursor: pointer;
@@ -80,7 +75,7 @@
         margin: 0;
         padding: 0;
         font-family: "Comic Sans MS";
-        background-color: #e7efcf;
+        background-color: #DBE8B5;
     }
 
     .tabs-bar {
@@ -90,17 +85,18 @@
         margin-bottom: 10px;
         padding: 0;
         z-index: 500;
-        top: 32px; 
+        top: 20px; 
         left: 5px;
         width: 390px;
         right: 0;
-        z-index: 1;
+        z-index: 4000;
+        background-color: #eaefe0;
     }
 
     .recipe-frame {
         background-color: #eaefe0;
         border-radius: 15px;
-        z-index: 20000;
+        z-index: 1;
         padding: 20px;
         margin: 20px;
         font-family: "Comic Sans MS";
@@ -150,15 +146,6 @@
         font-size: 1rem;
     }
 
-    .back-icon {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .back-icon img {
-        width: 100px; 
-    }
     
     
 </style>
