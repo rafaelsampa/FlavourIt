@@ -11,7 +11,9 @@
     </div>
 </div>
 <div class="main-menu">
-    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Ingredients</button>
+    <form action="{% url 'ingredient_filter' %}" method="get">
+        <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Ingredients</button>
+    </form>
     <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Name</button>
     <button type="button" class="logout-button"><img src="{% static 'graphics/logout.svg' %}">Exit Account</button>
 </div>
