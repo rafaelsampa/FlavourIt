@@ -57,6 +57,33 @@
 </div>
 
 <style>
+
+    .recipe-header{
+        background-color: #FAEBE0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0 auto;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+    }
+    .recipe-image {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; 
+        position: relative;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .recipe-image img {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        object-fit: cover; 
+        border-radius: 15px;
+    }
+
     
     
     .more-options {
@@ -69,7 +96,11 @@
         cursor: pointer;
         padding: 5px;
         transition: color 0.3s; 
-}
+        margin-bottom: -5px;
+    }
+    .more-options:active {
+        color: #2e0f0f; 
+    }
      
     body {
         margin: 0;
@@ -107,6 +138,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+    
 
     .recipe-header {
         display: flex;
@@ -145,6 +177,21 @@
         padding-left: 10px;
         font-size: 1rem;
     }
+    .tab.current {
+        box-shadow: 0 4px 8px rgb(46, 15, 15); /* Change this to your preferred shadow color */
+        z-index: 2;
+    }
+    .recipe-header {
+        width: 345px; 
+        height:50px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0 auto; 
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+    }
+
+
 
     
     
