@@ -4,6 +4,7 @@
     --on-surface-variant: #51453a;
     --on-variant: #ffffff;
     --surface:#fff8f5;
+    --surface-container-highest: #cccccc;
     }
     
     body {
@@ -66,6 +67,7 @@
     
     p{
         margin: 0;
+        text-align: center;
     }
 
     button{
@@ -114,7 +116,7 @@
         animation: turning 1s ease infinite alternate;
     }
 
-    .main-menu{
+    .main-menu,.bottom-section{
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -178,6 +180,54 @@
         text-decoration: underline;
     }
 
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 7vh;
+        height: 4vh;
+    }
+    .switch input {/*escondendo o checkbox original*/
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--surface-container-highest);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        height: 3vh;
+        width: 3vh;
+        left: 0.5vh;
+        bottom: 0.5vh;
+        background-color: var(--on-variant);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: var(--tertiary);
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px --tertiary;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(3vh);
+        -ms-transform: translateX(3vh);
+        transform: translateX(3vh);
+    }
+
     /*FIM DE CLASSES*/
 
     /*ANIMAÇÔES*/
@@ -186,3 +236,5 @@
         100% {transform: rotate(0deg);}
     }
     /*FIM DE ANIMAÇÔES*/
+
+/* SWITCH CONFIG*/
