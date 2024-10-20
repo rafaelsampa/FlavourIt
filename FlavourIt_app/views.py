@@ -11,3 +11,6 @@ def tool_filter(request):
 
 def time_filter(request):
     return render(request, 'flavourit/time_filter.html')
+
+def frame9(request):
+    return render(request, 'flavourit/frame9.html')
