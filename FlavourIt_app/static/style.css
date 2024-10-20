@@ -3,6 +3,7 @@
     --tertiary: #58633a;
     --on-surface-variant: #51453a;
     --on-variant: #ffffff;
+    --surface:#fff8f5;
     }
     
     body {
@@ -142,6 +143,33 @@
         flex-direction: row;
         justify-content:right;
         gap: 2vh;
+    }
+
+    .tabs-bar{
+        background: var(--surface);
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        border-bottom: solid thin var(--on-surface-variant);
+    }
+    
+    .tab{
+        flex-grow: 1;
+        height: 5.15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .tab p{
+        height: 100%;
+        line-height: 250%;
+    }
+
+    .current{/*para tab atual, colocar nos a*/
+        border-bottom: solid var(--on-surface-variant);
     }
 
     .logout-button{
