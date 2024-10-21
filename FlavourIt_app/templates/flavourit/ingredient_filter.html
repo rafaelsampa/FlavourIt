@@ -1,24 +1,373 @@
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<div class="tabs-bar">
-    <div class="tab current">
-        <a>Ingredients</a>
+<div class="filter-frame">
+    <div class="tabs-bar">
+        <div class="tab current">
+            <a>Ingredients</a>
+        </div>
+        <div class="tab">
+            <a>Tools</a>
+        </div>
+        <div class="tab">
+        <a>Time</a>
+        </div>
     </div>
-    <div class="tab">
-        <a>Tools</a>
-    </div>
-    <div class="tab">
-    <a>Time</a>
-    </div>
-</div>
-<div class="bottom-section">
-    <p>Hide recipes that contain other ingredients?</p>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
-    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
 
+    <div class="middle-section">
+        <input type="search" placeholder="Search recipes by ingredients...">
+        <div class="results-section">
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="number" min="0" placeholder="0">
+                <select>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <p>Hide recipes that contain other ingredients?</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+
+    </div>
 </div>
 {% endblock %}
