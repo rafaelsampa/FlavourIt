@@ -366,8 +366,9 @@
             <input type="checkbox">
             <span class="slider"></span>
         </label>
-        <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
-
+        <form action="{% url 'recipe_results' %}" method="get">
+            <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+        </form>
     </div>
 </div>
 {% endblock %}
