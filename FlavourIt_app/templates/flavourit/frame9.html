@@ -7,7 +7,7 @@
         <a>Recipe</a>
     </div>
     <div class="tab">
-    <a>Nutritional data</a>
+        <a>Nutritional data</a>
     </div>
 </div>
 
@@ -58,15 +58,6 @@
 
 <style>
 
-    .recipe-header{
-        background-color: #FAEBE0;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 0 auto;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-    }
     .recipe-image {
         width: 100%;
         height: 0;
@@ -83,8 +74,6 @@
         object-fit: cover; 
         border-radius: 15px;
     }
-
-    
     
     .more-options {
         width: 35px;
@@ -113,12 +102,12 @@
         display: flex;
         justify-content: center;
         position: relative;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         padding: 0;
         z-index: 500;
         top: 20px; 
         left: 5px;
-        width: 390px;
+        width: 380px;
         right: 0;
         z-index: 4000;
         background-color: #eaefe0;
@@ -134,23 +123,39 @@
         width: 100%; 
         height: 619px;
         max-height: 722px;
-        max-width: 358px; 
+        max-width: 378px; 
         margin-left: auto;
         margin-right: auto;
     }
     
-
-    .recipe-header {
+    .recipe-header{
+        background-color: #FAEBE0;
+        width: max-content - 40px; 
+        height:50px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0 auto;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
     }
-    
 
     .recipe-image img {
         width: 100%;
         border-radius: 15px;
         margin-bottom: 10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+    }
+
+    .stat-item img {
+        width: 24px;
+        height: 24px;
+        margin-top: -135px;
     }
 
     .recipe-stats {
@@ -165,12 +170,6 @@
         align-items: center;
     }
 
-    .stat-item img {
-        width: 24px;
-        height: 24px;
-        margin-bottom: 5px;
-    }
-
     .ingredients-section ul,
     .steps-section ol {
         list-style-position: inside;
@@ -178,20 +177,8 @@
         font-size: 1rem;
     }
     .tab.current {
-        box-shadow: 0 4px 8px rgb(46, 15, 15); /* Change this to your preferred shadow color */
         z-index: 2;
     }
-    .recipe-header {
-        width: 345px; 
-        height:50px;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 0 auto; 
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-    }
-
-
 
     
     
