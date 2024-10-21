@@ -3,18 +3,22 @@
 {% load static %}
 <div class="tabs-bar">
     <div class="tab">
-        <a>Ingredients</a>
+        <a href="{% url 'ingredient_filter' %}">Ingredients</a>
     </div>
     <div class="tab">
-        <a>Tools</a>
+        <a href="{% url 'tool_filter' %}">Tools</a>
     </div>
     <div class="tab current">
-    <a>Time</a>
+    <a href="{% url 'time_filter' %}">Time</a>
     </div>
 </div>
-<div class="bottom-section">
-    
-    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
-
+<div class="filter-frame">
+    <div class="time-section">
+        <label for="recipe-time">Enter maximum time for recipe:</label>
+        <input type="time" name="recipe-time" id="recipe-time">
+    </div>
+    <div class="bottom-section">
+        <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+    </div>
 </div>
 {% endblock %}

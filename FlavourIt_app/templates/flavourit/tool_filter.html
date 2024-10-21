@@ -1,24 +1,37 @@
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<div class="tabs-bar">
-    <div class="tab">
-        <a>Ingredients</a>
+<div class="filter-frame">
+    <div class="tabs-bar">
+        <div class="tab">
+            <a href="{% url 'ingredient_filter' %}">Ingredients</a>
+        </div>
+        <div class="tab current">
+            <a href="{% url 'tool_filter' %}">Tools</a>
+        </div>
+        <div class="tab">
+        <a href="{% url 'time_filter' %}">Time</a>
+        </div>
     </div>
-    <div class="tab current">
-        <a>Tools</a>
+    <div class="middle-section">
+        <input type="search" placeholder="Search recipes by tools...">
+        <div class="results-section">
+            <div class="result">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <p>Ingredient's Name</p>
+                <input type="checkbox">
+            </div>
+        </div>
     </div>
-    <div class="tab">
-    <a>Time</a>
+    <div class="bottom-section">
+        <p>Hide recipes that contain other tools?</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
     </div>
-</div>
-<div class="bottom-section">
-    <p>Hide recipes that contain other tools?</p>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
-    <button type="button"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
-
 </div>
 {% endblock %}
