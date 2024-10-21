@@ -5,6 +5,7 @@
     --on-variant: #ffffff;
     --surface:#fff8f5;
     --surface-container-highest: #cccccc;
+    --surface-container: #f0e2d7;
     }
     
     body {
@@ -87,6 +88,327 @@
 
     button img{
         height: 3vh;
+        width: 3vh;
+    }
+
+    input:checked + .slider {
+        background-color: var(--tertiary);
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px --tertiary;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(3vh);
+        -ms-transform: translateX(3vh);
+        transform: translateX(3vh);
+    }
+
+    input[type="search"]{
+        border: none;
+        border-radius: 24px 24px 0 0;
+        background-color: var(--surface-container);
+        width: 100%;
+        height: 5.15vh;
+    }
+
+    input[type="number"]{
+        width: 6vh;
+        height: 6vh;
+    }
+    
+    input[type="checkbox"]{
+        height: 3vh;:root{
+            --tertiary-fixed: #dbe8b5;
+            --tertiary: #58633a;
+            --on-surface-variant: #51453a;
+            --on-variant: #ffffff;
+            --surface:#fff8f5;
+            --surface-container-highest: #cccccc;
+            --surface-container: #f0e2d7;
+            }
+            
+            body {
+                height: 100vh;
+                background-color: var(--tertiary-fixed);
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                color: var(--on-surface-variant);
+                font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
+            }
+            
+            /* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+            
+            /*se a altura for maior que a largura*/
+            .mobile-frame{
+                width: 93vw; /*100 -7 por causa do padding*/
+                height: 93vh; /*100 -7 por causa do padding*/
+            
+            }
+            .landscape-mobile-warning{
+                visibility: hidden; /*esconde o aviso para virar o dispositivo*/
+                width: 0;
+                height: 0;
+            }
+            
+            /*se a largura for maior que a altura e a largura for maior que a largura de mobile*/
+            @media (orientation: landscape) and (min-width: 915px){
+                
+                .mobile-frame{
+                    height: 93vh; /*100-7 por causa do padding*/
+                    width: 49.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical. -7 por causa do padding*/
+                }
+                .landscape-mobile-warning{
+                    visibility: hidden; /*esconde o aviso para virar o dispositivo*/
+                    width: 0;
+                    height: 0;
+                }
+            }
+            
+            /*se a largura for maior que a altura e a largura é uma largura de mobile*/
+            @media (orientation: landscape) and (max-width: 915px){   
+                .mobile-frame{
+                    visibility: hidden;
+                    width: 0;
+                    height: 0;
+                }
+                .landscape-mobile-warning{
+                    visibility: visible;
+                    font-size: 4.34vh;/*pq troca de portrait para landscape ent a largura fica maior que a altura*/
+                    width: 93vw;/*100 -7 por causa do padding*/
+                    height: 93vh;/*100 -7 por causa do padding*/
+                }
+            }
+            
+            /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+            
+            /*TAGS HTML*/
+            
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        
+            button{
+                height: 5.5vh;
+                background-color: var(--tertiary);
+                color: var(--on-variant);
+                border: none;
+                border-radius: 24px;
+                font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
+                padding:1vh 3vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0.85vh;
+            }
+        
+            button img{
+                height: 3vh;
+                width: 3vh;
+            }
+        
+            input:checked + .slider {
+                background-color: var(--tertiary);
+            }
+            input:focus + .slider {
+                box-shadow: 0 0 1px --tertiary;
+            }
+            input:checked + .slider:before {
+                -webkit-transform: translateX(3vh);
+                -ms-transform: translateX(3vh);
+                transform: translateX(3vh);
+            }
+        
+            input[type="search"]{
+                border: none;
+                border-radius: 24px 24px 0 0;
+                background-color: var(--surface-container);
+                width: 100%;
+                height: 5.15vh;
+            }
+        
+            input[type="number"],select{
+                width: 6vh;
+                height: 100%;
+                background: none;
+                border: none;
+            }
+            
+            input[type="checkbox"]{
+                height: 3vh;
+                width: 3vh;
+            }
+            
+            /*FIM DE TAGS HTML*/
+            
+            /*CLASSES*/
+            
+            .mobile-frame{
+                padding: 3.5vh 3.5vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        
+            .landscape-mobile-warning{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8.4vh;
+            }
+        
+            .landscape-mobile-warning img{
+                width: 30vw;
+                height: 30vh;
+                transform: rotate(-90deg);
+                animation: turning 1s ease infinite alternate;
+            }
+        
+            .main-menu,.bottom-section{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3.5vh;
+            }
+        
+            .top-bar{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
+            }
+        
+            .left-top-bar{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content:left;
+            }
+        
+            .right-top-bar{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content:right;
+                gap: 2vh;
+            }
+        
+            .tabs-bar{
+                background: var(--surface);
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
+                border-bottom: solid thin var(--on-surface-variant);
+            }
+            
+            .tab{
+                flex-grow: 1;
+                height: 5.15vh;
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
+            }
+        
+            .tab p{
+                height: 100%;
+                line-height: 250%;
+            }
+        
+            .current{/*para tab atual, colocar nos a*/
+                border-bottom: solid var(--on-surface-variant);
+            }
+        
+            .logout-button{
+                background: none;
+                color: var(--on-surface-variant);
+                text-decoration: underline;
+            }
+        
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 7vh;
+                height: 4vh;
+            }
+            .switch input {/*escondendo o checkbox original*/
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                border-radius: 24px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: var(--surface-container-highest);
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            .slider:before {
+                position: absolute;
+                content: "";
+                border-radius: 50%;
+                height: 3vh;
+                width: 3vh;
+                left: 0.5vh;
+                bottom: 0.5vh;
+                background-color: var(--on-variant);
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            
+            .img-container{
+                width: 5vh;
+                height: 5vh;
+                border-radius: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img-container img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        
+            .result{
+                background-color: var(--surface);
+                width: 100%;
+                height: 5.15vh;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
+                border: solid thin var(--surface-container);
+            }
+        
+            .result p{
+                width: 30%;
+            }
+        
+            /*FIM DE CLASSES*/
+        
+            /*ANIMAÇÔES*/
+            @keyframes turning {
+                0% {transform: rotate(-90deg);}
+                100% {transform: rotate(0deg);}
+            }
+            /*FIM DE ANIMAÇÔES*/
+        
+        /* SWITCH CONFIG*/
+        
         width: 3vh;
     }
     
@@ -215,17 +537,35 @@
         -webkit-transition: .4s;
         transition: .4s;
     }
+    
+    .img-container{
+        width: 5vh;
+        height: 5vh;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
-    input:checked + .slider {
-        background-color: var(--tertiary);
+    .result{
+        background-color: var(--surface);
+        width: 100%;
+        height: 5.15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        border: solid thin var(--surface-container);
     }
-    input:focus + .slider {
-        box-shadow: 0 0 1px --tertiary;
-    }
-    input:checked + .slider:before {
-        -webkit-transform: translateX(3vh);
-        -ms-transform: translateX(3vh);
-        transform: translateX(3vh);
+
+    .result p{
+        width: 30%;
     }
 
     /*FIM DE CLASSES*/
