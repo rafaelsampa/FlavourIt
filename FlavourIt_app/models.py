@@ -12,6 +12,9 @@ class receita(models.Model):
     nome = models.TextField()
     tempo = models.TextField()
     instructions = models.TextField()
+    
+    def __str__(self):
+        return self.nome
 
 class valores_nutricionais(models.Model):
     id = models.BigIntegerField(primary_key=True)
