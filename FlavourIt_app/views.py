@@ -19,9 +19,8 @@ def recipe_results(request):
 def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
-def index(request):
-    lista = receita.nome.all()
-    context = {
-        'lista', lista 
-    }
-    return render(request, 'name_search.html', context)
+def receitasView(request):
+    query = "SELECT nome FROM receita"
+    receitas = receita.objects.raw(query)
+    
+    return render(request, 'name_search.html', {'Receitas':receitas})
