@@ -20,9 +20,14 @@
         </div>
     </div>
     <div class="bottom-section">
-        <form action="{% url 'recipe_results' %}" method="get">
-            <button type="submit"><img src="{% static 'graphics/arrow-left.svg' %}">Back</button>
-        </form>
+        <div class="two-buttons">
+            <form action="{% url 'recipe_results' %}" method="get">
+                <button type="submit"><img src="{% static 'graphics/arrow-left.svg' %}">Back</button>
+            </form>
+            <form action="{% url 'recipe_results' %}" method="get">
+                <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}
