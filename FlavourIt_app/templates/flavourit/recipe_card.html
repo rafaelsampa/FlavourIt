@@ -18,7 +18,7 @@
     </div>
 
     <div class="recipe-image">
-        <img src="{% static 'graphics/ratatouille_stock.svg' %}" alt="Remi">
+        <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"" alt="Remi">
     </div>
     <div class="recipe-info">
         <div class="quick-info">
@@ -53,16 +53,6 @@
         color: var(--on-surface-variant);
         font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
     }
-    
-    .tabs-bar{
-        width: 100%;
-        background: var(--surface-container);
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around;
-        align-items: center;
-        border-bottom: solid thin var(--on-surface-variant);
-    }
 
     /*header {
         background-color: #FAEBE0;
@@ -93,6 +83,7 @@
     }
 
     .recipe-info {
+        background-color: var(--surface-container);
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -100,12 +91,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-radius: 0;
+        border-radius: 0 0 24px 24px;
     }
     .quick-info{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     
 
