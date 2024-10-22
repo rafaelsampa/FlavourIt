@@ -19,6 +19,12 @@ def recipe_results(request):
 def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
+def recipe_card(request):
+    return render(request, 'flavourit/recipe_card.html')
+
+def name_search(request):
+    return render(request, 'flavourit/name_search.html')
+
 def receitasView(request):
     query = "SELECT nome FROM receita"
     receitas = receita.objects.raw(query)

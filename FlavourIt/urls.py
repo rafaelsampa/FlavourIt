@@ -24,4 +24,7 @@ urlpatterns = [
     path('time_filter/',views.time_filter,name='time_filter'),
     path('results/',views.recipe_results,name='recipe_results'),
     path('search/',views.name_search,name='name_search'),
+    path('time_filter/',views.time_filter,name='time_filter'),
+    path('recipe_card/',views.recipe_card,name='recipe_card'),
+    path('name_search/', views.name_search, name='name_search'),
 ]
