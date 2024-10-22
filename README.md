@@ -158,8 +158,11 @@
 <h2>Entrega 2</h2>
 
 <details>
-    <summary>Diagrama de Atividade do Sistema</summary>
-    <img src="readme_graphics/Atividades.png" width="100%">
+    <summary>Diagramas de Atividade do Sistema</summary>
+    <h4>História 1</h4>
+    <img src="readme_graphics/Atividades1.png" width="100%">
+    <h4>Histórias 2 e 3</h4>
+    <img src="readme_graphics/Atividades23.png" width="100%">
   </details>
 
 <details>
