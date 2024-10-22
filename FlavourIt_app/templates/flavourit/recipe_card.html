@@ -1,0 +1,170 @@
+{% extends 'flavourit/base.html' %}
+{% block conteudo %}
+{% load static %}
+
+<div class="filter-frame">
+    <div class="tabs-bar">
+        <div class="tab current">
+            <a href="{% url 'ingredient_filter' %}">Recipe</a>
+        </div>
+        <div class="tab">
+            <a href="{% url 'tool_filter' %}">Nutritional data</a>
+        </div>
+    </div>
+<div>
+    <div class="header">
+        <p>Ratatouille</p>
+        <!--<button class="more-options">⋮</button>-->
+    </div>
+
+    <div class="recipe-image">
+        <img src="{% static 'graphics/ratatouille_stock.svg' %}" alt="Remi">
+    </div>
+    <div class="recipe-info">
+        <div class="quick-info">
+            <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
+            <p>00:00</p>
+            <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
+            <p>00</p>
+        </div>
+        <div>
+            <ul>
+            <li>0 ml ingredients</li>
+            <li>0 ml ingredients</li>
+            <li>0 ml ingredients</li> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+   * {
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        background-color: var(--tertiary-fixed);
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: var(--on-surface-variant);
+        font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
+    }
+    
+    .tabs-bar{
+        width: 100%;
+        background: var(--surface-container);
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        border-bottom: solid thin var(--on-surface-variant);
+    }
+
+    /*header {
+        background-color: #FAEBE0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        padding: 20px;
+        height: auto;
+    }*/
+    
+
+    .recipe-image {
+        /*padding-bottom: 0;*/
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .recipe-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .recipe-info {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0;
+    }
+    .quick-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+
+    .stat-item img {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+
+    .more-options {
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 5px;
+        transition: color 0.3s;
+    }
+
+    .more-options:active {
+        color: #2e0f0f;
+    }
+
+    .quick-info img{
+        width: 3vh;
+        height: 3vh;
+    }
+
+    
+    html, body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*@media (max-width: 768px) {
+
+        .recipe-header {
+            font-size: 1.2rem;
+        }
+
+        .recipe-image {
+            padding-bottom: 80%;
+        }
+    }*/
+
+    @media (max-width: 480px) {
+        .recipe-header h2 {
+            font-size: 1rem;
+        }
+
+        .recipe-image img {
+            height: 50%;
+        }
+    }
+
+</style>
+
+{% endblock %}
