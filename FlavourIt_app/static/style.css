@@ -110,7 +110,7 @@
                 width: 100%;
                 height: 5.15vh;
             }
-        
+
             input[type="number"],select{
                 width: 6vh;
                 height: 100%;
@@ -316,6 +316,21 @@
                 align-items: center;
                 height: 72.5vh;
                 text-align: center;
+            }
+
+            .header{
+                border-radius: 24px 24px 0 0;
+                background-color: var(--surface-container);
+                width: 100%;
+                height: 5.15vh;
+            }
+
+            .result-info{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         
             /*FIM DE CLASSES*/

@@ -22,4 +22,6 @@ urlpatterns = [
     path('ingredient_filter/',views.ingredient_filter,name='ingredient_filter'),
     path('tool_filter/',views.tool_filter,name='tool_filter'),
     path('time_filter/',views.time_filter,name='time_filter'),
+    path('results/',views.recipe_results,name='recipe_results'),
+    path('search/',views.name_search,name='name_search'),
 ]

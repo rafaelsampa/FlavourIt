@@ -11,3 +11,9 @@ def tool_filter(request):
 
 def time_filter(request):
     return render(request, 'flavourit/time_filter.html')
+
+def recipe_results(request):
+    return render(request, 'flavourit/recipe_results.html')
+
+def name_search(request):
+    return render(request, 'flavourit/name_search.html')
