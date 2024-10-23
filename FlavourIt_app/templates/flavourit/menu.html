@@ -1,15 +1,6 @@
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<div class="top-bar">
-    <div class="left-top-bar">
-        <img src="{% static 'graphics/logo.svg' %}">
-    </div>
-    <div class="right-top-bar">
-        <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
-        <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
-    </div>
-</div>
 <div class="main-menu">
     <form action="{% url 'ingredient_filter' %}" method="get">
         <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Ingredients</button>
