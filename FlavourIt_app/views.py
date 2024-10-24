@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import receita
+from .forms import *
 
 def menu(request):
     return render(request, 'flavourit/menu.html')
@@ -25,8 +25,7 @@ def recipe_card(request):
 def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
-def receitasView(request):
-    query = "SELECT nome FROM receita"
-    receitas = receita.objects.raw(query)
+def receitas(request):
+    form = receita.objects.all()
     
-    return render(request, 'name_search.html', {'Receitas':receitas})
+    return render(request, 'name_search.html', {'Receitas':form})
