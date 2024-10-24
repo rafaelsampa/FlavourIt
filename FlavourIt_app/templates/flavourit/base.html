@@ -15,23 +15,7 @@
 
     </head>
     <body>
-
         <div class="mobile-frame">
-
-            <div class="top-bar">
-                <div class="left-top-bar">
-
-                    <form action="{% url 'menu' %}" method="get">
-                        <input type="image" src="{% static 'graphics/logo.svg' %}" name="submit" width="42" height="42" alt="submit"/>
-                    </form>
-
-                </div>
-                <div class="right-top-bar">
-                    <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
-                    <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
-                </div>
-            </div>
-
             {% block conteudo %} 
             {% endblock %}
         </div>
