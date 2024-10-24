@@ -2,10 +2,10 @@
 {% block conteudo %}
 {% load static %}
 
-<div class="filter-frame">
-    <div class="tabs-bar">
+<div class="filter-frame" style=" "> 
+    <div class="tabs-bar"> 
         <div class="tab current">
-            <a href="{% url 'ingredient_filter' %}">Recipe</a>
+            <a href="{% url 'frame9' %}">Recipe</a>
         </div>
         <div class="tab">
             <a href="{% url 'tool_filter' %}">Nutritional data</a>
@@ -23,45 +23,25 @@
     <div class="recipe-info">
         <div class="quick-info">
             <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
-            <span>00:00</span></div>
+            <p>40:00</p>
             <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
-            <span>00</span>
+            <p>00</p>
         </div>
         <div>
-            <ul style="list-style-type:circle">
-            <li>・0 ml ingredients</li>
-            <li>・0 ml ingredients</li>
-            <li>・0 ml ingredients</li> 
-            </ul>
-        </div>
-    
-    </div>
-    <div class="recipe-details">
-        <div class="ingredients-section">
             <ul>
-                {% for ingredient in recipe.ingredients %}
-                    <li>0 ml {{ ingredient }}</li>
-                {% endfor %}
+            <li>0 ml ingredients</li>
+            <li>0 ml ingredients</li>
+            <li>0 ml ingredients</li> 
             </ul>
         </div>
-
-        <div class="steps-section">
-            <ol>
-                {% for step in recipe.steps %}
-                    <li>{{ step }}</li>
-                {% endfor %}
-            </ol>
-        </div>
     </div>
+    
 </div>
-</div>
+    
 
 <style>
-    
-   * {
-        box-sizing: border-box;
-    }
 
+    
     body {
         height: 100vh;
         background-color: var(--tertiary-fixed);
@@ -70,34 +50,60 @@
         flex-direction: row;
         justify-content: center;
         color: var(--on-surface-variant);
-        font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
+        font-size: 2vh;
     }
-   
-    
+
+    .header {
+        display: flex;
+        font-size: 1.25rem;
+        justify-content: space-evenly;
+        background-color: var(--surface-container); 
+        width: 100%;  
+        max-width: 353.38px;
+        
+    }
+
     .tabs-bar{
         width: 100%;
-        background: var(--surface-container);
+        background: var(--surface);
         display: flex;
         flex-direction: row;
         justify-content:space-around;
         align-items: center;
         border-bottom: solid thin var(--on-surface-variant);
+        
     }
 
-    /*header {
-        background-color: #FAEBE0;
+    .tab{
+        flex-grow: 1;
+        height: 5.15vh;
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content:center;
         align-items: center;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-        padding: 20px;
+    }
+
+    .tab a{
+        height: 100%;
+        line-height: 250%;
+        color: #51453a;
+        text-decoration: none;
+    }
+
+    .filter-frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: center;
+        width: 100%;  
+        max-width: 353.38px; 
         height: auto;
-    }*/
-    
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 
     .recipe-image {
-        /*padding-bottom: 0;*/
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -113,78 +119,28 @@
     }
 
     .recipe-info {
-        width: 100%;
+        background-color: var(--surface-container);
+        width: 100%;  
+        max-width: 353.38px; 
         height: auto;
         overflow: hidden;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-radius: 0;
+        border-radius: 0 0 24px 24px;
+        padding-bottom: 150px;
     }
-    .quick-info{
+
+    .quick-info {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
+        width: 100%;
     }
     
-
-    .stat-item img {
-        width: 28px;
-        height: 28px;
-        margin-bottom: 5px;
-    }
-
-
-    .more-options {
-        width: 35px;
-        height: 35px;
-        background-color: transparent;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 5px;
-        transition: color 0.3s;
-    }
-
-    .more-options:active {
-        color: #2e0f0f;
-    }
-
-    .quick-info img{
-        width: 3vh;
-        height: 3vh;
-    }
-
-    
-    html, body {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /*@media (max-width: 768px) {
-
-        .recipe-header {
-            font-size: 1.2rem;
-        }
-
-        .recipe-image {
-            padding-bottom: 80%;
-        }
-    }*/
-
-    @media (max-width: 480px) {
-        .recipe-header h2 {
-            font-size: 1rem;
-        }
-
-        .recipe-image img {
-            height: 50%;
-        }
-    }
-
 </style>
+
+
 
 {% endblock %}
