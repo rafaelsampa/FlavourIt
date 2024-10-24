@@ -155,6 +155,7 @@
   <details>
     <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Screencast</a> do protótipo </summary>
   </details>
+  
 <h2>Entrega 2</h2>
 
 <details>
@@ -234,6 +235,13 @@ CREATE TABLE Receita (
     Instruções TEXT NOT NULL
 
 ```
+  </details>
+
+<details>
+    <summary>Relatório de Programação em Par</summary>
+    <p>
+      Dividimos o grupo em duplas, e cada dupla ficou com uma tarefa diferente, como Front-end, Back-end, implementação de testes, entre outras. As duplas e suas respectivas tarefas foram escolhidas aleatoriamente. Algumas duplas conseguiram implementar a Programação em Pares e outras não, devido a implicações como: horários que não coincidem, ou uma tarefa muito simples. Outras duplas ainda trabalharam atravéz de chamadas on-line. Já as duplas que conseguiram implementar perceberam que ajudou bastante, principalmente para desenvolver a lógica do programa, para acertar questões que não ficaram claras e escrever o código muito mais rápido e evitando pequenos erros que uma pessoa só demoraria para perceber. Continuaremos a aplicar a Programação em Pares ao decorrer do projeto, trocando as duplas para deixar mais dinâmico e percebendo como cada uma delas trabalha melhor e para otimização do desenvolvimento do FlavourIt.
+    </p>
   </details>
 
 <h2>Créditos</h2>
