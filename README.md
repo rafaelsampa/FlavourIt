@@ -177,15 +177,14 @@
   <details>
     <summary>Modelo Físico</summary>
     
-```sql
-    
+```sql   
 CREATE TABLE Cliente (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL,
     Altura REAL,
     Peso REAL,
     Atividade TEXT
-
+)
 
 CREATE TABLE Favoritado (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -193,7 +192,7 @@ CREATE TABLE Favoritado (
     Id_Cliente INT,
     FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
     FOREIGN KEY (Id_Cliente) REFERENCES Cliente(Id)
-
+)
 
 CREATE TABLE Ingrediente (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -203,7 +202,7 @@ CREATE TABLE Ingrediente (
     Unidade TEXT,
     FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
     FOREIGN KEY (Id_Val_Nutri) REFERENCES Valores_Nutricionais(Id)
-
+)
 
 CREATE TABLE Valores_Nutricionais (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -213,7 +212,7 @@ CREATE TABLE Valores_Nutricionais (
     Proteina REAL,
     Porção REAL,
     Unidade TEXT
-
+)
 
 CREATE TABLE Receita_Utensilio (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -221,19 +220,19 @@ CREATE TABLE Receita_Utensilio (
     Id_Utensilio INT,
     FOREIGN KEY (Id_Receita) REFERENCES Receita(Id),
     FOREIGN KEY (Id_Utensilio) REFERENCES Utensilio(Id)
-
+)
 
 CREATE TABLE Utensilio (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL
-
+)
 
 CREATE TABLE Receita (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Nome TEXT NOT NULL,
     Tempo TEXT NOT NULL,
     Instruções TEXT NOT NULL
-
+)
 ```
   </details>
 
