@@ -17,7 +17,7 @@ class receita(models.Model):
         return self.nome
 
 class valores_nutricionais(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
     gordura = models.DecimalField(max_digits=2, decimal_places=2)
     carboidrato = models.DecimalField(max_digits=2, decimal_places=2)
