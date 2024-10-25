@@ -15,9 +15,9 @@
                 <div class="img-container">
                     <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                 </div>
-                    {% for r in receitas%}
-                        <p>{{ receitas.nome }}</p>
-                    {% endfor %}
+                {% for r in receitas%}
+                    <p>{{ r.nome }}</p>
+                {% endfor %}
                 </div>
         </div>
     </div>

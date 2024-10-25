@@ -26,6 +26,7 @@ def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
 def receitas(request):
-    form = receita.objects.all()
+    query = "SELECT nome FROM receita"
+    form = receita.objects.raw(query)
     
-    return render(request, 'name_search.html', {'Receitas':form})
+    return render(request, 'templates/flavourit/name_search.html', {'Receitas':form})
