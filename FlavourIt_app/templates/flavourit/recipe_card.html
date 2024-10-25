@@ -18,22 +18,47 @@
     </div>
 
     <div class="recipe-image">
-        <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"" alt="Remi">
+        <img src="{% static 'graphics/ratatouille_stock.svg' %}" alt="Remi">
     </div>
+
+    
     <div class="recipe-info">
         <div class="quick-info">
             <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
-            <p>00:00</p>
+            <p>01:30</p>
             <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
-            <p>00</p>
+            <p>08</p>
         </div>
-        <div>
-            <ul>
-            <li>0 ml ingredients</li>
-            <li>0 ml ingredients</li>
-            <li>0 ml ingredients</li> 
-            </ul>
+
+        <div class="container">
+            <div class="ingredients-list">
+                <ul>
+                    <li>2 eggplants</li>
+                    <li>6 roma tomatoes</li>
+                    <li>2 yellow squashes</li> 
+                    <li>2 zucchinis</li> 
+                    <li>2 tablespoons olive oil</li>
+                    <li>1 medium white onion</li>
+                    <li>4 cloves garlic</li>
+                    <li>1 red bell pepper</li>
+                    <li>1 yellow bell pepper</li>
+                    <li>salt, to taste</li>
+                    <li>ground black pepper, to taste</li>
+                    <li>28 oz crushed tomatoes(795 g)</li>
+                    <li>2 tablespoons basil</li>
+                </ul>
+            </div>
+            <div class="steps-list">
+                <ul>
+                <li>Preheat the oven for 375˚F (190˚C).</li>
+                <li>Slice the eggplant, tomatoes, squash, and zucchini into approximately ¹⁄₁₆-inch (1-mm)-thick rounds</li>
+                <li>Set aside.</li>
+                <li>Heat the olive oil in a 12-inch (30-cm) oven-safe pan over medium-high heat</li>
+                <li>Sauté the onion, garlic, and bell peppers until soft, about 10 minutes</li>
+                </ul>
+            </div>
         </div>
+
     </div>
 </div>
 
@@ -54,20 +79,20 @@
         font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
     }
 
-    /*header {
+    header {
         background-color: #FAEBE0;
         display: flex;
+        font-size: 1.25rem;
         justify-content: space-between;
         align-items: center;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
         padding: 20px;
         height: auto;
-    }*/
+    }
     
 
     .recipe-image {
-        /*padding-bottom: 0;*/
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -127,6 +152,15 @@
         height: 3vh;
     }
 
+    .ingredients-list {
+        float:left;
+        width:50%;
+    }
+
+    .steps-list {
+        float:right;
+        width:50%;
+    }
     
     html, body {
         height: 100%;

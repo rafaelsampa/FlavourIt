@@ -9,7 +9,6 @@
             }
             
             body {
-                padding-top: 42;
                 height: 100vh;
                 background-color: var(--tertiary-fixed);
                 margin: 0;
