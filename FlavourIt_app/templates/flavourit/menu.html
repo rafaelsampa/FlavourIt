@@ -3,7 +3,9 @@
 {% load static %}
 <div class="top-bar">
     <div class="left-top-bar">
-        <img src="{% static 'graphics/logo.svg' %}">
+        <form action="{% url 'menu' %}" method="get">
+            <input type="image" src="{% static 'graphics/logo.svg' %}" name="submit" width="42" height="42" alt="submit"/>
+        </form>
     </div>
     <div class="right-top-bar">
         <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
