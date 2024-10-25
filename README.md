@@ -155,6 +155,14 @@
   <details>
     <summary><a href="https://youtu.be/5GE4Y1hyeDc?si=nGn4n-lUW51F5HMS">Screencast</a> do protótipo </summary>
   </details>
+
+  <details>
+    <summary>Conclusão da sprint</summary>
+      <h4>Quadro sprint</h4>
+      <img src="readme_graphics/quadro%20s1.png" width="100%">
+      <h4>Backlog</h4>
+      <img src="readme_graphics/backlog%20atual%20s2.png" width="100%">
+  </details>
   
 <h2>Entrega 2</h2>
 
@@ -235,6 +243,12 @@ CREATE TABLE Receita (
 )
 ```
   </details>
+
+  <details>
+    <summary>Issue/Bug Tracker Atual</summary>
+    <img src="readme_graphics/bug%20tracker.png" width="100%">
+  </details>
+
 
 <details>
     <summary>Relatório de Programação em Par</summary>
