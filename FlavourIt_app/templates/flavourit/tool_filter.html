@@ -13,18 +13,25 @@
         <a href="{% url 'time_filter' %}">Time</a>
         </div>
     </div>
+
     <div class="middle-section">
         <input type="search" placeholder="Search recipes by tools...">
         <div class="results-section">
+
+            <form action="{% url 'search_by_tools' %}" method="get">  <!-- Added form -->
+                {% for utensilio in utensilios %}
+
             <div class="result">
                 <div class="img-container">
                     <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                 </div>
-                <p>Ingredient's Name</p>
-                <input type="checkbox">
+                <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
+                <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
             </div>
+            {% endfor %}
         </div>
     </div>
+    
     <div class="bottom-section">
         <p>Hide recipes that contain other tools?</p>
         <label class="switch">

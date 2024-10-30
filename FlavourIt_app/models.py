@@ -26,7 +26,7 @@ class valores_nutricionais(models.Model):
     unidade = models.TextField()
 
 class utensilio(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
     
 class favoritado(models.Model):

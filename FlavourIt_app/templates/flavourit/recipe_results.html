@@ -1,3 +1,4 @@
+
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
@@ -11,6 +12,8 @@
   <div class="middle-section">
     <div class="header"><!--TODO: ordenação das receitas--></div>
     <div class="results-section">
+      {% if recipes %}
+      {% for recipe in recipes %}
       <div class="result">
           <div class="img-container">
             <form action="{% url 'recipe_card' %}" method="get">
@@ -19,7 +22,7 @@
 
             <img src="">
           </div>
-          <p>Recipe's Name</p>
+          <p>{{ recipe.nome }}</p>
           <div class="result-info">
             <p>00:00</p>
             <img src="{% static 'graphics/clock.svg' %}" alt="Time">
@@ -28,6 +31,8 @@
           </div>
           <!--TODO: número de "favoritadas" que uma receita tem-->
       </div>
+      {% endfor %}
+      {% endif %}
   </div>
   </div>
 </div>

@@ -4,29 +4,29 @@
 <div class="filter-frame">
     <div class="tabs-bar">
         <div class="tab current">
-        <a href="{% url 'ingredient_filter' %}">Pick a Recipe</a>
-    </div>
+            <a href="{% url 'ingredient_filter' %}">Pick a Recipe</a>
+        </div>
     </div>
 
     <div class="middle-section">
-        <input type="search" placeholder="Search recipes by ingredients...">
-        <div class="results-section">
-            <div class="result">
-                <div class="img-container">
-                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <form action="{% url 'search_by_name' %}" method="get">
+            <input type="search" name="name" placeholder="Search recipes by name...">
+            <div class="results-section">
+                <div class="result">
+                    <div class="img-container">
+                        <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                    {% for r in receitas%}
+                        <p>{{ r.nome }}</p>
+                    {% endfor %}
                 </div>
-                {% for r in receitas%}
-                    <p>{{ r.nome }}</p>
-                {% endfor %}
+            </div>
+            <div class="bottom-section">
+                <div class="search-button">
+                    <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
                 </div>
-        </div>
-    </div>
-    <div class="bottom-section">
-        <div class="search-button">
-            <form action="{% url 'recipe_results' %}" method="get">
-                <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}
