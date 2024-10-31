@@ -9,7 +9,9 @@
     </div>
     <div class="right-top-bar">
         <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
-        <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
+        <a href="{% url 'account' %}">
+            <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
+        </a>
     </div>
 </div>
 <div class="main-menu">

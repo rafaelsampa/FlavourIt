@@ -86,7 +86,7 @@
                 gap: 0.85vh;
             }
         
-            button img{
+            button img, .top-bar img{
                 height: 3vh;
                 width: 3vh;
             }
@@ -130,6 +130,11 @@
                 width: 22vh;
                 text-align: center;
                 font-size: 4vh;
+            }
+
+            input[type="date"]{
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
             }
             
             /*FIM DE TAGS HTML*/
@@ -342,6 +347,49 @@
                 justify-content:center;
                 align-items: center;
                 gap: 3vh;
+            }
+            
+            .container_account{
+                border: thin solid var(--on-surface-variant);
+                background-color: var(--surface-container);
+                d
+                justify-content: center;
+                align-items: center;
+            }
+
+            .two-buttons{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
+                gap: 3vh;
+            }
+            
+            .container_account{
+                border: thin solid var(--on-surface-variant);
+                background-color: var(--surface-container);
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
+            }
+            .select_wrapper select{
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .select_wrapper, .container_account {
+                width: 24vh;
+                height: 6vh;
+            }
+
+            .label_account{
+                font-size: 1.7vh;/*o tamanho original era 12pt que equivale a 16 px. 16 px corresponde a 1.7% da altura, ou seja 1.7vh*/
+                margin-bottom: -4.5vh;
+                margin-left: 16vh;
+                z-index: 10000;
+                background-color: var(--surface);
             }
         
             /*FIM DE CLASSES*/

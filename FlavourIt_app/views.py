@@ -17,8 +17,8 @@ def recipe_results(request):
 def recipe_card(request):
     return render(request, 'flavourit/recipe_card.html')
 
-def profile(request):
-    return render(request, 'flavourit/profile.html')
+def account(request):
+    return render(request, 'flavourit/account.html')
 
 # ======== Fim de views para URLs ========
 
