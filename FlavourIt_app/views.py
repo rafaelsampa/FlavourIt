@@ -3,11 +3,10 @@ from .forms import *
 from .models import receita, valores_nutricionais,utensilio
 from .utils import insert_recipe
 
+# ======== Views para URLs ========
+
 def menu(request):
     return render(request, 'flavourit/menu.html')
-
-def tool_filter(request):
-    return render(request, 'flavourit/tool_filter.html')
 
 def time_filter(request):
     return render(request, 'flavourit/time_filter.html')
@@ -18,13 +17,20 @@ def recipe_results(request):
 def recipe_card(request):
     return render(request, 'flavourit/recipe_card.html')
 
+def profile(request):
+    return render(request, 'flavourit/profile.html')
+
+# ======== Fim de views para URLs ========
+
+# ======== Views para Queries ========
+
 def receitas(request):
     query = "SELECT nome FROM receita"
     form = receita.objects.raw(query)
     
     return render(request, 'templates/flavourit/name_search.html', {'Receitas':form})
 
-### FUNCIONOOOUUUUOOOOOUUOUOUUOOUUOUOUOUO
+## FUNCIONOOOUUUUOOOOOUUOUOUUOOUUOUOUOUO
 def ingredient_filter(request):
     ingredients = valores_nutricionais.objects.all()
     return render(request, 'flavourit/ingredient_filter.html', {'ingredients': ingredients})
@@ -42,9 +48,9 @@ def search_by_ingredients(request):
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
-###
+##
 
-### NAME search okay bro!!!!!!!
+## NAME search okay bro!!!!!!!
 def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
@@ -58,10 +64,6 @@ def search_by_name(request):
         recipes = receita.objects.all()  # If no query, show all recipes
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes, 'query': query})
-
-###
-
-###
 
 def tool_filter(request):
     utensilios = utensilio.objects.all()
@@ -80,4 +82,4 @@ def search_by_tools(request):
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
-###
+# ======== Fim de views para Queries ========

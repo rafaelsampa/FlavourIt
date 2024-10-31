@@ -34,5 +34,6 @@ urlpatterns = [
 
     path('tool_filter/',views.tool_filter,name='tool_filter'),
     path('search_by_tools/', views.search_by_tools, name='search_by_tools'),
+    path('profile/', views.profile, name='profile'),
 
 ]
