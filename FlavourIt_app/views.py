@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import *
 from .models import receita, valores_nutricionais,utensilio
-from .utils import insert_recipe
+from datetime import datetime
 
 # ======== Views para URLs ========
 
@@ -81,5 +81,27 @@ def search_by_tools(request):
         recipes = receita.objects.all()  # Show all recipes if no tools are selected
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
+### funciona kkkkkkkkk
+def time_filter(request):
+    return render(request, 'flavourit/time_filter.html')
+
+def search_by_time(request):
+    
+    user_time = request.GET.get('recipe-time')  # Retrieve the time input from the form
+    
+    if user_time:
+        # Convert `hh:mm` (user input) to `hh:mm:ss` for compatibility with `tempo`
+        user_time_obj = datetime.strptime(user_time, "%H:%M")
+        user_time_formatted = user_time_obj.strftime("%H:%M:%S")
+        
+        # Filter recipes with `tempo` less than or equal to the user's time
+        recipes = receita.objects.filter(tempo__lte=user_time_formatted)
+    else:
+        recipes = receita.objects.all()  # Show all recipes if no time specified
+
+    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
+###
 
 # ======== Fim de views para Queries ========

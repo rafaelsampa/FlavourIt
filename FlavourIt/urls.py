@@ -21,7 +21,6 @@ urlpatterns = [
     path('',views.menu,name='menu'),
     path('time_filter/',views.time_filter,name='time_filter'),
     path('search/',views.name_search,name='name_search'),
-    path('time_filter/',views.time_filter,name='time_filter'),
     path('recipe_card/',views.recipe_card,name='recipe_card'),
     
     path('name_search/', views.name_search, name='name_search'),
@@ -34,6 +33,10 @@ urlpatterns = [
 
     path('tool_filter/',views.tool_filter,name='tool_filter'),
     path('search_by_tools/', views.search_by_tools, name='search_by_tools'),
+
     path('account/', views.account, name='account'),
+
+    path('time_filter/',views.time_filter,name='time_filter'),
+    path('search_by_time/',views.search_by_time,name='search_by_time'),
 
 ]
