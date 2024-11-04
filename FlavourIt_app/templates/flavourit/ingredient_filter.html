@@ -16,40 +16,39 @@
     </div>
 
     <div class="middle-section">
-        <input type="search" placeholder="Search recipes by ingredients...">
-        <div class="results-section">
-            <form action="{% url 'search_by_ingredients' %}" method="get">  <!-- Added form -->
+        <form action="{% url 'search_by_ingredients' %}" method="get">  <!-- Added form -->
+            <input type="search" placeholder="Search recipes by ingredients...">
+            <div class="results-section">
                 {% for ingredient in ingredients %}
 
-            <div class="result">
-                <div class="img-container">
-                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="result">
+                    <div class="img-container">
+                        <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                    <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
+                    <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id }}">
+                        <select>
+                            <option value="ml">ml</option>
+                            <option value="l">l</option>
+                            <option value="tsp">tsp</option>
+                            <option value="tbsp">tbsp</option>
+                            <option value="cup">cup</option>
+                            <option value="g">g</option>
+                            <option value="kg">kg</option>
+                        </select>
+                    <input type="checkbox"id="ingredient_{{ ingredient.id }}" name="ingredients" value="{{ ingredient.id }}">
                 </div>
-                <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
-                <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id }}">
-                <select>
-                    <option value="ml">ml</option>
-                    <option value="l">l</option>
-                    <option value="tsp">tsp</option>
-                    <option value="tbsp">tbsp</option>
-                    <option value="cup">cup</option>
-                    <option value="g">g</option>
-                    <option value="kg">kg</option>
-                </select>
-                <input type="checkbox"id="ingredient_{{ ingredient.id }}" name="ingredients" value="{{ ingredient.id }}">
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    </div>
 
-    <div class="bottom-section">
-        <p>Hide recipes that contain other ingredients?</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <form action="{% url 'recipe_results' %}" method="get">
-            <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+            <div class="bottom-section">
+                <p>Hide recipes that contain other ingredients?</p>
+                <label class="switch">
+                    <input type="checkbox" name="busca_exclusiva" id="busca_exclusiva">
+                    <span class="slider"></span>
+                </label>
+                <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+            </div>
         </form>
     </div>
 </div>

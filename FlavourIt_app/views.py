@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .forms import *
 from .models import receita, valores_nutricionais,utensilio
 from datetime import datetime
+from django.db.models import Count, Q, F
+
 
 # ======== Views para URLs ========
 
@@ -37,16 +39,30 @@ def ingredient_filter(request):
 
 def search_by_ingredients(request):
     selected_ingredients = request.GET.getlist('ingredients')
+    busca_exclusiva = request.GET.get('busca_exclusiva')  # Returns 'on' if checked
+    #print("busca:::::::::"+busca_exclusiva);
 
     if selected_ingredients:
-        # Filter recipes based on selected ingredient IDs
-        recipes = receita.objects.filter(
-            ingredient__id_val_Nutri__id__in=selected_ingredients
-        ).distinct()
+        # Start with recipes that include all selected ingredients
+        recipes = receita.objects.filter(ingredient__id_val_Nutri__id__in=selected_ingredients).distinct()
+
+        #if busca_exclusiva == 'on':
+        #    recipes = recipes.annotate(
+        #        ingredient_count=Count('ingredient'),  # Total ingredients in each recipe
+        #        matched_ingredients_count=Count(
+        #            'ingredient',
+        #            filter=Q(ingredient__id_val_Nutri__id__in=selected_ingredients)
+        #       )  # Ingredients that match the selected list
+        #    ).filter(
+        #        ingredient_count=F('matched_ingredients_count')
+        #    )
+
     else:
-        recipes = receita.objects.all()  # Show all recipes if no ingredients selected
+        # If no ingredients are selected, return all recipes
+        recipes = receita.objects.all()
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
 
 ##
 
