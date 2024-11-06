@@ -15,32 +15,32 @@
     </div>
 
     <div class="middle-section">
-        <input type="search" placeholder="Search recipes by tools...">
-        <div class="results-section">
-
-            <form action="{% url 'search_by_tools' %}" method="get">  <!-- Added form -->
+        <form action="{% url 'search_by_tools' %}" method="get">  <!-- Added form -->
+            <input type="search" placeholder="Search recipes by tools...">
+            <div class="results-section">
                 {% for utensilio in utensilios %}
 
-            <div class="result">
-                <div class="img-container">
-                    <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="result">
+                    <div class="img-container">
+                        <img src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    </div>
+                    <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
+                    <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
                 </div>
-                <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
-                <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    </div>
+
     
-    <div class="bottom-section">
-        <p>Hide recipes that contain other tools?</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <form action="{% url 'recipe_results' %}" method="get">
-            <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+            <div class="bottom-section">
+                <p>Hide recipes that contain other tools?</p>
+                <label class="switch">
+                    <input type="checkbox" name="busca_exclusiva" id="busca_exclusiva">
+                    <span class="slider"></span>
+                </label>
+                <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search</button>
+            </div>
         </form>
     </div>
 </div>
+
 {% endblock %}

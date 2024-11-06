@@ -40,22 +40,31 @@ def ingredient_filter(request):
 def search_by_ingredients(request):
     selected_ingredients = request.GET.getlist('ingredients')
     busca_exclusiva = request.GET.get('busca_exclusiva')  # Returns 'on' if checked
-    #print("busca:::::::::"+busca_exclusiva);
+    #for ingredientes in selected_ingredients:
+    #    print(ingredientes)
 
     if selected_ingredients:
         # Start with recipes that include all selected ingredients
         recipes = receita.objects.filter(ingredient__id_val_Nutri__id__in=selected_ingredients).distinct()
 
-        #if busca_exclusiva == 'on':
-        #    recipes = recipes.annotate(
-        #        ingredient_count=Count('ingredient'),  # Total ingredients in each recipe
-        #        matched_ingredients_count=Count(
-        #            'ingredient',
-        #            filter=Q(ingredient__id_val_Nutri__id__in=selected_ingredients)
-        #       )  # Ingredients that match the selected list
-        #    ).filter(
-        #        ingredient_count=F('matched_ingredients_count')
-        #    )
+        if busca_exclusiva == 'on':
+            exclusive_recipe_ids = []
+            for recipe in recipes:
+                #print(f"Recipe: {recipe.nome},")
+                # Get all ingredient IDs in this recipe
+                recipe_ingredient_ids = set(recipe.ingredient_set.values_list('id_val_Nutri__id', flat=True))
+                #for ingredientes in recipe_ingredient_ids:
+                #    print(ingredientes)
+
+                # string to int
+                selected_ingredients = set(map(int, selected_ingredients))
+                # Check if recipe ingredients are a subset of selected ingredients
+                if recipe_ingredient_ids.issubset(selected_ingredients):
+                    exclusive_recipe_ids.append(recipe.id)
+
+
+            # Filter to only include recipes that matched the exclusive criteria
+            recipes = recipes.filter(id__in=exclusive_recipe_ids)
 
     else:
         # If no ingredients are selected, return all recipes
@@ -87,12 +96,32 @@ def tool_filter(request):
 
 def search_by_tools(request):
     selected_tools = request.GET.getlist('utensilios')  # Ensure 'tools' matches the input name in your HTML
+    busca_exclusiva = request.GET.get('busca_exclusiva')
 
     if selected_tools:
         # Filter recipes based on selected tool IDs
-        recipes = receita.objects.filter(
-            receita_utensilio__id_utensilio__id__in=selected_tools
-        ).distinct()
+        recipes = receita.objects.filter(receita_utensilio__id_utensilio__id__in=selected_tools).distinct()
+
+        if busca_exclusiva == 'on':
+            exclusive_recipe_ids = []
+            for recipe in recipes:
+                #print(f"Recipe: {recipe.nome},")
+                # Get all ingredient IDs in this recipe
+                recipe_tools_ids = set(recipe.receita_utensilio_set.values_list('id_utensilio__id', flat=True))
+                #for ingredientes in recipe_ingredient_ids:
+                #    print(ingredientes)
+
+                # string to int
+                selected_tools = set(map(int, selected_tools))
+                # Check if recipe ingredients are a subset of selected ingredients
+                if recipe_tools_ids.issubset(selected_tools):
+                    exclusive_recipe_ids.append(recipe.id)
+
+
+            # Filter to only include recipes that matched the exclusive criteria
+            recipes = recipes.filter(id__in=exclusive_recipe_ids)
+
+
     else:
         recipes = receita.objects.all()  # Show all recipes if no tools are selected
 
