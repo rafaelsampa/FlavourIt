@@ -14,7 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.urls import path, include
+from django.contrib import admin
 from FlavourIt_app import views
 
 urlpatterns = [
@@ -34,8 +35,10 @@ urlpatterns = [
     path('tool_filter/',views.tool_filter,name='tool_filter'),
     path('search_by_tools/', views.search_by_tools, name='search_by_tools'),
 
-    path('account/', views.account, name='account'),
-
+    path('config_account/', views.configAccount, name='account'),
+    path("admin/", admin.site.urls),
+    path("accounts/", include("accounts.urls")),
+    path("accounts/", include("django.contrib.auth.urls")),
     path('time_filter/',views.time_filter,name='time_filter'),
     path('search_by_time/',views.search_by_time,name='search_by_time'),
 
