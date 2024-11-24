@@ -15,9 +15,8 @@
       {% if recipes %}
       {% for recipe in recipes %}
       <div class="result">
-          <div class="img-container">
-            <form action="{% url 'recipe_card' %}" method="get">
-              <input type="image" src="https://images.pexels.com/photos/400958/pexels-photo-400958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="submit" width="48" height="65" alt="submit"/>
+          <div class="img-container"><form action="{% url 'recipe_card' %}" method="get">
+              <input type="image" src="{{recipe.image_url }}" name="submit" width="48" height="65">
             </form>
 
             <img src="">
