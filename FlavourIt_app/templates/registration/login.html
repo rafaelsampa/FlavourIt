@@ -1,10 +1,16 @@
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Log In</button>
-</form>
+<div class="login_div">
+  <img src="{% static 'graphics/Logo-full.svg' %}" alt="Favorited Recipes">
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Log In</button>
+  </form>
+  <form action="{% url 'signup'%}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="logout-button">Create an Account</button>
+  </form>
+</div>
 {% endblock %}

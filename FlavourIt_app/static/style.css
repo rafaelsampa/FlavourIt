@@ -352,7 +352,6 @@
             .container_account{
                 border: thin solid var(--on-surface-variant);
                 background-color: var(--surface-container);
-                d
                 justify-content: center;
                 align-items: center;
             }
@@ -409,6 +408,30 @@
                 align-items:center;
             }
 
+            .login_div{
+                display: flex;
+                flex-direction: column;
+                justify-content:space-evenly;
+                align-items:center;
+            }
+            .login_div form{
+                display: flex;
+                flex-direction: column;
+                justify-content:space-evenly;
+                align-items:center;
+                gap: 3vh;
+            }
+
+            .login_div input{
+                background-color: var(--surface-container);
+                border: thin solid var(--on-surface-variant);
+                width: 100%;
+                height: 5.15vh;
+            }
+
+            .login_div label{
+                font-size: 2vh;
+            }
         
             /*FIM DE CLASSES*/
         
