@@ -391,6 +391,24 @@
                 z-index: 10000;
                 background-color: var(--surface);
             }
+            .not_signed_up{
+                display: flex;
+                flex-direction: column;
+                justify-content:space-evenly;
+                align-items:center;
+
+            }
+            .not_signed_up h1,h3{
+                text-align: center;
+            }
+            .not_signed_up_buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                gap: 3vh;
+                align-items:center;
+            }
+
         
             /*FIM DE CLASSES*/
         
