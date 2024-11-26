@@ -7,7 +7,6 @@ class client(models.Model):
     altura = models.DecimalField(max_digits=2, decimal_places=2)
     peso = models.DecimalField(max_digits=3, decimal_places=2)
     Atividade = models.TextField()
-
 class receita(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
@@ -60,7 +59,6 @@ class favoritado(models.Model):
 
 class ingredient(models.Model):
     id = models.BigAutoField(primary_key=True)
-    nome = models.TextField()
     id_receita = models.ForeignKey('receita', on_delete=models.CASCADE)
     id_val_Nutri = models.ForeignKey('valores_nutricionais', on_delete=models.CASCADE)
     quant = models.DecimalField(max_digits=2, decimal_places=2, default=0)

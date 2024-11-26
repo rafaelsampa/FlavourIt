@@ -3,6 +3,9 @@ from .forms import *
 from .models import receita, valores_nutricionais,utensilio
 from datetime import datetime
 from django.db.models import Count, Q, F
+from FlavourIt_app.models import receita
+from django.shortcuts import render, get_object_or_404
+
 
 
 # ======== Views para URLs ========
@@ -16,8 +19,38 @@ def time_filter(request):
 def recipe_results(request):
     return render(request, 'flavourit/recipe_results.html')
 
-def recipe_card(request):
-    return render(request, 'flavourit/recipe_card.html')
+def nutritional_data(request):
+    return render(request, 'flavourit/nutritional_data.html')
+
+def recipe_card(request, recipe_id):
+    recipe = get_object_or_404(receita, id=recipe_id)
+    ingredients = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
+    utensils = utensilio.objects.filter(receita_utensilio__id_receita=recipe)
+
+    ingredient_data = []
+    for ing in ingredients:
+        ingredient_data.append({
+            'quant': ing.quant,
+            'unidade': ing.unidade,
+            'nutrition_info': {
+                'nome': ing.id_val_Nutri.nome,
+                'gordura': ing.id_val_Nutri.gordura,
+                'carboidrato': ing.id_val_Nutri.carboidrato,
+                'proteina': ing.id_val_Nutri.proteina,
+                'porcao': ing.id_val_Nutri.porção,
+                'unidade': ing.id_val_Nutri.unidade,
+            }
+        })
+
+    return render(request, 'flavourit/recipe_card.html', {
+        'recipe': recipe,
+        'ingredients': ingredient_data,
+        'utensils': utensils,
+    })
+
+
+
+
 
 def configAccount(request):
     return render(request, 'flavourit/account.html')

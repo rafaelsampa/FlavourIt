@@ -12,26 +12,29 @@
   <div class="middle-section">
     <div class="header"><!--TODO: ordenação das receitas--></div>
     <div class="results-section">
-      {% if recipes %}
-      {% for recipe in recipes %}
-      <div class="result">
-          <div class="img-container"><form action="{% url 'recipe_card' %}" method="get">
-              <input type="image" src="{{recipe.image_url }}" name="submit" width="48" height="65">
-            </form>
+    {% if recipes %}
+        {% for recipe in recipes %}
+        <div class="result">
+            <div class="img-container">
+                <!-- Dynamically link to recipe_card view -->
+                <a href="{% url 'recipe_card' recipe.id %}">
+                    <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}">
+                </a>
+            </div>
+            <p>{{ recipe.nome }}</p>
+            <div class="result-info">
+                <p>{{ recipe.tempo }}</p>
+                <img src="{% static 'graphics/clock.svg' %}" alt="Time">
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No recipes found.</p>
+    {% endif %}
+</div>
 
-            <img src="">
-          </div>
-          <p>{{ recipe.nome }}</p>
-          <div class="result-info">
-            <p>{{ recipe.tempo }}</p>
-            <img src="{% static 'graphics/clock.svg' %}" alt="Time">
-            <p>00</p>
-            <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Time">
-          </div>
-          <!--TODO: número de "favoritadas" que uma receita tem-->
-      </div>
-      {% endfor %}
-      {% endif %}
+</div>
+
   </div>
   </div>
 </div>
