@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'u',
         'nutrition_info': {
             'nome': 'Egg',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 12.6,
+            'carboidrato': 0.9,
+            'proteina': 16.5,
+            'porcao': 144,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Sunflower Oil',
-            'gordura': 0,
+            'gordura': 29,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 33,
             'unidade': 'ml'          
         }
     },
@@ -33,10 +33,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Butter',
-            'gordura': 0,
+            'gordura': 2.85,
             'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'proteina': 2.71,
+            'porcao': 5,
             'unidade': 'g'
     }
     }

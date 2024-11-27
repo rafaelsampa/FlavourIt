@@ -5,10 +5,10 @@ ingredientes_pure = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Raw Potato',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.2,
+            'carboidrato': 37.3,
+            'proteina': 4.3,
+            'porcao': 250,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes_pure = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Milk',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 3.97,
+            'carboidrato': 5.8,
+            'proteina': 3.85,
+            'porcao': 250,
             'unidade': 'ml'
         }
     },
@@ -34,7 +34,7 @@ ingredientes_pure = [
             'gordura': 0,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 100,
             'unidade': 'g'
         }
     },
@@ -45,10 +45,10 @@ ingredientes_pure = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Butter',
-            'gordura': 0,
+            'gordura': 5.7,
             'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'proteina': 5.42,
+            'porcao': 14,
             'unidade': 'g'
         }
     }

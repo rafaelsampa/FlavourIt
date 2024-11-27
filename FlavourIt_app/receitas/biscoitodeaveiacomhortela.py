@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Banana',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.66,
+            'carboidrato': 45.6,
+            'proteina': 2.18,
+            'porcao': 200,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Aveia',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 6.52,
+            'carboidrato': 67.7,
+            'proteina': 13.15,
+            'porcao': 100,
             'unidade': 'ml'
         }
     }

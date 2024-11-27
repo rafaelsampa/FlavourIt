@@ -17,11 +17,13 @@ def insert_recipe(nome, tempo, instrucoes, ingredientes, utensilios):
             }
         )
 
+
+        qtd='quantidade';
         ingredient.objects.create(
             id_receita=receita1,
             id_val_Nutri=nutrition,
-            quant=0,
-            unidade=0
+            quant=ingrediente['quantidade'],
+            unidade=ingrediente['unidade']
         )
 
     for utensilio1 in utensilios:

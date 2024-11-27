@@ -4,8 +4,8 @@ from django.templatetags.static import static
 class client(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
-    altura = models.DecimalField(max_digits=2, decimal_places=2)
-    peso = models.DecimalField(max_digits=3, decimal_places=2)
+    altura = models.DecimalField(max_digits=10, decimal_places=2)
+    peso = models.DecimalField(max_digits=10, decimal_places=2)
     Atividade = models.TextField()
     Birth_Date = models.DateField(blank=True, null=True)
 
@@ -30,10 +30,10 @@ class receita(models.Model):
 class valores_nutricionais(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
-    gordura = models.DecimalField(max_digits=2, decimal_places=2)
-    carboidrato = models.DecimalField(max_digits=2, decimal_places=2)
-    proteina = models.DecimalField(max_digits=2, decimal_places=2)
-    porção = models.DecimalField(max_digits=2, decimal_places=2)
+    gordura = models.DecimalField(max_digits=10, decimal_places=2)
+    carboidrato = models.DecimalField(max_digits=10, decimal_places=2)
+    proteina = models.DecimalField(max_digits=10, decimal_places=2)
+    porção = models.DecimalField(max_digits=10, decimal_places=2)
     unidade = models.TextField()
 
     @property
@@ -63,7 +63,7 @@ class ingredient(models.Model):
     id = models.BigAutoField(primary_key=True)
     id_receita = models.ForeignKey('receita', on_delete=models.CASCADE)
     id_val_Nutri = models.ForeignKey('valores_nutricionais', on_delete=models.CASCADE)
-    quant = models.DecimalField(max_digits=2, decimal_places=2, default=0)
+    quant = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     unidade = models.TextField()
 
 

@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'White Rice',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.28,
+            'carboidrato': 28.2,
+            'proteina': 2.69,
+            'porcao': 100,
             'unidade': 'g'
         }
     },
@@ -21,7 +21,7 @@ ingredientes = [
             'gordura': 0,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 150,
             'unidade': 'ml'
         }
     }

@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Noodles',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 2.07,
+            'carboidrato': 25.2,
+            'proteina': 4.54,
+            'porcao': 100,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Olive Oil',
-            'gordura': 0,
+            'gordura': 30,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 30,
             'unidade': 'ml'
         }
     },
@@ -31,10 +31,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Garlic',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.01,
+            'carboidrato': 1,
+            'proteina': 0.2,
+            'porcao': 4,
             'unidade': 'g'
         }
     },
@@ -48,7 +48,7 @@ ingredientes = [
             'gordura': 0,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 100,
             'unidade': 'g'
         }
     }

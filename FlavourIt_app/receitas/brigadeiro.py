@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Condensed Milk',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 24.3,
+            'carboidrato': 180.3,
+            'proteina': 24.3,
+            'porcao': 320,
             'unidade': 'ml'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Cocoa Powder',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 4.9,
+            'carboidrato': 14.5,
+            'proteina': 4.9,
+            'porcao': 24,
             'unidade': 'g'
         }
     },
@@ -31,10 +31,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Margarine',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 22.8,
+            'carboidrato': 0.2,
+            'proteina': 0.05,
+            'porcao': 28,
             'unidade': 'g'
         }
     }

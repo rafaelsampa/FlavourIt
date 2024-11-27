@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Popcorn Kernel',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 4.17,
+            'carboidrato': 69.4,
+            'proteina': 11.1,
+            'porcao': 100,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Sunflower Oil',
-            'gordura': 0,
+            'gordura': 86.8,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 100,
             'unidade': 'ml'
         }
     },
@@ -34,7 +34,7 @@ ingredientes = [
             'gordura': 0,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 100,
             'unidade': 'g'
         }
     }

@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Banana',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.66,
+            'carboidrato': 45.6,
+            'proteina': 2.18,
+            'porcao': 200,
             'unidade': 'g'
         }
     },
@@ -19,10 +19,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Sugar',
-            'gordura': 0,
-            'carboidrato': 0,
+            'gordura': 0.08,
+            'carboidrato': 24.9,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 20,
             'unidade': 'g'
         }
     },
@@ -33,10 +33,10 @@ ingredientes = [
         'unidade': 'u',
         'nutrition_info': {
             'nome': 'Egg',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 8.4,
+            'carboidrato': 0.6,
+            'proteina': 11,
+            'porcao': 96,
             'unidade': 'g'
         }
     },
@@ -47,10 +47,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Milk',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 3.97,
+            'carboidrato': 5.8,
+            'proteina': 3.85,
+            'porcao': 250,
             'unidade': 'ml'
         }
     },
@@ -61,10 +61,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Wheat Flour',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 0.98,
+            'carboidrato': 76.3,
+            'proteina': 10.3,
+            'porcao': 100,
             'unidade': 'g'
         }
     }

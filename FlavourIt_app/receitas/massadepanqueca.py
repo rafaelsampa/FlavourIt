@@ -5,10 +5,10 @@ ingredientes = [
         'unidade': 'g',
         'nutrition_info': {
             'nome': 'Flour',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 2.44,
+            'carboidrato': 190.8,
+            'proteina': 26,
+            'porcao': 250,
             'unidade': 'g'
         }
     },
@@ -18,10 +18,10 @@ ingredientes = [
         'unidade': 'ml',
         'nutrition_info': {
             'nome': 'Milk',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 15.24,
+            'carboidrato': 22.2,
+            'proteina': 14.78,
+            'porcao': 250,
             'unidade': 'ml'
         }
     },
@@ -31,10 +31,10 @@ ingredientes = [
         'unidade': 'u',
         'nutrition_info': {
             'nome': 'Egg',
-            'gordura': 0,
-            'carboidrato': 0,
-            'proteina': 0,
-            'porcao': 0,
+            'gordura': 12.6,
+            'carboidrato': 0.9,
+            'proteina': 16.5,
+            'porcao': 144,
             'unidade': 'g'
         }
     },
@@ -47,7 +47,7 @@ ingredientes = [
             'gordura': 0,
             'carboidrato': 0,
             'proteina': 0,
-            'porcao': 0,
+            'porcao': 100,
             'unidade': 'g'
         }
     }
