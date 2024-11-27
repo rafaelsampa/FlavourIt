@@ -334,7 +334,7 @@
 
             .header_recipe{
                 border-radius: 24px 24px 0 0;
-                background-color: var(--surface-container);
+                background-color: var(--surface);
                 width: 100%;
                 overflow: hidden;
                 flex-grow: 1;
@@ -362,7 +362,7 @@
             .recipe-info{
                 margin-top: -3.5vh;
                 flex-grow: 1;
-                background-color: var(--surface-container);
+                background-color: var(--surface);
                 width: 100%;
                 overflow: hidden;
                 overflow-y: scroll;
@@ -370,12 +370,16 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                border-radius: 0 0 24px 24px;
             }
 
             .quick-info{
+                margin-top: 3.5vh;
+                margin-left: 3.5vh;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-evenly;
+                gap: 3.5vh;
+                justify-content:left;
                 align-items: center;
                 width: 100%;
             }

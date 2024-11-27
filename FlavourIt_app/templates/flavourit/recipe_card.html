@@ -22,18 +22,14 @@
 
     <div class="recipe-info">
         <div class="quick-info">
-            <div>
-                <img src="{% static 'graphics/clock.svg' %}" alt="Time">
-                <p>{{ recipe.tempo|slice:":5"}}</p> 
-            </div>
-            <div>
-                <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
-                {% if portions %}
-                    <p>{{ portions }}</p> 
-                {% else %}
-                    <p>--</p> 
-                {% endif %}
-            </div>
+            <p>{{ recipe.tempo|slice:":5"}}</p> 
+            <img src="{% static 'graphics/clock.svg' %}" alt="Time">
+            {% if portions %}
+                <p>{{ portions }}</p> 
+            {% else %}
+                <p>--</p> 
+            {% endif %}
+            <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
         </div>
 
         <div class="ingredients-list">
