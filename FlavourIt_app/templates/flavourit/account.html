@@ -39,8 +39,12 @@
             </div>
         </div>
         <div class="bottom-section">
-            <button type="submit"><img src="{% static 'graphics/arrow-left.svg' %}">Back</button>
-        </div>
+        <button type="button" onclick="window.history.back();">
+            <img src="{% static 'graphics/arrow-left.svg' %}" alt="Back">
+            Back
+        </button>
+</div>
+
     </form>
 </div>
 <p><a href="{% url 'password_change' %}">Password change</a></p>
