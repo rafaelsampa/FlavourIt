@@ -2,61 +2,8 @@
 {% block conteudo %}
 {% load static %}
 
-<div class="filter-frame">
-    <div class="tabs-bar">
-        <div class="tab current">
-            <a href="{% url 'ingredient_filter' %}">Recipe</a>
-        </div>
-        <div class="tab">
-            <a href="{% url 'nutritional_data' %}">Nutritional data</a>
-        </div>
-    </div>
-
-    <div class="header">
-        <h1>{{ recipe.nome }}</h1> 
-    </div>
-
-    <div class="recipe-image">
-        <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
-    </div>
-
-    <div class="recipe-info">
-        <div class="quick-info">
-            <div>
-                <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
-                <p>{{ recipe.tempo }}</p> 
-            </div>
-            <div>
-                <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
-                <p>{{ recipe.porcao }}</p> 
-            </div>
-        </div>
-        <div class="ingredients-list">
-            <h3>Ingredients</h3>
-            <ul>
-                {% for ingredient in ingredients %}
-                <li>
-                    {{ ingredient.quant }} {{ ingredient.unidade }} of {{ ingredient.nutrition_info.nome }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <div class="utensils-list">
-            <h3>Utensils</h3>
-            <ul>
-                {% for utensil in utensils %}
-                <li>{{ utensil.nome }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
 <style>
-    * {
+    /* * {
         box-sizing: border-box;
     }
 
@@ -102,22 +49,57 @@
         justify-content: space-between;
         margin-bottom: 20px;
     }
-
-    .ingredients-list, .utensils-list, .steps-list {
-        margin-bottom: 20px;
-    }
-
-    ul, ol {
-        padding-left: 20px;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-
-    h1, h3 {
-        color: var(--primary-color);
-    }
+*/
 </style>
+
+<div class="filter-frame">
+    <div class="tabs-bar">
+        <div class="tab current">
+            <a href="{% url 'ingredient_filter' %}">Recipe</a>
+        </div>
+        <div class="tab">
+            <a href="{% url 'nutritional_data' %}">Nutritional data</a>
+        </div>
+    </div>
+
+    <div class="header_recipe">
+        <p>{{ recipe.nome }}</p>
+        <div class="img-recipe">
+            <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
+        </div>
+    </div>
+
+    <div class="recipe-info">
+        <div class="quick-info">
+            <div>
+                <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
+                <p>{{ recipe.tempo }}</p> 
+            </div>
+            <div>
+                <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
+                <p>{{ recipe.porcao }}</p> 
+            </div>
+        </div>
+        <div class="ingredients-list">
+            <h3>Ingredients</h3>
+            <ul>
+                {% for ingredient in ingredients %}
+                <li>
+                    {{ ingredient.quant }} {{ ingredient.unidade }} of {{ ingredient.nutrition_info.nome }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="utensils-list">
+            <h3>Utensils</h3>
+            <ul>
+                {% for utensil in utensils %}
+                <li>{{ utensil.nome }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
