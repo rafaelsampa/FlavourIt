@@ -23,7 +23,7 @@ urlpatterns = [
     path('time_filter/',views.time_filter,name='time_filter'),
     path('search/',views.name_search,name='name_search'),
     path('recipe_card/<int:recipe_id>/', views.recipe_card, name='recipe_card'),
-    path('nutritional_data', views.nutritional_data, name='nutritional_data'),
+    path('recipe_card/<int:recipe_id>/nutritional_data/', views.nutritional_data, name='nutritional_data'),
 
     path('name_search/', views.name_search, name='name_search'),
     path('search_by_name/', views.search_by_name, name='search_by_name'),

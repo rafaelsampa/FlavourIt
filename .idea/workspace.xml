@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94bf8b7c-d559-4c26-91df-d99994639570" name="Changes" comment="Exibindo imagens dinamicamente (não commitei direito da última vez)">
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/nutritional_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlavourIt/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Pipoca.png" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Pipoca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/nutritional_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/nutritional_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlavourIt_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flavourit.db" beforeDir="false" afterPath="$PROJECT_DIR$/Flavourit.db" afterDir="false" />
     </list>
@@ -114,6 +113,7 @@
       <updated>1731875120365</updated>
       <workItem from="1731875123958" duration="9415000" />
       <workItem from="1732402779272" duration="27024000" />
+      <workItem from="1732732155555" duration="3659000" />
     </task>
     <task id="LOCAL-00001" summary="Add imagens utensilios,receitas e ingredientes e exibindo">
       <option name="closed" value="true" />

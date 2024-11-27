@@ -4,13 +4,14 @@
 
 <div class="filter-frame">
     <div class="tabs-bar">
-        <div class="tab current">
-            <a href="{% url 'ingredient_filter' %}">Recipe</a>
-        </div>
-        <div class="tab">
-            <a href="{% url 'nutritional_data' %}">Nutritional data</a>
-        </div>
+    <div class="tab {% if request.resolver_match.url_name == 'recipe_card' %}current{% endif %}">
+        <a href="{% url 'recipe_card' recipe.id %}">Recipe</a>
     </div>
+    <div class="tab {% if request.resolver_match.url_name == 'nutritional_data' %}current{% endif %}">
+        <a href="{% url 'nutritional_data' recipe.id %}">Nutritional data</a>
+    </div>
+</div>
+
 
     <div class="header_recipe">
         <h1>{{ recipe.nome }}</h1>

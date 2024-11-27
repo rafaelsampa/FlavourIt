@@ -109,7 +109,7 @@ def configAccount(request):
 def receitas(request):
     query = "SELECT nome FROM receita"
     form = receita.objects.raw(query)
-    
+
     return render(request, 'templates/flavourit/name_search.html', {'Receitas':form})
 
 ## FUNCIONOOOUUUUOOOOOUUOUOUUOOUUOUOUOUO
@@ -221,20 +221,49 @@ def time_filter(request):
     return render(request, 'flavourit/time_filter.html')
 
 def search_by_time(request):
-    
+
     user_time = request.GET.get('recipe-time')  # Retrieve the time input from the form
-    
+
     if user_time:
         # Convert `hh:mm` (user input) to `hh:mm:ss` for compatibility with `tempo`
         user_time_obj = datetime.strptime(user_time, "%H:%M")
         user_time_formatted = user_time_obj.strftime("%H:%M:%S")
-        
+
         # Filter recipes with `tempo` less than or equal to the user's time
         recipes = receita.objects.filter(tempo__lte=user_time_formatted)
     else:
         recipes = receita.objects.all()  # Show all recipes if no time specified
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
+from django.shortcuts import render, get_object_or_404
+from .models import receita, ingredient
+
+def nutritional_data(request, recipe_id):
+    recipe = get_object_or_404(receita, id=recipe_id)
+
+    ingredientes = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
+
+    ingredient_data = []
+    for ing in ingredientes:
+        ingredient_data.append({
+            'quantidade': ing.quant,
+            'unidade': ing.unidade,
+            'nutrition_info': {
+                'nome': ing.id_val_Nutri.nome,
+                'gordura': ing.id_val_Nutri.gordura,
+                'carboidrato': ing.id_val_Nutri.carboidrato,
+                'proteina': ing.id_val_Nutri.proteina,
+                'porcao': ing.id_val_Nutri.porção,
+                'unidade': ing.id_val_Nutri.unidade,
+            }
+        })
+
+    return render(request, 'flavourit/nutritional_data.html', {
+        'recipe': recipe,
+        'ingredientes': ingredient_data,
+    })
+
 
 ###
 
