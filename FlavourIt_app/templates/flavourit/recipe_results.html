@@ -23,7 +23,7 @@
             </div>
             <p>{{ recipe.nome }}</p>
             <div class="result-info">
-                <p>{{ recipe.tempo }}</p>
+                <p>{{ recipe.tempo|slice:":5" }}</p>
                 <img src="{% static 'graphics/clock.svg' %}" alt="Time">
             </div>
         </div>

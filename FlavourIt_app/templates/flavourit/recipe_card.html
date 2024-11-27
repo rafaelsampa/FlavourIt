@@ -2,56 +2,6 @@
 {% block conteudo %}
 {% load static %}
 
-<style>
-    /* * {
-        box-sizing: border-box;
-    }
-
-    body {
-        height: 100vh;
-        background-color: var(--tertiary-fixed);
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        color: var(--on-surface-variant);
-        font-size: 2vh;
-    }
-
-    .filter-frame {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .header {
-        background-color: #FAEBE0;
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .recipe-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .recipe-info {
-        background-color: var(--surface-container);
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .quick-info {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-*/
-</style>
-
 <div class="filter-frame">
     <div class="tabs-bar">
         <div class="tab current">
@@ -72,14 +22,15 @@
     <div class="recipe-info">
         <div class="quick-info">
             <div>
-                <img src="{% static 'graphics/time_icon.svg' %}" alt="Time">
-                <p>{{ recipe.tempo }}</p> 
+                <img src="{% static 'graphics/clock.svg' %}" alt="Time">
+                <p>{{ recipe.tempo|slice:":5"}}</p> 
             </div>
             <div>
                 <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
                 <p>{{ recipe.porcao }}</p> 
             </div>
         </div>
+
         <div class="ingredients-list">
             <h3>Ingredients</h3>
             <ul>
@@ -91,13 +42,11 @@
             </ul>
         </div>
 
-        <div class="utensils-list">
-            <h3>Utensils</h3>
-            <ul>
-                {% for utensil in utensils %}
-                <li>{{ utensil.nome }}</li>
-                {% endfor %}
-            </ul>
+        <div class="instructions-list">
+            <h3>Instructions</h3>
+            <ol>
+                {{ recipe.instructions|safe }}
+            </ol>
         </div>
     </div>
 </div>
