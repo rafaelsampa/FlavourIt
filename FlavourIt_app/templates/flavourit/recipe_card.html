@@ -27,7 +27,11 @@
             </div>
             <div>
                 <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
-                <p>{{ recipe.porcao }}</p> 
+                {% if portions %}
+                    <p>{{ portions }}</p> 
+                {% else %}
+                    <p>3</p> 
+                {% endif %}
             </div>
         </div>
 

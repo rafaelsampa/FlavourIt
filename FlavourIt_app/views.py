@@ -24,8 +24,13 @@ def nutritional_data(request):
 
 def recipe_card(request, recipe_id):
     recipe = get_object_or_404(receita, id=recipe_id)
+    user_quantities = request.session.get('user_quantities', {})
     ingredients = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
     utensils = utensilio.objects.filter(receita_utensilio__id_receita=recipe)
+
+    portions = None
+    if user_quantities:
+        portions = 8000
 
     ingredient_data = []
     for ing in ingredients:
@@ -46,6 +51,7 @@ def recipe_card(request, recipe_id):
         'recipe': recipe,
         'ingredients': ingredient_data,
         'utensils': utensils,
+        'portions': portions,
     })
 
 
@@ -87,6 +93,12 @@ def search_by_ingredients(request):
     #for ingredientes in selected_ingredients:
     #    print(ingredientes)
 
+    #qtd informada pelo user
+    user_quantities={
+        int(key.split('_')[1]): float(value)
+        for key, value in request.GET.items() if key.startswith('quantity_') and value
+    }
+
     if selected_ingredients:
         # Start with recipes that include all selected ingredients
         recipes = receita.objects.filter(ingredient__id_val_Nutri__id__in=selected_ingredients).distinct()
@@ -113,6 +125,9 @@ def search_by_ingredients(request):
     else:
         # If no ingredients are selected, return all recipes
         recipes = receita.objects.all()
+
+
+    request.session['user_quantities'] = user_quantities
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
