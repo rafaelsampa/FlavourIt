@@ -22,12 +22,13 @@
             <ul>
                 {% for ingredient in ingredientes %}
                 <li>
-                    <strong>{{ ingredient.nutrition_info.nome }}</strong>: 
-                    {{ ingredient.quantidade }} {{ ingredient.unidade }} - 
-                    {{ ingredient.nutrition_info.gordura }}g fat, 
-                    {{ ingredient.nutrition_info.carboidrato }}g carbs, 
+                    <strong>{{ ingredient.nutrition_info.nome }}</strong>:<br>
+                    {{ ingredient.quantidade }} {{ ingredient.unidade }}<br>
+                    {{ ingredient.nutrition_info.gordura }}g fat<br>
+                    {{ ingredient.nutrition_info.carboidrato }}g carbs<br>
                     {{ ingredient.nutrition_info.proteina }}g protein
                 </li>
+
                 {% endfor %}
             </ul>
         </div>
