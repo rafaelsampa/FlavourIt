@@ -8,17 +8,13 @@ def insert_recipe(nome, tempo, instrucoes, ingredientes, utensilios):
         nutrition_info = ingrediente['nutrition_info']
         nutrition, created= valores_nutricionais.objects.get_or_create(
             nome=nutrition_info['nome'],
-            defaults={
-                'gordura': Decimal('0.00'),
-                'carboidrato': Decimal('0.00'),
-                'proteina': Decimal('0.00'),
-                'porção': Decimal('0.00'),
-                'unidade': Decimal('0.00'),
-            }
+            gordura = nutrition_info['gordura'],
+            carboidrato = nutrition_info['carboidrato'],
+            proteina = nutrition_info['proteina'],
+            porção = nutrition_info['porcao'],
+            unidade=nutrition_info['unidade'],
         )
 
-
-        qtd='quantidade';
         ingredient.objects.create(
             id_receita=receita1,
             id_val_Nutri=nutrition,
