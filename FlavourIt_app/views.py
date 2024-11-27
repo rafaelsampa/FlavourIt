@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from .forms import *
-from .models import receita, valores_nutricionais,utensilio
-from datetime import datetime
-from django.db.models import Count, Q, F
-from FlavourIt_app.models import receita
 from django.shortcuts import render, get_object_or_404
+from .forms import *
+from .models import receita, valores_nutricionais, utensilio, ingredient
+from datetime import datetime
+from FlavourIt_app.models import receita
+from math import floor
+from decimal import Decimal
 
 
 
@@ -28,9 +28,39 @@ def recipe_card(request, recipe_id):
     ingredients = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
     utensils = utensilio.objects.filter(receita_utensilio__id_receita=recipe)
 
-    portions = None
-    if user_quantities:
-        portions = 8000
+    recipe_ingredients = ingredient.objects.filter(id_receita=recipe)
+
+    portions=-1
+
+    for rec_ingredient in recipe_ingredients:
+        ingredient_id = rec_ingredient.id_val_Nutri.id  #Get the nutritional value ID
+        #print("AQUI: ");
+        #print(ingredient_id);
+        quant_needed = rec_ingredient.quant  #Quantity needed for the recipe
+
+        #print(f"Type of user_quantities keys: {type(next(iter(user_quantities.values()), None))}")
+
+        #print(user_quantities);
+        if str(ingredient_id) not in user_quantities:
+            #print(f"Type of ingredient_id: {type(ingredient_id)}")
+
+            portions=-1
+            break;  # Missing ingredient, stop calculation
+
+        user_quant = Decimal(user_quantities[str(ingredient_id)])  # Quantity provided by the user
+        porcao = floor(user_quant / quant_needed)  # Calculate portions based on this ingredient
+        #print(f"Type of user_quant: {type(user_quant)}")
+        #print(f"Type of porcao: {type(porcao)}")
+        #print(porcao)
+
+        # Update menor_porcao
+        if portions==-1 or porcao < portions:
+            portions = porcao
+
+    #print("PORTIONS: ")
+    #print(portions)
+    if portions==-1:
+        portions=None
 
     ingredient_data = []
     for ing in ingredients:
@@ -94,7 +124,7 @@ def search_by_ingredients(request):
     #    print(ingredientes)
 
     #qtd informada pelo user
-    user_quantities={
+    user_quantities = {
         int(key.split('_')[1]): float(value)
         for key, value in request.GET.items() if key.startswith('quantity_') and value
     }
