@@ -53,6 +53,17 @@ def recipe_card(request, recipe_id):
 
 
 def configAccount(request):
+    if request.method == "POST":
+        birthDate = request.POST.get('birth_date', None)
+        weight = request.POST.get('weight', None)
+        height = request.POST.get('height', None)
+        activity = request.POST['activity']
+        member = client.objects.get(id=request.id)
+        member.Birth_Date = birthDate
+        member.peso = weight
+        member.altura = height
+        member.Atividade = activity
+        member.save()
     return render(request, 'flavourit/account.html')
 
 # ======== Fim de views para URLs ========

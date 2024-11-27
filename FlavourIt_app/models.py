@@ -7,6 +7,8 @@ class client(models.Model):
     altura = models.DecimalField(max_digits=2, decimal_places=2)
     peso = models.DecimalField(max_digits=3, decimal_places=2)
     Atividade = models.TextField()
+    Birth_Date = models.DateField(blank=True, null=True)
+
 class receita(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
