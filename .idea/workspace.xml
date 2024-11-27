@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94bf8b7c-d559-4c26-91df-d99994639570" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flavourit.db" beforeDir="false" afterPath="$PROJECT_DIR$/Flavourit.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,7 @@
       <updated>1731875120365</updated>
       <workItem from="1731875123958" duration="9415000" />
       <workItem from="1732402779272" duration="27024000" />
-      <workItem from="1732732155555" duration="5660000" />
+      <workItem from="1732732155555" duration="6130000" />
     </task>
     <task id="LOCAL-00001" summary="Add imagens utensilios,receitas e ingredientes e exibindo">
       <option name="closed" value="true" />
@@ -142,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732744416026</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Back button now works">
+      <option name="closed" value="true" />
+      <created>1732744906755</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732744906755</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +159,7 @@
     <MESSAGE value="Add imagens utensilios,receitas e ingredientes e exibindo" />
     <MESSAGE value="Exibindo imagens dinamicamente (não commitei direito da última vez)" />
     <MESSAGE value="Mudando png da pipoca + exibindo nutritional_data baseado na receita" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudando png da pipoca + exibindo nutritional_data baseado na receita" />
+    <MESSAGE value="Back button now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Back button now works" />
   </component>
 </project>
