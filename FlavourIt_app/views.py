@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import *
 from .models import receita, valores_nutricionais, utensilio, ingredient
 from datetime import datetime
 from FlavourIt_app.models import receita, client
 from math import floor
 from decimal import Decimal
+from django.http import JsonResponse
 
 
 
@@ -83,7 +85,29 @@ def recipe_card(request, recipe_id):
         'portions': portions,
     })
 
+def favoritar(request):
+    if request.method == "POST":
+        receita_id = request.POST.get("id_receita")  # Ensure the ID is sent in the POST request
+        try:
+            member = client.objects.get(id=request.user.id)  # Assuming the user is logged in and request.user is available
+        except:
+            print("DEU ERRADO");
+            return redirect(request.META.get('HTTP_REFERER', '/'))
 
+        # Check if the favorite already exists
+        favorite = favoritado.objects.filter(id_Receita_id=receita_id, id_Cliente_id=member.id).first()
+
+        if favorite:
+            # If it exists, remove the favorite (unfavorite)
+            favorite.delete()
+            print("FOI1")
+        else:
+            # If it doesn't exist, create a new favorite
+            favoritado.objects.create(id_Receita_id=receita_id, id_Cliente_id=member.id)
+            print("FOI2")
+
+    # Redirect back to the current page
+    return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
 
@@ -240,8 +264,6 @@ def search_by_time(request):
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
-from django.shortcuts import render, get_object_or_404
-from .models import receita, ingredient
 
 def nutritional_data(request, recipe_id):
     recipe = get_object_or_404(receita, id=recipe_id)

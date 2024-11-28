@@ -43,4 +43,6 @@ urlpatterns = [
     path('time_filter/',views.time_filter,name='time_filter'),
     path('search_by_time/',views.search_by_time,name='search_by_time'),
 
+    path('favoritar/', views.favoritar, name='favoritar'),
+
 ]
