@@ -396,8 +396,7 @@
                 flex-grow: 1;
                 background-color: var(--surface);
                 width: 100%;
-                overflow: hidden;
-                overflow-y: scroll;
+                overflow: scroll;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -546,13 +545,12 @@
                 display: block;
             }
             
-            .show {display: block;}
+            .show {
+                display: block;
+            }
 
-            .nutritional-info{
-                width: 48vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .ingredient-list ul{
+                width: 50%;
             }
         
             /*FIM DE CLASSES*/

@@ -1,32 +1,32 @@
 from django.core.management.base import BaseCommand
 from FlavourIt_app.utils import insert_recipe
-#from FlavourIt_app.receitas import arrozbranco
-#from FlavourIt_app.receitas import arrozdoce
-#from FlavourIt_app.receitas import bacalhauabras
-#from FlavourIt_app.receitas import batatasuica
-#from FlavourIt_app.receitas import biscoitodeaveiacomhortela
-#from FlavourIt_app.receitas import bolodecenoura
-#from FlavourIt_app.receitas import bolodechocolate
-#from FlavourIt_app.receitas import bolodefuba
-#from FlavourIt_app.receitas import brigadeiro
-#from FlavourIt_app.receitas import cachorroquente
-#from FlavourIt_app.receitas import caldinhodefeijao
-#from FlavourIt_app.receitas import ceviche
-#from FlavourIt_app.receitas import chilicomcarne
-#from FlavourIt_app.receitas import churrasco
-#from FlavourIt_app.receitas import coxinha
-#from FlavourIt_app.receitas import cremebrulee
-#from FlavourIt_app.receitas import crepe
-#from FlavourIt_app.receitas import docedeleite
-#from FlavourIt_app.receitas import empanadas
-#from FlavourIt_app.receitas import escondidinhodecarne
-#from FlavourIt_app.receitas import macarraoalhoeoleo
-#from FlavourIt_app.receitas import massadepanqueca
-#from FlavourIt_app.receitas import omelete
-#from FlavourIt_app.receitas import panquecadebanana
-#from FlavourIt_app.receitas import pipoca
-#from FlavourIt_app.receitas import puredebatata
-#from FlavourIt_app.receitas import batatasuica
+# from FlavourIt_app.receitas import arrozbranco
+# from FlavourIt_app.receitas import arrozdoce
+# from FlavourIt_app.receitas import bacalhauabras
+# from FlavourIt_app.receitas import batatasuica
+# from FlavourIt_app.receitas import biscoitodeaveiacomhortela
+# from FlavourIt_app.receitas import bolodecenoura
+# from FlavourIt_app.receitas import bolodechocolate
+# from FlavourIt_app.receitas import bolodefuba
+# from FlavourIt_app.receitas import brigadeiro
+# from FlavourIt_app.receitas import cachorroquente
+# from FlavourIt_app.receitas import caldinhodefeijao
+# from FlavourIt_app.receitas import ceviche
+# from FlavourIt_app.receitas import chilicomcarne
+# from FlavourIt_app.receitas import churrasco
+# from FlavourIt_app.receitas import coxinha
+# from FlavourIt_app.receitas import cremebrulee
+# from FlavourIt_app.receitas import crepe
+# from FlavourIt_app.receitas import docedeleite
+# from FlavourIt_app.receitas import empanadas
+# from FlavourIt_app.receitas import escondidinhodecarne
+# from FlavourIt_app.receitas import macarraoalhoeoleo
+# from FlavourIt_app.receitas import massadepanqueca
+# from FlavourIt_app.receitas import omelete
+# from FlavourIt_app.receitas import panquecadebanana
+# from FlavourIt_app.receitas import pipoca
+# from FlavourIt_app.receitas import puredebatata
+# from FlavourIt_app.receitas import batatasuica
 
 from FlavourIt_app.receitas import (
     arrozbranco,

@@ -21,7 +21,7 @@
                 <form action="{% url 'favoritar' %}" method="post">
                     {% csrf_token %}
                     <input type="hidden" name="id_receita" value="{{ recipe.id }}">
-                    <button type="submit">Favorite</button>
+                    <button type="submit">{%if results == true%}<img src="{% static 'graphics/heart-filled_brown.svg' %}" alt="{{ recipe.nome }}">{%else%}<img src="{% static 'graphics/heart.svg' %}" alt="{{ recipe.nome }}">{%endif%}Favorite</button>
                 </form>
                 <form action="" method="post">
                     <button type="submit">Export</button>
@@ -50,8 +50,7 @@
         </div>
 
         <div class="slow-info">
-            <div class="ingredients-list">
-                <h3>Ingredients</h3>
+            <div class="ingredient-list">
                 <ul>
                     {% for ingredient in ingredients %}
                     <li>
@@ -61,8 +60,7 @@
                 </ul>
             </div>
 
-            <div class="instructions-list">
-                <h3>Instructions</h3>
+            <div class="ingredient-list">
                 <ol>
                     {{ recipe.instructions|safe }}
                 </ol>

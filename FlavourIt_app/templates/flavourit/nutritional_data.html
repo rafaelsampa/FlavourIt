@@ -21,7 +21,7 @@
                 <form action="{% url 'favoritar' %}" method="post">
                     {% csrf_token %}
                     <input type="hidden" name="id_receita" value="{{ recipe.id }}">
-                    <button type="submit">Favorite</button>
+                    <button type="submit">{%if results == true%}<img src="{% static 'graphics/heart-filled_brown.svg' %}" alt="{{ recipe.nome }}">{%else%}<img src="{% static 'graphics/heart.svg' %}" alt="{{ recipe.nome }}">{%endif%}Favorite</button>
                 </form>
                 <form action="" method="post">
                     <button type="submit">Export</button>
@@ -43,50 +43,28 @@
                 <thead>
                     <tr>
                         <th class="title"></th>
-                        {% for ingredient in ingredientes %}
-                            <th class="title">{{ ingredient.nutrition_info.nome }}</th>
-                        {% endfor %}
+                        <th class="title">Quantity</th>
+                        <th class="title">Fat</th>
+                        <th class="title">Carbs</th>
+                        <th class="title">Protein</th>
                         <th class="title">Total</th>
+                        <th class="title">Daily Value</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% for ingredient in ingredientes %}
                     <tr>
-                        <td class="title">Quantity</td>
-                        {% for ingredient in ingredientes %}
-                            <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
-                        {% endfor %}
+                        <td class="title">{{ ingredient.nutrition_info.nome }}</td>
+                        <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
+                        <td>{{ ingredient.nutrition_info.gordura }}</td>
+                        <td>{{ ingredient.nutrition_info.carboidrato }}</td>
+                        <td>{{ ingredient.nutrition_info.proteina }}</td>
+                        <td></td>
                         <td></td>
                     </tr>
-                    <tr>
-                        <td class="title">Fat</td>
-                        {% for ingredient in ingredientes %}
-                            <td>{{ ingredient.nutrition_info.gordura }}</td>
-                        {% endfor %}
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Carbs</td>
-                        {% for ingredient in ingredientes %}
-                            <td>{{ ingredient.nutrition_info.carboidrato }}</td>
-                        {% endfor %}
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Protein</td>
-                        {% for ingredient in ingredientes %}
-                            <td>{{ ingredient.nutrition_info.proteina }}</td>
-                        {% endfor %}
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="title">Daily Value</td>
-                        {% for ingredient in ingredientes %}
-                            <td></td>
-                        {% endfor %}
-                        <td></td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
-            </table>            
+            </table>
         </div>
     </div>
 </div>

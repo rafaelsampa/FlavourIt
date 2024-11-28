@@ -304,6 +304,14 @@ def nutritional_data(request, recipe_id):
         'ingredientes': ingredient_data,
     })
 
+    def recipeCardFavorite(request):
+        receita_id = request.GET['receita_id']
+
+        if favoritado.objects.filter(id_Client_id = request.user.id, id_Receita_id = receita_id).exists():
+            result = True
+        else:
+            result = False
+        return render(request, 'recipe_card.html', {'results': result})
 
 ###
 
