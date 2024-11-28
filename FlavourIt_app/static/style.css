@@ -340,8 +340,7 @@
                 flex-grow: 1;
             }
 
-            .header_recipe h1{
-                text-align: center;
+            .header_recipe p{
                 margin: 0;
             }
 

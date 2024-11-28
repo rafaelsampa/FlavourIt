@@ -14,13 +14,13 @@
 
 
     <div class="header_recipe">
-        <div class="header_line"><h1>{{ recipe.nome }}</h1>
+        <div class="header_line"><p>{{ recipe.nome }}</p>
             <div class="dropdown"></div>
             <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="">Favourite</a>
+                <a href="">Export</a>
+                <a href="">Share</a>
             </div>
         </div>
         <div class="img-recipe">
@@ -85,6 +85,8 @@
     .dropdown-content {
         display: none;
         position: absolute;
+        left: 31vh;
+        top: 28vh;
         background-color: var(--surface-container);
         overflow: auto;
         z-index: 1;
