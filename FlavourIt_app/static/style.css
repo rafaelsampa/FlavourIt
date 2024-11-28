@@ -373,6 +373,10 @@
                 background-color: var(--surface);
             }
 
+            .dropdown-content button{
+                background-color: var(--surface-container);
+            }
+
             .img-recipe{
                 width: 100%;
                 height: 100%;
@@ -519,10 +523,6 @@
             .login_div label{
                 font-size: 2vh;
             }
-
-            .dropbtn {
-                cursor: pointer;
-            }
             
             .dropdown {
                 position: relative;
@@ -532,8 +532,8 @@
             .dropdown-content {
                 display: none;
                 position: absolute;
-                left: 31vh;
-                top: 28vh;
+                left: 54vw;
+                top: 24vh;
                 background-color: var(--surface-container);
                 overflow: auto;
                 z-index: 1;

@@ -21,10 +21,14 @@
                 <form action="{% url 'favoritar' %}" method="post">
                     {% csrf_token %}
                     <input type="hidden" name="id_receita" value="{{ recipe.id }}">
-                    <button type="submit">Favourite</button>
+                    <button type="submit">Favorite</button>
                 </form>
-                <a href="">Export</a>
-                <a href="">Share</a>
+                <form action="" method="post">
+                    <button type="submit">Export</button>
+                </form>
+                <form action="" method="post">
+                    <button type="submit">Share</button>
+                </form>
                 
             </div>
         </div>

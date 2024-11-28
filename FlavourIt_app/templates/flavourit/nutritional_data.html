@@ -18,10 +18,22 @@
             <div class="dropdown"></div>
             <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="">Favourite</a>
-                <a href="">Export</a>
-                <a href="">Share</a>
+                <form action="{% url 'favoritar' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id_receita" value="{{ recipe.id }}">
+                    <button type="submit">Favorite</button>
+                </form>
+                <form action="" method="post">
+                    <button type="submit">Export</button>
+                </form>
+                <form action="" method="post">
+                    <button type="submit">Share</button>
+                </form>
+                
             </div>
+        </div>
+        <div class="img-recipe">
+            <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
         </div>
     </div>
 
