@@ -4,35 +4,83 @@
 
 <div class="filter-frame">
     <div class="tabs-bar">
-        <div class="tab {% if request.resolver_match.url_name == 'recipe_card' %}current{% endif %}">
-            <a href="{% url 'recipe_card' recipe.id %}">Recipe</a>
-        </div>
-        <div class="tab {% if request.resolver_match.url_name == 'nutritional_data' %}current{% endif %}">
-            <a href="{% url 'nutritional_data' recipe.id %}">Nutritional data</a>
-        </div>
+    <div class="tab {% if request.resolver_match.url_name == 'recipe_card' %}current{% endif %}">
+        <a href="{% url 'recipe_card' recipe.id %}">Recipe</a>
     </div>
+    <div class="tab {% if request.resolver_match.url_name == 'nutritional_data' %}current{% endif %}">
+        <a href="{% url 'nutritional_data' recipe.id %}">Nutritional data</a>
+    </div>
+</div>
+
 
     <div class="header_recipe">
-        <h1>Nutritional Data for {{ recipe.nome }}</h1>
+        <div class="header_line"><p>{{ recipe.nome }}</p>
+            <div class="dropdown"></div>
+            <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="">Favourite</a>
+                <a href="">Export</a>
+                <a href="">Share</a>
+            </div>
+        </div>
     </div>
 
     <div class="recipe-info">
         <div class="nutritional-info">
-            <h2>Ingredients with Nutritional Data</h2>
-            <ul>
-                {% for ingredient in ingredientes %}
-                <li>
-                    <strong>{{ ingredient.nutrition_info.nome }}</strong>:<br>
-                    {{ ingredient.quantidade }} {{ ingredient.unidade }}<br>
-                    {{ ingredient.nutrition_info.gordura }}g fat<br>
-                    {{ ingredient.nutrition_info.carboidrato }}g carbs<br>
-                    {{ ingredient.nutrition_info.proteina }}g protein
-                </li>
-
-                {% endfor %}
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title">Ingredient</th>
+                        <th class="title">Quantity</th>
+                        <th class="title">Fat</th>
+                        <th class="title">Carbs</th>
+                        <th class="title">Protein</th>
+                        <th class="title">Daily Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ingredient in ingredientes %}
+                    <tr>
+                        <td>{{ ingredient.nutrition_info.nome }}</td>
+                        <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
+                        <td>{{ ingredient.nutrition_info.gordura }}</td>
+                        <td>{{ ingredient.nutrition_info.carboidrato }}</td>
+                        <td>{{ ingredient.nutrition_info.proteina }}</td>
+                        <td></td>
+                        
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>Total</td>
+                        <td>--</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
+    }
+    </script>
 
 {% endblock %}

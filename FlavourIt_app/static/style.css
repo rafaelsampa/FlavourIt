@@ -136,6 +136,23 @@
                 border: none;
                 background-color: rgba(0, 0, 0, 0);
             }
+
+            table {
+                border-collapse: collapse;
+                margin: 3.5vh;
+            }
+
+            td{
+                text-align: center;
+            }
+
+            tr:nth-child(even){background-color:var(--on-variant);}
+
+            th{
+                font-weight: bold;
+                border: solid thin var(--surface);
+                background-color: var(--surface-container);
+            }
             
             /*FIM DE TAGS HTML*/
             
@@ -503,6 +520,34 @@
             .login_div label{
                 font-size: 2vh;
             }
+
+            .dropbtn {
+                cursor: pointer;
+            }
+            
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                left: 31vh;
+                top: 28vh;
+                background-color: var(--surface-container);
+                overflow: auto;
+                z-index: 1;
+            }
+            
+            .dropdown-content a {
+                color: var(--on-surface-variant);
+                padding: 1vh 2vh;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .show {display: block;}
         
             /*FIM DE CLASSES*/
         

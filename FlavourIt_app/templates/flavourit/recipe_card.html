@@ -61,55 +61,12 @@
         </div>
     </div>
 </div>
-
-<style>
-    :root{
-        --tertiary-fixed: #dbe8b5;
-        --tertiary: #58633a;
-        --on-surface-variant: #51453a;
-        --on-variant: #ffffff;
-        --surface:#fff8f5;
-        --surface-container-highest: #cccccc;
-        --surface-container: #f0e2d7;
-        }
-
-    .dropbtn {
-        cursor: pointer;
-    }
-    
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        left: 31vh;
-        top: 28vh;
-        background-color: var(--surface-container);
-        overflow: auto;
-        z-index: 1;
-    }
-    
-    .dropdown-content a {
-        color: var(--on-surface-variant);
-        padding: 1vh 2vh;
-        text-decoration: none;
-        display: block;
-    }
-    
-    .show {display: block;}
-    </style>
-
 <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
+
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
-    
-    // Close the dropdown if the user clicks outside of it
+
     window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
