@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .forms import *
 from .models import receita, valores_nutricionais, utensilio, ingredient
 from datetime import datetime
-from FlavourIt_app.models import receita
+from FlavourIt_app.models import receita, client
 from math import floor
 from decimal import Decimal
 
@@ -94,12 +93,17 @@ def configAccount(request):
         weight = request.POST.get('weight', None)
         height = request.POST.get('height', None)
         activity = request.POST['activity']
-        member = client.objects.get(id=request.id)
-        member.Birth_Date = birthDate
-        member.peso = weight
-        member.altura = height
-        member.Atividade = activity
-        member.save()
+        
+        try:
+            member = client.objects.get(id=request.user.id)
+            member.Birth_Date = birthDate
+            member.peso = weight
+            member.altura = height
+            member.Atividade = activity
+            member.save()
+        except client.DoesNotExist:
+            member = client(Birth_Date=birthDate,peso=weight, altura=height, Atividade=activity)
+            member.save()
     return render(request, 'flavourit/account.html')
 
 # ======== Fim de views para URLs ========
