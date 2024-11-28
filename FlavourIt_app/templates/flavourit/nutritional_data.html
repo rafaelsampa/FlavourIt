@@ -30,36 +30,51 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="title">Ingredient</th>
-                        <th class="title">Quantity</th>
-                        <th class="title">Fat</th>
-                        <th class="title">Carbs</th>
-                        <th class="title">Protein</th>
-                        <th class="title">Daily Value</th>
+                        <th class="title"></th>
+                        {% for ingredient in ingredientes %}
+                            <th class="title">{{ ingredient.nutrition_info.nome }}</th>
+                        {% endfor %}
+                        <th class="title">Total</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for ingredient in ingredientes %}
                     <tr>
-                        <td>{{ ingredient.nutrition_info.nome }}</td>
-                        <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
-                        <td>{{ ingredient.nutrition_info.gordura }}</td>
-                        <td>{{ ingredient.nutrition_info.carboidrato }}</td>
-                        <td>{{ ingredient.nutrition_info.proteina }}</td>
+                        <td class="title">Quantity</td>
+                        {% for ingredient in ingredientes %}
+                            <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
+                        {% endfor %}
                         <td></td>
-                        
                     </tr>
-                    {% endfor %}
                     <tr>
-                        <td>Total</td>
-                        <td>--</td>
+                        <td class="title">Fat</td>
+                        {% for ingredient in ingredientes %}
+                            <td>{{ ingredient.nutrition_info.gordura }}</td>
+                        {% endfor %}
                         <td></td>
+                    </tr>
+                    <tr>
+                        <td class="title">Carbs</td>
+                        {% for ingredient in ingredientes %}
+                            <td>{{ ingredient.nutrition_info.carboidrato }}</td>
+                        {% endfor %}
                         <td></td>
+                    </tr>
+                    <tr>
+                        <td class="title">Protein</td>
+                        {% for ingredient in ingredientes %}
+                            <td>{{ ingredient.nutrition_info.proteina }}</td>
+                        {% endfor %}
                         <td></td>
-                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Daily Value</td>
+                        {% for ingredient in ingredientes %}
+                            <td></td>
+                        {% endfor %}
+                        <td></td>
                     </tr>
                 </tbody>
-            </table>
+            </table>            
         </div>
     </div>
 </div>

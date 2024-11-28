@@ -139,7 +139,6 @@
 
             table {
                 border-collapse: collapse;
-                margin: 3.5vh;
             }
 
             td{
@@ -148,7 +147,7 @@
 
             tr:nth-child(even){background-color:var(--on-variant);}
 
-            th{
+            table .title{
                 font-weight: bold;
                 border: solid thin var(--surface);
                 background-color: var(--surface-container);
@@ -548,6 +547,13 @@
             }
             
             .show {display: block;}
+
+            .nutritional-info{
+                width: 48vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         
             /*FIM DE CLASSES*/
         
