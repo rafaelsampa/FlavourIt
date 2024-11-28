@@ -9,7 +9,9 @@
         </form>
     </div>
     <div class="right-top-bar">
-        <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
+        <a href="{% url 'receitas_favoritadas' %}">
+            <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
+        </a>
         <a href="{% url 'account' %}">
             <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
         </a>
