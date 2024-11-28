@@ -110,17 +110,17 @@ class RecipeViewTests(TestCase):
 
     def test_recipe_search(self):
         # Verificar se foi realemnte criada, pq ta dando merda
-        saved_recipe = receita.objects.get(nome="Teste de Receita")
+        saved_recipe = receita.objects.get(nome="Teste da Receita")
         self.assertIsNotNone(saved_recipe)
         
         # WARING ============
         # Busca
         response = self.client.get(
             reverse('search_by_name'), 
-            {'name': 'Teste de Receita'}
+            {'name': 'Teste da Receita'}
         )
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Teste de Receita")
+        self.assertContains(response, "Teste da Receita")
 
     def test_recipe_card(self):
         response = self.client.get(reverse('recipe_card', args=[self.recipe.id]))
