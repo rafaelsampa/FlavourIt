@@ -44,5 +44,6 @@ urlpatterns = [
     path('search_by_time/',views.search_by_time,name='search_by_time'),
 
     path('favoritar/', views.favoritar, name='favoritar'),
+     path('receitas_favoritadas/', views.receitas_favoritadas, name='receitas_favoritadas'),
 
 ]

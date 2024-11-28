@@ -85,6 +85,20 @@ def recipe_card(request, recipe_id):
         'portions': portions,
     })
 
+def receitas_favoritadas(request):
+
+    try:
+        member = client.objects.get(id=request.user.id)  # Assuming the user is logged in and request.user is available
+    except:
+        print("DEU ERRADO");
+        return redirect(request.META.get('HTTP_REFERER', '/'))
+
+    id_user=member.id
+    recipes = receita.objects.filter(favoritado__id_Cliente=id_user)
+    
+    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
+
 def favoritar(request):
     if request.method == "POST":
         receita_id = request.POST.get("id_receita")  # Ensure the ID is sent in the POST request
