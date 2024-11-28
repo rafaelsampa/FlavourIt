@@ -14,7 +14,15 @@
 
 
     <div class="header_recipe">
-        <h1>{{ recipe.nome }}</h1>
+        <div class="header_line"><h1>{{ recipe.nome }}</h1>
+            <div class="dropdown"></div>
+            <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
         <div class="img-recipe">
             <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
         </div>
@@ -32,24 +40,86 @@
             <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
         </div>
 
-        <div class="ingredients-list">
-            <h3>Ingredients</h3>
-            <ul>
-                {% for ingredient in ingredients %}
-                <li>
-                    {{ ingredient.quant }} {{ ingredient.unidade }} of {{ ingredient.nutrition_info.nome }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+        <div class="slow-info">
+            <div class="ingredients-list">
+                <h3>Ingredients</h3>
+                <ul>
+                    {% for ingredient in ingredients %}
+                    <li>
+                        {{ ingredient.quant }} {{ ingredient.unidade }} of {{ ingredient.nutrition_info.nome }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-        <div class="instructions-list">
-            <h3>Instructions</h3>
-            <ol>
-                {{ recipe.instructions|safe }}
-            </ol>
+            <div class="instructions-list">
+                <h3>Instructions</h3>
+                <ol>
+                    {{ recipe.instructions|safe }}
+                </ol>
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    :root{
+        --tertiary-fixed: #dbe8b5;
+        --tertiary: #58633a;
+        --on-surface-variant: #51453a;
+        --on-variant: #ffffff;
+        --surface:#fff8f5;
+        --surface-container-highest: #cccccc;
+        --surface-container: #f0e2d7;
+        }
+
+    .dropbtn {
+        cursor: pointer;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--surface-container);
+        overflow: auto;
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: var(--on-surface-variant);
+        padding: 1vh 2vh;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .show {display: block;}
+    </style>
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
+    }
+    </script>
 
 {% endblock %}

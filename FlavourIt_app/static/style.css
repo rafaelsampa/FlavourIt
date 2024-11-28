@@ -345,6 +345,19 @@
                 margin: 0;
             }
 
+            .header_line{
+                display: flex;
+                flex-flow: row;
+                justify-content:space-between;
+                align-items: center;
+                margin: 0 3.5vh;
+            }
+
+            .header_line button{
+                color: var(--on-surface-variant);
+                background-color: var(--surface);
+            }
+
             .img-recipe{
                 width: 100%;
                 height: 100%;
@@ -382,6 +395,13 @@
                 justify-content:left;
                 align-items: center;
                 width: 100%;
+            }
+
+            .slow-info{
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
             }
 
             .result-info{
