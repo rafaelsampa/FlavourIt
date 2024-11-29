@@ -1,1 +1,0 @@
-insert_recipe('Arroz branco', '00:20:00', '1-Rinse the rice thoroughly until the water runs clear.<br>2-In a pot, heat oil and sauté garlic until fragrant.<br>3-Add rice, stir briefly, then add boiling water and salt. Cover and cook on low heat until the water is absorbed.', arrozbranco.ingredientes, arrozbranco.utensilios)

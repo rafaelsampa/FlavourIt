@@ -27,7 +27,7 @@ ingredientes = [
         'quantidade': 200,
         'unidade': 'g',
         'nutrition_info': {
-            'nome': 'Meat (Chicken/Beef)',
+            'nome': 'Meat',
             'gordura': 4,
             'carboidrato': 0,
             'proteina': 20,
