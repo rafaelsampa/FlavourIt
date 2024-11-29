@@ -5,11 +5,15 @@ from datetime import datetime
 from FlavourIt_app.models import receita, client
 from math import floor
 from decimal import Decimal
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph, Frame, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from django.utils.html import strip_tags
+from django.http import HttpResponse
 from django.http import JsonResponse
 
 
-
-# ======== Views para URLs ========
 
 def menu(request):
     return render(request, 'flavourit/menu.html')
@@ -22,6 +26,56 @@ def recipe_results(request):
 
 def nutritional_data(request):
     return render(request, 'flavourit/nutritional_data.html')
+
+
+from django.utils.html import strip_tags
+
+
+def generate_recipe_pdf(request, recipe_id):
+    recipe = receita.objects.get(id=recipe_id)
+    ingredients = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{recipe.nome}.pdf"'
+
+    c = canvas.Canvas(response, pagesize=A4)
+    width, height = A4
+
+    c.setFont("Courier-Bold", 24)
+    c.drawString(100, height - 50, recipe.nome)
+    c.setFont("Courier-Bold", 18)
+    c.drawString(100, height - 100, "Ingredients:")
+
+    y_position = height - 120
+    c.setFont("Courier", 12)
+    for ing in ingredients:
+        ingredient_text = f"• {ing.quant:.2f} {ing.unidade} of {ing.id_val_Nutri.nome}"
+        c.drawString(100, y_position, ingredient_text)
+        y_position -= 20
+
+    y_position -= 20
+
+    c.setFont("Courier-Bold", 18)
+    c.drawString(100, y_position, "Instructions:")
+
+    y_position -= 30
+
+    raw_instructions = strip_tags(recipe.instructions)
+    steps = raw_instructions.split(".")
+
+    styles = getSampleStyleSheet()
+    style = styles["BodyText"]
+    frame = Frame(100, 50, width - 150, y_position - 50, showBoundary=0)
+    story = []
+    for i, step in enumerate(steps, start=1):
+        if step.strip():
+            story.append(Paragraph(f"{i}. {step.strip()}.", style))
+            story.append(Spacer(1, 12))
+
+    frame.addFromList(story, c)
+
+    c.save()
+    return response
+
 
 def recipe_card(request, recipe_id):
     recipe = get_object_or_404(receita, id=recipe_id)

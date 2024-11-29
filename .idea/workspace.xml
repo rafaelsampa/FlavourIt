@@ -5,148 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94bf8b7c-d559-4c26-91df-d99994639570" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Arborio Rice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Basil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Beans.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Bell Pepper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Black Beans.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Broth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Burger Buns.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Carrots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chicken Breast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chicken Breast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chicken Broth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chicken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chili Pepper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Chimichurri Sauce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Cilantro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Cinnamon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Coarse Salt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Coconut Milk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Cornmeal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Cream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Crushed Biscuits.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Egg Yolks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Eggs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Fish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Fresh Fish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Gelatin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Ground Beef.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Ham.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Herbs (Chopped).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Herbs (mixed).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Lasagna Noodles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Lemon Juice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Lentils.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Lettuce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Lime.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Limes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Mashed Potatoes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Meat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Mixed Vegetables.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Mozzarella Cheese.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Mushrooms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Nori Sheets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Onion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Onions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Pasta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Pepper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Pizza Dough.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Pork Cuts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Potato Sticks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Potatoes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Pumpkin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Quinoa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Rice (Cooked).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Rice Vinegar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Rice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Saffron.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Salted Cod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Seafood Mix.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Sesame Oil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Soy Sauce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Sushi Rice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Tapioca Flour.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Tomato Sauce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Tomatoes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Tortillas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Vegetable Broth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Vegetables (Chopped).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Vegetables (Mixed).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Water or Broth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/Yeast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_ingredients/beef cuts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Bacalhau à Brás.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Bolo de Fubá.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Cachorro-Quente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Chili con Carne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Creme Brulée.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Crepe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Empanadas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Frango assado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Gnocchi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Hambúrguer Caseiro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Lentilha Refogada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Minestrone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Panna Cotta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Salada de Quinoa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Sushi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Tacos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/Torta de Limão.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/arroz doce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/bolo de cenoura.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/bolo de chocolate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/caldinho de feijão.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/ceviche.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/churrasco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/coxinha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/doce de leite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/escondidinho de carne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/esfirra aberta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/feijoada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/lasanha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/moqueca de peixe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/paella.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/pizza marguerita.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/polenta cremosa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/quiche de queijo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/risoto de cogumelos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/sopa de abóbora.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/strogonoff de frango.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/tapioca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_recipes/yakissoba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Baking Dish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Baking Tray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Cake Pan (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Cutting Board.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Fork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Frying Pan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Knife.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Ladle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Molds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/No Stick Pan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Paellera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Pie Dish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Pot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Ramekin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Refrigerator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Rolling Spin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Serving Bowl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Serving Dish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Serving Platter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Spoon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Sushi Mat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Tongs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Torch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Whisk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Wok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/Wooden_Spoon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlavourIt_app/static/graphics/img_utensils/mixing bowl.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlavourIt_app/management/commands/insert_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/management/commands/insert_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/receitas/hamburger.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/receitas/hamburguer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/receitas/yakissoba.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/receitas/yakissoba.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/static/ingredientes/ingredientes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flavourit.db" beforeDir="false" afterPath="$PROJECT_DIR$/Flavourit.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +118,7 @@
       <updated>1731875120365</updated>
       <workItem from="1731875123958" duration="9415000" />
       <workItem from="1732402779272" duration="27024000" />
-      <workItem from="1732732155555" duration="28655000" />
+      <workItem from="1732732155555" duration="36423000" />
     </task>
     <task id="LOCAL-00001" summary="Add imagens utensilios,receitas e ingredientes e exibindo">
       <option name="closed" value="true" />
@@ -313,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732828684286</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adicionando imagens">
+      <option name="closed" value="true" />
+      <created>1732845079990</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732845079990</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +198,7 @@
     <MESSAGE value="Back button now works" />
     <MESSAGE value="batata suica agora com imagem" />
     <MESSAGE value="Mais receitas..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mais receitas..." />
+    <MESSAGE value="Adicionando imagens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando imagens" />
   </component>
 </project>

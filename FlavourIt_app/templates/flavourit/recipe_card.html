@@ -23,28 +23,28 @@
                     <input type="hidden" name="id_receita" value="{{ recipe.id }}">
                     <button type="submit">{%if results == true%}<img src="{% static 'graphics/heart-filled_brown.svg' %}" alt="{{ recipe.nome }}">{%else%}<img src="{% static 'graphics/heart.svg' %}" alt="{{ recipe.nome }}">{%endif%}Favorite</button>
                 </form>
-                <form action="" method="post">
-                    <button type="submit">Export</button>
-                </form>
+                 <form action="{% url 'generate_recipe_pdf' recipe.id %}" method="get">
+                     <button type="submit">Export</button>
+                 </form>
                 <form action="" method="post">
                     <button type="submit">Share</button>
                 </form>
-                
+
             </div>
         </div>
         <div class="img-recipe">
-            <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
+            <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}">
         </div>
     </div>
 
     <div class="recipe-info">
         <div class="quick-info">
-            <p>{{ recipe.tempo|slice:":5"}}</p> 
+            <p>{{ recipe.tempo|slice:":5"}}</p>
             <img src="{% static 'graphics/clock.svg' %}" alt="Time">
             {% if portions %}
-                <p>{{ portions }}</p> 
+                <p>{{ portions }}</p>
             {% else %}
-                <p>--</p> 
+                <p>--</p>
             {% endif %}
             <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
         </div>

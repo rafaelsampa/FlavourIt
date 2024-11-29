@@ -17,6 +17,7 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib import admin
 from FlavourIt_app import views
+from FlavourIt_app.views import generate_recipe_pdf
 
 urlpatterns = [
     path('',views.menu,name='menu'),
@@ -24,6 +25,7 @@ urlpatterns = [
     path('search/',views.name_search,name='name_search'),
     path('recipe_card/<int:recipe_id>/', views.recipe_card, name='recipe_card'),
     path('recipe_card/<int:recipe_id>/nutritional_data/', views.nutritional_data, name='nutritional_data'),
+    path('recipe/<int:recipe_id>/export-pdf/', generate_recipe_pdf, name='generate_recipe_pdf'),
 
     path('name_search/', views.name_search, name='name_search'),
     path('search_by_name/', views.search_by_name, name='search_by_name'),
