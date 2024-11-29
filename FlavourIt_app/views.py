@@ -170,11 +170,9 @@ def favoritar(request):
             print("DEU ERRADO");
             return redirect(request.META.get('HTTP_REFERER', '/'))
 
-        # Check if the favorite already exists
         favorite = favoritado.objects.filter(id_Receita_id=receita_id, id_Cliente_id=member.id).first()
 
         if favorite:
-            # If it exists, remove the favorite (unfavorite)
             favorite.delete()
             print("FOI1")
         else:
