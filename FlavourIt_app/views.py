@@ -206,6 +206,15 @@ def configAccount(request):
             member.save()
     return render(request, 'flavourit/account.html')
 
+
+"""def macrosCalc(request):
+    if request.method == "GET":
+        receita_id = request.GET['id_receita']
+        ingredients_id = ingredient.objects.get(id_receita=receita_id)
+        for i in range(ingredients_id.count):
+            val_id = valores_nutricionais.objects.get(id=ingredients_id[i].id_val_Nutri)
+            daily_diaries = """
+        
 # ======== Fim de views para URLs ========
 
 # ======== Views para Queries ========
