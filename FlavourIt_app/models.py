@@ -4,8 +4,8 @@ from django.templatetags.static import static
 class client(models.Model):
     id = models.BigAutoField(primary_key=True)
     nome = models.TextField()
-    altura = models.DecimalField(max_digits=10, decimal_places=2)
-    peso = models.DecimalField(max_digits=10, decimal_places=2)
+    altura = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    peso = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     Atividade = models.TextField()
     Birth_Date = models.DateField(blank=True, null=True)
 

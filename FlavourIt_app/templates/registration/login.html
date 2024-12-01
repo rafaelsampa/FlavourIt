@@ -1,16 +1,47 @@
+<!DOCTYPE html>
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<div class="login_div">
-  <img src="{% static 'graphics/Logo-full.svg' %}" alt="Favorited Recipes">
-  <form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Log In</button>
-  </form>
-  <form action="{% url 'signup'%}" method="post">
-    {% csrf_token %}
-    <button type="submit" class="logout-button">Create an Account</button>
-  </form>
-</div>
+<html lang="pt-br" div="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="sytlesheet" href="{% static 'styles.css' %}"
+    </head>
+    <body>
+
+      {% if messages %}
+        {% for message in messages%}
+          {% if messages.tags == "error "%}
+              <center><h4 style="color: firebrick;">{{message}}</h4></center>
+          {% else %}
+            <center><h4 style="color: dodgerblue;">{{message}}</h4></center>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
+      <div class="login_div">
+        <img src="{% static 'graphics/Logo-full.svg' %}" alt="Favorited Recipes">
+        <form method="post">
+          {% csrf_token %}
+
+          <label class="label_account" for="username">Username</label>
+          <div class="container_account">
+            <input name="username" type="text" required placeholder="Username">
+          </div>
+
+          <label class="label_account" for="password">Password</label>
+          <div class="container_account">
+            <input name="password" type="password" required placeholder="Password">
+          </div>
+
+          <input type="submit" value="Login">
+          <div class="signup_link">
+            <p>Forgot your Password? <a href="#">Reset Password</p></a>
+          </div>
+
+        </form>
+    </div>
+  </body>
+</html>
 {% endblock %}

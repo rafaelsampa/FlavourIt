@@ -12,8 +12,73 @@ from reportlab.lib.styles import getSampleStyleSheet
 from django.utils.html import strip_tags
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.conf import settings
+from django.core.mail import EmailMessage
+from django.utils import timezone
+from django.urls import reverse
 
+def registerView(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        username = request.POST['username']
+        birthDate = request.POST['birth_date']
+        email = request.POST['email']
+        password = request.POST['password']
+        weight = request.POST['weight']
+        height = request.POST['height']
+        
+        user_data_has_error = False
+        
+        if User.objects.filter(username=username).exists():
+            user_data_has_error = True
+            messages.error(request, 'Username already exists')
+        
+        if User.objects.filter(email=email).exists():
+            user_data_has_error = True
+            messages.error(request, 'Email already exists')
+        
+        if len(password) < 8:
+            user_data_has_error = True
+            messages.error(request, 'Password must be at least 8 characters')
+        
+        if not user_data_has_error:
+            auth = User.objects.create_user(
+                username=username,
+                email=email,
+                password=password
+            )
+            user = client(
+                nome = name,
+                Birth_Date = birthDate,
+                altura = height,
+                peso = weight
+            )
+            user.save()
+            messages.success(request, 'Account created. Login now')
+            return redirect('login')
+        else:
+            return redirect('signup')
+    return render(request, 'registration/signup.html')
 
+def loginView(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request=request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('menu')
+        else:
+            messages.error(request, 'Invalid Username or Password')
+            return redirect('login')
+    return render(request, 'registration/login.html')
+
+def logoutView(request):
+    logout(request)
+    return redirect('menu')
 
 def menu(request):
     return render(request, 'flavourit/menu.html')
