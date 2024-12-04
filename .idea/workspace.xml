@@ -26,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -117,6 +118,8 @@
       <workItem from="1732402779272" duration="27024000" />
       <workItem from="1732732155555" duration="47321000" />
       <workItem from="1733325995325" duration="7342000" />
+      <workItem from="1733348617097" duration="10000" />
+      <workItem from="1733348648280" duration="2679000" />
     </task>
     <task id="LOCAL-00001" summary="Add imagens utensilios,receitas e ingredientes e exibindo">
       <option name="closed" value="true" />
