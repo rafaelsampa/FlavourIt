@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends 'flavourit/base.html' %}
+{% block conteudo %}
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Add Your Own Recipe</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <div class="recipe_form_div">
+            <h2>Add Your Own Recipe</h2>
+
+            {% if error_message %}
+                <center><h4 style="color: firebrick;">{{error_message}}</h4></center>
+            {% endif %}
+
+            <form method="post" action="{% url 'add_recipe' %}">
+                {% csrf_token %}
+                
+                <label class="label_recipe" for="nome">Recipe Name</label>
+                <div class="container_recipe">
+                    <input name="nome" id="nome" type="text" required placeholder="Enter recipe name">
+                </div>
+
+                <label class="label_recipe" for="tempo">Preparation Time</label>
+                <div class="container_recipe">
+                    <input name="tempo" id="tempo" type="time" required placeholder="00:00">
+                </div>
+
+                <label class="label_recipe" for="instructions">Instructions</label>
+                <div class="container_recipe">
+                    <textarea name="instructions" id="instructions" required placeholder="Enter preparation instructions" rows="5"></textarea>
+                </div>
+
+                <div class="results-section">
+                    <p>Ingredients</p>
+                    {% for ingredient in ingredients %}
+
+                    <div class="result">
+                        <div class="img-container">
+                            <img src="{{ ingredient.image_url }}" alt="{{ ingredient.nome }}">
+                        </div>
+
+
+                        <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
+                        <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id }}">
+                            <select name="unit_{{ ingredient.id }}">
+                                <option value="ml">ml</option>
+                                <option value="l">l</option>
+                                <option value="tsp">tsp</option>
+                                <option value="tbsp">tbsp</option>
+                                <option value="cup">cup</option>
+                                <option value="g">g</option>
+                                <option value="kg">kg</option>
+                            </select>
+                        <input type="checkbox"id="ingredient_{{ ingredient.id }}" name="ingredients" value="{{ ingredient.id }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

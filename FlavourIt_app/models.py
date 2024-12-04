@@ -15,6 +15,9 @@ class receita(models.Model):
     tempo = models.TextField()
     instructions = models.TextField()
 
+    id_Cliente = models.ForeignKey(client, on_delete=models.CASCADE, null=True, blank=True)
+
+
     @property
     def image_url(self):
         file_name = f"{self.nome}.png"
@@ -74,5 +77,4 @@ class receita_utensilio(models.Model):
     id_receita = models.ForeignKey(receita, on_delete=models.CASCADE)
     id_utensilio = models.ForeignKey(utensilio, on_delete=models.CASCADE)
 
-
-
+    

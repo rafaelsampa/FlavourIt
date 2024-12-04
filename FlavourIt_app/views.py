@@ -93,8 +93,81 @@ def nutritional_data(request):
     return render(request, 'flavourit/nutritional_data.html')
 
 
-from django.utils.html import strip_tags
+### add receitas
 
+def adicionar_receitas(request):
+
+    ingredients = valores_nutricionais.objects.all()
+    utensilios=utensilio.objects.all()
+
+    return render(request, 'flavourit/adicionar_receita.html', {'ingredients': ingredients, 'utensilios': utensilios})
+
+def add_recipe(request):
+    if request.method == "POST":
+        nome = request.POST.get('nome')
+        tempo = request.POST.get('tempo')
+        instructions = request.POST.get('instructions')
+        selected_ingredients = request.POST.getlist('ingredients')
+
+        # Check if a recipe with the same name already exists
+        if receita.objects.filter(nome=nome).exists():
+            ingredients = valores_nutricionais.objects.all()
+            utensilios=utensilio.objects.all()
+            error_message = "A recipe with this name already exists. Please choose another name."
+            context = {
+                'error_message': error_message,
+                'ingredients': ingredients,
+                'utensilios': utensilios
+            }
+            return render(request, 'flavourit/adicionar_receita.html', context)
+
+
+        user_time_obj = datetime.strptime(tempo, "%H:%M")
+        user_time_formatted = user_time_obj.strftime("%H:%M:%S")
+        receita1=receita.objects.create(
+            nome=nome,
+            tempo=user_time_formatted,
+            instructions=instructions,
+            id_Cliente=client.objects.get(id=request.user.id)
+        )
+        ##receita colocada na database^^
+
+        #print(selected_ingredients)
+        for ingrediente in selected_ingredients:
+
+            idint=int(ingrediente)
+            ingredient1 = valores_nutricionais.objects.get(id=idint)
+            ingredient_id=valores_nutricionais.objects.get(id=ingredient1.id)
+
+            quantity_key = f"quantity_{ingrediente}"
+            unit_key = f"unit_{ingrediente}"
+            quant = request.POST.get(quantity_key, 0)  # Default to 0 if not provided
+            if(quant):
+                quant=Decimal(quant);
+            else:
+                quant=0;
+
+            unidade = request.POST.get(unit_key, '')
+            print(unidade)
+
+            ingredient.objects.create(
+                id_receita=receita1,
+                id_val_Nutri=ingredient_id,
+                quant=quant,
+                unidade=unidade
+            )
+            #print(i.id_val_Nutri)
+
+
+        #for utensilio1 in utensilios:
+        #    utensilio_obj, created= utensilio.objects.get_or_create(nome=utensilio1['nome'])
+        #    receita_utensilio.objects.create(id_receita=receita1, id_utensilio=utensilio_obj)
+
+
+    recipes=receita.objects.all()
+    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+
+###
 
 def generate_recipe_pdf(request, recipe_id):
     recipe = receita.objects.get(id=recipe_id)

@@ -2,7 +2,7 @@ from decimal import Decimal
 from .models import receita, ingredient, utensilio, valores_nutricionais, receita_utensilio
 
 def insert_recipe(nome, tempo, instrucoes, ingredientes, utensilios):
-    receita1 = receita.objects.create(nome=nome, tempo=tempo, instructions=instrucoes)
+    receita1 = receita.objects.create(nome=nome, tempo=tempo, instructions=instrucoes, id_Cliente=None)
 
     for ingrediente in ingredientes:
         nutrition_info = ingrediente['nutrition_info']
