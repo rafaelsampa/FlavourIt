@@ -8,52 +8,6 @@
         <title>FlavourIt</title>
         <meta name="description" content="Create incredible dishes with ingredients you already have at home.">
         <meta name="author" content="G">
-
-        <style>
-            .top-panel {
-                width: 100%;
-                height: 60px;
-                background-color: #fff8dc;  /* teste de cor verde */
-                position: fixed;
-                top: 0;
-                left: 0;
-                display: flex;
-                align-items: center;
-                padding: 0 20px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                z-index: 1000;
-            }
-
-            .panel-button {
-                background-color: transparent;
-                border: none;
-                padding: 10px 20px;
-                margin: 0 5px;
-                cursor: pointer;
-            }
-
-            .panel-button:hover {
-                background-color: #7ba05b;  
-            }
-
-            .panel-button img {
-                height: 24px;
-                width: auto;
-            }
-            /**Teste de troca de cor do csv**/
-            .panel-button img[src*="search_light"] {
-                filter: invert(40%) sepia(85%) saturate(385%) hue-rotate(78deg) brightness(98%) contrast(92%);
-            }
-
-            body {
-                padding-top: 60px;
-            }
-
-            .mobile-frame {
-                position: relative;
-                z-index: 1;
-            }
-        </style>
     </head>
     <body>
         <div class="top-panel">
@@ -61,14 +15,17 @@
                 <a href="{% url 'menu' %}" class="panel-button">
                     <img src="{% static 'graphics/logo.svg' %}" alt="Menu">
                 </a>
-                <a href="{% url 'ingredient_filter' %}" class="panel-button">
-                    <img src="{% static 'graphics/search_dark.svg' %}" alt="Search">
+                <a href="{% url 'menu' %}" class="panel-button">
+                    <img src="{% static 'graphics/search_green.svg' %}" alt="Menu">
+                </a>
+                <a href="{% url 'adicionar_receitas' %}" class="panel-button">
+                    <img src="{% static 'graphics/plus.svg' %}" alt="Add New Recipes">
                 </a>
                 <a href="{% url 'receitas_favoritadas' %}" class="panel-button">
-                    <img src="{% static 'graphics/heart.svg' %}" alt="Favorites">
+                    <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
                 </a>
                 <a href="{% url 'account' %}" class="panel-button">
-                    <img src="{% static 'graphics/user.svg' %}" alt="Account">
+                    <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
                 </a>
             {% endif %}
         </div>

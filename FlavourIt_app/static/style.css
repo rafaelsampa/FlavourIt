@@ -19,8 +19,6 @@
                 font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
             }
 
-            /* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
-
             /*se a altura for maior que a largura*/
             .mobile-frame{
                 width: 93vw; /*100 -7 por causa do padding*/
@@ -32,37 +30,6 @@
                 width: 0;
                 height: 0;
             }
-
-            /*se a largura for maior que a altura e a largura for maior que a largura de mobile*/
-            @media (orientation: landscape) and (min-width: 915px){
-
-                .mobile-frame{
-                    height: 93vh; /*100-7 por causa do padding*/
-                    width: 49.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical. -7 por causa do padding*/
-                }
-                .landscape-mobile-warning{
-                    visibility: hidden; /*esconde o aviso para virar o dispositivo*/
-                    width: 0;
-                    height: 0;
-                }
-            }
-
-            /*se a largura for maior que a altura e a largura é uma largura de mobile*/
-            @media (orientation: landscape) and (max-width: 915px){
-                .mobile-frame{
-                    visibility: hidden;
-                    width: 0;
-                    height: 0;
-                }
-                .landscape-mobile-warning{
-                    visibility: visible;
-                    font-size: 4.34vh;/*pq troca de portrait para landscape ent a largura fica maior que a altura*/
-                    width: 93vw;/*100 -7 por causa do padding*/
-                    height: 93vh;/*100 -7 por causa do padding*/
-                }
-            }
-
-            /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
 
             /*TAGS HTML*/
 
@@ -86,7 +53,7 @@
                 gap: 0.85vh;
             }
 
-            button img, .top-bar img{
+            button img, .top-panel img{
                 height: 3vh;
                 width: 3vh;
             }
@@ -186,30 +153,6 @@
                 justify-content: center;
                 align-items: center;
                 gap: 3.5vh;
-            }
-
-            .top-bar{
-
-                padding:10px;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-around;
-                align-items: center;
-            }
-
-            .left-top-bar{
-                flex-grow: 1;
-                display: flex;
-                flex-direction: row;
-                justify-content:left;
-            }
-
-            .right-top-bar{
-                flex-grow: 1;
-                display: flex;
-                flex-direction: row;
-                justify-content:right;
-                gap: 2vh;
             }
 
             .tabs-bar{
@@ -553,6 +496,28 @@
                 width: 3;
             }
 
+            .top-panel {
+                width: 100vw;
+                height: 6vh;
+                background-color: var(--surface);
+                position: fixed;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                flex-flow: row;
+            }
+
+            .panel-button {
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                width: 3vh;
+            }
+
+            .panel-button:hover {
+                background-color: var(--surface-container);
+            }
+
             /*FIM DE CLASSES*/
 
             /*ANIMAÇÔES*/
@@ -561,3 +526,58 @@
                 100% {transform: rotate(0deg);}
             }
             /*FIM DE ANIMAÇÔES*/
+
+/* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+
+            /*se a largura for maior que a altura e a largura for maior que a largura de mobile*/
+            @media (orientation: landscape) and (min-width: 915px){
+
+                .mobile-frame{
+                    height: 93vh; /*100-7 por causa do padding*/
+                    width: 49.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical. -7 por causa do padding*/
+                }
+                .landscape-mobile-warning{
+                    visibility: hidden; /*esconde o aviso para virar o dispositivo*/
+                    width: 0;
+                    height: 0;
+                }
+
+                .top-panel {
+                    width: 18vh;
+                    height: 100%;
+                    background-color: var(--surface);
+                    position: fixed;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-flow: column;
+                }
+    
+                .panel-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    width: 100%;
+                }
+    
+                .panel-button:hover {
+                    background-color: var(--surface-container);
+                }
+            }
+
+            /*se a largura for maior que a altura e a largura é uma largura de mobile*/
+            @media (orientation: landscape) and (max-width: 915px){
+                .mobile-frame{
+                    visibility: hidden;
+                    width: 0;
+                    height: 0;
+                }
+                .landscape-mobile-warning{
+                    visibility: visible;
+                    font-size: 4.34vh;/*pq troca de portrait para landscape ent a largura fica maior que a altura*/
+                    width: 93vw;/*100 -7 por causa do padding*/
+                    height: 93vh;/*100 -7 por causa do padding*/
+                }
+            }
+
+            /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */

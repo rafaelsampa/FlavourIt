@@ -8,10 +8,10 @@
    stroke-width="2"
    stroke-linecap="round"
    stroke-linejoin="round"
-   class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+   class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
    version="1.1"
    id="svg3"
-   sodipodi:docname="search_dark.svg"
+   sodipodi:docname="plus.svg"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,14 +28,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="23.71754"
-     inkscape:cx="11.08884"
-     inkscape:cy="14.124568"
-     inkscape:window-width="1290"
-     inkscape:window-height="991"
-     inkscape:window-x="26"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:zoom="33.375"
+     inkscape:cx="11.985019"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg3" />
   <path
      stroke="none"
@@ -43,11 +43,11 @@
      fill="none"
      id="path1" />
   <path
-     d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+     d="M12 5l0 14"
      id="path2"
-     style="stroke:#51453a;stroke-opacity:1" />
+     style="stroke:#58633a;stroke-opacity:1" />
   <path
-     d="M21 21l-6 -6"
+     d="M5 12l14 0"
      id="path3"
-     style="stroke:#51453a;stroke-opacity:1" />
+     style="stroke:#58633a;stroke-opacity:1" />
 </svg>
