@@ -343,13 +343,24 @@ def configAccount(request):
     return render(request, 'flavourit/account.html')
 
 
-"""def macrosCalc(request):
+def menuUser(request):
     if request.method == "GET":
-        receita_id = request.GET['id_receita']
-        ingredients_id = ingredient.objects.get(id_receita=receita_id)
-        for i in range(ingredients_id.count):
-            val_id = valores_nutricionais.objects.get(id=ingredients_id[i].id_val_Nutri)
-            daily_diaries = """
+        id_client = request.user.id
+        getInfoTableClient = client.objects.get(id=id_client)
+        getinfoTableUser = User.objects.get(id=id_client)
+        name = getInfoTableClient.nome
+        altura = getInfoTableClient.altura
+        peso = getInfoTableClient.peso
+        birthDate = getInfoTableClient.Birth_Date
+        username = getinfoTableUser.username
+        dateJoin = getinfoTableUser.date_joined
+        
+        if favoritado.objects.filter(id_Cliente_id=id_client).exists():
+            fav = favoritado.id_Receita_id.filter(id_Cliente_id=id_client)
+        else:
+            fav = ""
+        
+    return render(request, "flavourit/menuUser.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
         
 # ======== Fim de views para URLs ========
 
