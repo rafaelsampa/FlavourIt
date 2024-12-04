@@ -87,7 +87,7 @@ ingredientes = [
         'quantidade': 400,
         'unidade': 'g',
         'nutrition_info': {
-            'nome': 'Crushed Tomatoes',
+            'nome': 'Tomatoes',
             'gordura': 0.2,
             'carboidrato': 3.9,
             'proteina': 1.2,
@@ -123,7 +123,7 @@ ingredientes = [
         'quantidade': 1,
         'unidade': 'tbsp',
         'nutrition_info': {
-            'nome': 'Herbs (Thyme, Basil)',
+            'nome': 'Herbs (mixed)',
             'gordura': 0.1,
             'carboidrato': 1.0,
             'proteina': 0.3,

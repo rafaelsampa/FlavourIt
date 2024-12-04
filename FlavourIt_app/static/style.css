@@ -7,7 +7,7 @@
             --surface-container-highest: #cccccc;
             --surface-container: #f0e2d7;
             }
-            
+
             body {
                 height: 100vh;
                 background-color: var(--tertiary-fixed);
@@ -18,24 +18,24 @@
                 color: var(--on-surface-variant);
                 font-size: 2vh; /*o tamanho original era 14pt que equivale a 18.67 px. 18.67 px corresponde a 2% da altura, ou seja 2vh*/
             }
-            
+
             /* ====== MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
-            
+
             /*se a altura for maior que a largura*/
             .mobile-frame{
                 width: 93vw; /*100 -7 por causa do padding*/
                 height: 93vh; /*100 -7 por causa do padding*/
-            
+
             }
             .landscape-mobile-warning{
                 visibility: hidden; /*esconde o aviso para virar o dispositivo*/
                 width: 0;
                 height: 0;
             }
-            
+
             /*se a largura for maior que a altura e a largura for maior que a largura de mobile*/
             @media (orientation: landscape) and (min-width: 915px){
-                
+
                 .mobile-frame{
                     height: 93vh; /*100-7 por causa do padding*/
                     width: 49.25vh; /*56.25/100 = 9/16, a mesma proporção de um telefone vertical. -7 por causa do padding*/
@@ -46,9 +46,9 @@
                     height: 0;
                 }
             }
-            
+
             /*se a largura for maior que a altura e a largura é uma largura de mobile*/
-            @media (orientation: landscape) and (max-width: 915px){   
+            @media (orientation: landscape) and (max-width: 915px){
                 .mobile-frame{
                     visibility: hidden;
                     width: 0;
@@ -61,16 +61,16 @@
                     height: 93vh;/*100 -7 por causa do padding*/
                 }
             }
-            
+
             /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
-            
+
             /*TAGS HTML*/
-            
+
             p{
                 margin: 0;
                 text-align: center;
             }
-        
+
             button{
                 height: 5.5vh;
                 background-color: var(--tertiary);
@@ -85,12 +85,12 @@
                 align-items: center;
                 gap: 0.85vh;
             }
-        
+
             button img, .top-bar img{
                 height: 3vh;
                 width: 3vh;
             }
-        
+
             input:checked + .slider {
                 background-color: var(--tertiary);
             }
@@ -102,7 +102,7 @@
                 -ms-transform: translateX(3vh);
                 transform: translateX(3vh);
             }
-        
+
             input[type="search"]{
                 border: none;
                 border-radius: 24px 24px 0 0;
@@ -117,7 +117,7 @@
                 background: none;
                 border: none;
             }
-            
+
             input[type="checkbox"]{
                 height: 3vh;
                 width: 3vh;
@@ -152,18 +152,18 @@
                 border: solid thin var(--surface);
                 background-color: var(--surface-container);
             }
-            
+
             /*FIM DE TAGS HTML*/
-            
+
             /*CLASSES*/
-            
+
             .mobile-frame{
                 padding: 3.5vh 3.5vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
-        
+
             .landscape-mobile-warning{
                 display: flex;
                 flex-direction: column;
@@ -171,14 +171,14 @@
                 align-items: center;
                 gap: 8.4vh;
             }
-        
+
             .landscape-mobile-warning img{
                 width: 30vw;
                 height: 30vh;
                 transform: rotate(-90deg);
                 animation: turning 1s ease infinite alternate;
             }
-        
+
             .main-menu,.bottom-section{
                 flex-grow: 1;
                 display: flex;
@@ -187,7 +187,7 @@
                 align-items: center;
                 gap: 3.5vh;
             }
-        
+
             .top-bar{
 
                 padding:10px;
@@ -196,14 +196,14 @@
                 justify-content:space-around;
                 align-items: center;
             }
-        
+
             .left-top-bar{
                 flex-grow: 1;
                 display: flex;
                 flex-direction: row;
                 justify-content:left;
             }
-        
+
             .right-top-bar{
                 flex-grow: 1;
                 display: flex;
@@ -211,7 +211,7 @@
                 justify-content:right;
                 gap: 2vh;
             }
-        
+
             .tabs-bar{
                 width: 100%;
                 background: var(--surface);
@@ -221,7 +221,7 @@
                 align-items: center;
                 border-bottom: solid thin var(--on-surface-variant);
             }
-            
+
             .tab{
                 flex-grow: 1;
                 height: 5.15vh;
@@ -230,24 +230,24 @@
                 justify-content:center;
                 align-items: center;
             }
-        
+
             .tab a{
                 height: 100%;
                 line-height: 250%;
                 color: #51453a;
                 text-decoration: none;
             }
-        
+
             .current{/*para tab atual, colocar nos a*/
                 border-bottom: solid var(--on-surface-variant);
             }
-        
+
             .logout-button{
                 background: none;
                 color: var(--on-surface-variant);
                 text-decoration: underline;
             }
-        
+
             .switch {
                 position: relative;
                 display: inline-block;
@@ -283,7 +283,7 @@
                 -webkit-transition: .4s;
                 transition: .4s;
             }
-            
+
             .img-container{
                 width: 5vh;
                 height: 5vh;
@@ -298,7 +298,7 @@
                 height: auto;
                 object-fit: cover;
             }
-        
+
             .result{
                 background-color: var(--surface);
                 width:100%;
@@ -309,7 +309,7 @@
                 align-items: center;
                 border: solid thin var(--surface-container);
             }
-        
+
             .result p{
                 width: 30%;
             }
@@ -438,7 +438,7 @@
                 align-items: center;
                 gap: 3vh;
             }
-            
+
             .container_account{
                 border: thin solid var(--on-surface-variant);
                 background-color: var(--surface-container);
@@ -454,7 +454,7 @@
                 align-items: center;
                 gap: 3vh;
             }
-            
+
             .container_account{
                 border: thin solid var(--on-surface-variant);
                 background-color: var(--surface-container);
@@ -522,12 +522,12 @@
             .login_div label{
                 font-size: 2vh;
             }
-            
+
             .dropdown {
                 position: relative;
                 display: inline-block;
             }
-            
+
             .dropdown-content {
                 display: none;
                 position: absolute;
@@ -537,14 +537,14 @@
                 overflow: auto;
                 z-index: 1;
             }
-            
+
             .dropdown-content a {
                 color: var(--on-surface-variant);
                 padding: 1vh 2vh;
                 text-decoration: none;
                 display: block;
             }
-            
+
             .show {
                 display: block;
             }
@@ -552,9 +552,9 @@
             .ingredient-list{
                 width: 3;
             }
-        
+
             /*FIM DE CLASSES*/
-        
+
             /*ANIMAÇÔES*/
             @keyframes turning {
                 0% {transform: rotate(-90deg);}

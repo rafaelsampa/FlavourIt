@@ -69,7 +69,7 @@ class Command(BaseCommand):
 
         insert_recipe('Pasta with garlic and oil', '00:15:00', '<li>Cook spaghetti in boiling salted water until al dente.<li>In a skillet, sauté garlic in olive oil until golden.<li>Toss the drained spaghetti in the skillet with garlic and oil. Season with salt, pepper, and parsley.', pastawithgarlicandoil.ingredientes, pastawithgarlicandoil.utensilios)
 
-        insert_recipe('Pancake ', '00:10:00', '<li>Mix flour, milk, eggs, and a pinch of salt until smooth.<li>Heat a non-stick skillet and pour a small amount of batter, swirling to coat the bottom.<li>Cook until edges lift, flip, and cook liiefly on the other side.', pancake.ingredientes, pancake.utensilios)
+        insert_recipe('Pancake', '00:10:00', '<li>Mix flour, milk, eggs, and a pinch of salt until smooth.<li>Heat a non-stick skillet and pour a small amount of batter, swirling to coat the bottom.<li>Cook until edges lift, flip, and cook liiefly on the other side.', pancake.ingredientes, pancake.utensilios)
 
         insert_recipe('Omelet', '00:10:00', '<li>Beat eggs with a pinch of salt, pepper, and optional fillings like cheese or vegetables.<li>Heat butter in a skillet, pour in the eggs, and let set.<li>Fold the omelet in half and cook liiefly until the cheese melts.', omelet.ingredientes, omelet.utensilios)
 
@@ -117,7 +117,7 @@ class Command(BaseCommand):
 
         insert_recipe('Lemon Pie', '01:10:00', '<li>Make a crust with crushed biscuits and butter.<li>Mix condensed milk, lime juice, and cream, then pour into the crust.<li>Chill for 2 hours and serve with whipped cream.', lemonpie.ingredientes, lemonpie.utensilios)
 
-        insert_recipe('Churrasco', '01:30:00', '<li>Season meats with coarse salt.<li>Grill over charcoal until desired doneness.<li>Serve with chimichurri and sides like farofa or salad.', barbecue.ingredientes, barbecue.utensilios)
+        insert_recipe('Barbecue', '01:30:00', '<li>Season meats with coarse salt.<li>Grill over charcoal until desired doneness.<li>Serve with chimichurri and sides like farofa or salad.', barbecue.ingredientes, barbecue.utensilios)
 
         insert_recipe('Paella', '01:20:00', '<li>Sauté onions, garlic, and bell peppers in olive oil.<li>Add rice, lioth, saffron, and seafood or chicken.<li>Cook until the rice absorbs the liquid.', paella.ingredientes, paella.utensilios)
 
@@ -147,11 +147,11 @@ class Command(BaseCommand):
 
         insert_recipe('Gnocchi', '01:00:00', '<li>Mix mashed potatoes, flour, and egg to form a dough.<li>Shape into rolls, cut into pieces, and boil.<li>Serve with sauce of choice.', gnocchi.ingredientes, gnocchi.utensilios)
 
-        insert_recipe('Cornmeal Cake ', '00:50:00', '<li>Mix cornmeal, sugar, milk, eggs, and butter.<li>Pour into a greased pan and bake at 180°C.<li>Serve with coffee or tea.', cornmealcake.ingredientes, cornmealcake.utensilios)
+        insert_recipe('Cornmeal Cake', '00:50:00', '<li>Mix cornmeal, sugar, milk, eggs, and butter.<li>Pour into a greased pan and bake at 180°C.<li>Serve with coffee or tea.', cornmealcake.ingredientes, cornmealcake.utensilios)
 
         insert_recipe('Sushi', '01:30:00', '<li>Cook sushi rice and season with vinegar.<li>Slice fresh fish and vegetables.<li>Assemble rolls with nori, rice, and fillings.', sushi.ingredientes, sushi.utensilios)
 
-        insert_recipe('minestronesoup Soup', '00:50:00', '<li>Sauté onions, garlic, and vegetables.<li>Add lioth, beans, and pasta, and simmer until tender.<li>Season to taste and serve with grated cheese.', minestronesoup.ingredientes, minestronesoup.utensilios)
+        insert_recipe('Minestrone Soup', '00:50:00', '<li>Sauté onions, garlic, and vegetables.<li>Add lioth, beans, and pasta, and simmer until tender.<li>Season to taste and serve with grated cheese.', minestronesoup.ingredientes, minestronesoup.utensilios)
 
         insert_recipe('Panna Cotta', '00:20:00', '<li>Heat cream, sugar, and gelatin until dissolved.Pour into molds and chill until set.<li>Serve with fruit sauce.', pannacotta.ingredientes, pannacotta.utensilios)
 
