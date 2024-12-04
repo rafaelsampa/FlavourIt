@@ -2,30 +2,6 @@
 {% block conteudo %}
 {% load static %}
 {% if user.is_authenticated %}
-<<<<<<< HEAD
-=======
-<div class="top-bar">
-    <div class="left-top-bar">
-        <form action="{% url 'menu' %}" method="get">
-            <input type="image" src="{% static 'graphics/logo.svg' %}" name="submit" width="42" height="42" alt="submit"/>
-        </form>
-    </div>
-    <div class="right-top-bar">
-        <a href="{% url 'adicionar_receitas' %}">
-            <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
-        </a>
-        <a href="{% url 'receitas_favoritadas' %}">
-            <img src="{% static 'graphics/heart-filled.svg' %}" alt="Favorited Recipes">
-        </a>
-        <a href="{% url 'account' %}">
-            <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
-        </a>
-        <a href="{% url 'user' %}">
-            <img src="{% static 'graphics/user.svg' %}" alt="Account Settings">
-        </a>
-    </div>
-</div>
->>>>>>> ffd2d9c9912522aebdbdec6c29b74f44091150a1
 <div class="main-menu">
     <form action="{% url 'ingredient_filter' %}" method="get">
         <button type="submit"><img src="{% static 'graphics/search_light.svg' %}">Search Recipes by Ingredients</button>
