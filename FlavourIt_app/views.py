@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import *
-from .models import receita, valores_nutricionais, utensilio, ingredient
+from .models import receita, valores_nutricionais, utensilio, ingredient,client
 from datetime import datetime
-from FlavourIt_app.models import receita, client
 from math import floor
 from decimal import Decimal
 from reportlab.lib.pagesizes import A4
@@ -11,15 +10,13 @@ from reportlab.platypus import Paragraph, Frame, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from django.utils.html import strip_tags
 from django.http import HttpResponse
-from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.conf import settings
-from django.core.mail import EmailMessage
-from django.utils import timezone
-from django.urls import reverse
 from django.db.models import Q
+import os
+from django.core.files.storage import FileSystemStorage
 
 def registerView(request):
     if request.method == "POST":
@@ -94,8 +91,6 @@ def nutritional_data(request):
     return render(request, 'flavourit/nutritional_data.html')
 
 
-### add receitas
-
 def adicionar_receitas(request):
 
     ingredients = valores_nutricionais.objects.all()
@@ -109,7 +104,19 @@ def add_recipe(request):
         tempo = request.POST.get('tempo')
         instructions = request.POST.get('instructions')
         selected_ingredients = request.POST.getlist('ingredients')
-        imagem = request.POST.get('imagem')
+        imagem = request.FILES.get('imagem')
+
+        # Define the folder path where the image will be saved
+        folder_path = os.path.join(settings.BASE_DIR, 'FlavourIt_app/static/graphics/img_recipes/')
+        # Create the folder if it doesn't exist
+        os.makedirs(folder_path, exist_ok=True)
+        # Save the file
+        fs = FileSystemStorage(location=folder_path)
+        file_name = fs.save(nome+".png", imagem)  # Save the file with its original name
+        file_path = fs.path(file_name)  # Get the full path to the saved file
+
+        #print(nome)
+        #print(file_path)
 
         # Check if a recipe with the same name already exists
         if receita.objects.filter(nome=nome).exists():
@@ -126,7 +133,7 @@ def add_recipe(request):
 
         user_time_obj = datetime.strptime(tempo, "%H:%M")
         user_time_formatted = user_time_obj.strftime("%H:%M:%S")
-        imagem_path = imagem if imagem else 'graphics/img_recipes/default.jpg'
+        
         receita1=receita.objects.create(
             nome=nome,
             tempo=user_time_formatted,
@@ -151,7 +158,7 @@ def add_recipe(request):
                 quant=0;
 
             unidade = request.POST.get(unit_key, '')
-            print(unidade)
+            #print(unidade)
 
             ingredient.objects.create(
                 id_receita=receita1,
@@ -312,18 +319,18 @@ def favoritar(request):
         try:
             member = client.objects.get(id=request.user.id)  # Assuming the user is logged in and request.user is available
         except:
-            print("DEU ERRADO");
+            #print("DEU ERRADO");
             return redirect(request.META.get('HTTP_REFERER', '/'))
 
         favorite = favoritado.objects.filter(id_Receita_id=receita_id, id_Cliente_id=member.id).first()
 
         if favorite:
             favorite.delete()
-            print("FOI1")
+            #print("FOI1")
         else:
             # If it doesn't exist, create a new favorite
             favoritado.objects.create(id_Receita_id=receita_id, id_Cliente_id=member.id)
-            print("FOI2")
+            #print("FOI2")
 
     # Redirect back to the current page
     return redirect(request.META.get('HTTP_REFERER', '/'))
@@ -440,7 +447,7 @@ def name_search(request):
 
 def search_by_name(request):
     query = request.GET.get('name')  # Get the search query from the GET request
-    print(query)         
+    #print(query)         
 
     if query:
         # Filter recipes based on the name containing the query string (case-insensitive)
