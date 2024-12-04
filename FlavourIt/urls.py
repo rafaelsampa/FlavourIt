@@ -43,7 +43,7 @@ urlpatterns = [
     path("signup/", views.registerView, name="signup"),
     path("login/", views.loginView, name="login"),
     path("logout/", views.logoutView, name='logout'),
-    path("menuUser/", views.menuUser, name="user"),
+    path("menuUser/", views.Account_View, name="user"),
     path('time_filter/',views.time_filter,name='time_filter'),
     path('search_by_time/',views.search_by_time,name='search_by_time'),
 
@@ -52,6 +52,4 @@ urlpatterns = [
     
     path('adicionar_receitas/', views.adicionar_receitas, name='adicionar_receitas'),
     path('add_recipe/', views.add_recipe, name='add_recipe'),
-
-
 ]

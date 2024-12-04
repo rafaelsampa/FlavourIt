@@ -357,7 +357,7 @@ def configAccount(request):
     return render(request, 'flavourit/account.html')
 
 
-def menuUser(request):
+def Account_View(request):
     if request.method == "GET":
         id_client = request.user.id
         getInfoTableClient = client.objects.get(id=id_client)
@@ -374,7 +374,7 @@ def menuUser(request):
         else:
             fav = ""
         
-    return render(request, "flavourit/menuUser.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
+    return render(request, "flavourit/account_view.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
         
 # ======== Fim de views para URLs ========
 
