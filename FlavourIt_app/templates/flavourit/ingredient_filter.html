@@ -21,14 +21,21 @@
             <div class="results-section">
                 {% for ingredient in ingredients %}
 
-                <div class="result">
+                <div class="box">
+
                     <div class="img-container">
                         <img src="{{ ingredient.image_url }}" alt="{{ ingredient.nome }}">
                     </div>
 
-
-                    <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
-                    <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id }}">
+                    <div>
+                        <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
+                    </div>
+                    
+                    <div>
+                        <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id }}">
+                    </div>
+                    
+                    <div>
                         <select>
                             <option value="ml">ml</option>
                             <option value="l">l</option>
@@ -38,7 +45,11 @@
                             <option value="g">g</option>
                             <option value="kg">kg</option>
                         </select>
-                    <input type="checkbox"id="ingredient_{{ ingredient.id }}" name="ingredients" value="{{ ingredient.id }}">
+                    </div>
+
+                    <div> 
+                        <input type="checkbox"id="ingredient_{{ ingredient.id }}" name="ingredients" value="{{ ingredient.id }}">
+                    </div>
                 </div>
                 {% endfor %}
             </div>

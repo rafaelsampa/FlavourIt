@@ -320,6 +320,19 @@
                 overflow-y: auto;
             }
 
+            .box {
+                border: solid thin var(--surface-container);
+                display: flex;
+                align-items: center;
+              }
+              
+            .box div {
+                width: 100%;
+                height: 5.15vh;
+                background-color: var(--surface);
+                border-radius: 5px;
+            }
+
             .filter-frame{
                 display: flex;
                 flex-direction: column;

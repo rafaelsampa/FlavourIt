@@ -15,23 +15,32 @@
     </div>
 
     <div class="middle-section">
+
+        <div class="box">
+
+
+        </div>
         <form action="{% url 'search_by_tools' %}" method="get">  <!-- Added form -->
             <input type="search" placeholder="Search recipes by tools...">
             <div class="results-section">
                 {% for utensilio in utensilios %}
-
-                <div class="result">
+                <div class="box">
                     <div class="img-container">
                         <img src="{{utensilio.image_url }}">
                     </div>
-                    <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
-                    <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
+
+                    <div>
+                        <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
+                    </div> 
                 </div>
                 {% endfor %}
             </div>
 
-    
-            <div class="bottom-section">
+                <div class="bottom-section">
                 <p>Hide recipes that contain other tools?</p>
                 <label class="switch">
                     <input type="checkbox" name="busca_exclusiva" id="busca_exclusiva">
