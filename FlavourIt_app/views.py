@@ -19,6 +19,7 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.utils import timezone
 from django.urls import reverse
+from django.db.models import Q
 
 def registerView(request):
     if request.method == "POST":
@@ -108,6 +109,7 @@ def add_recipe(request):
         tempo = request.POST.get('tempo')
         instructions = request.POST.get('instructions')
         selected_ingredients = request.POST.getlist('ingredients')
+        imagem = request.POST.get('imagem')
 
         # Check if a recipe with the same name already exists
         if receita.objects.filter(nome=nome).exists():
@@ -124,6 +126,7 @@ def add_recipe(request):
 
         user_time_obj = datetime.strptime(tempo, "%H:%M")
         user_time_formatted = user_time_obj.strftime("%H:%M:%S")
+        imagem_path = imagem if imagem else 'graphics/img_recipes/default.jpg'
         receita1=receita.objects.create(
             nome=nome,
             tempo=user_time_formatted,
@@ -165,6 +168,10 @@ def add_recipe(request):
 
 
     recipes=receita.objects.all()
+
+    cliente=client.objects.get(id=request.user.id);
+    recipes = recipes.filter(Q(id_Cliente__isnull=True) | Q(id_Cliente=cliente))
+
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
 ###
@@ -419,6 +426,9 @@ def search_by_ingredients(request):
 
     request.session['user_quantities'] = user_quantities
 
+    cliente=client.objects.get(id=request.user.id);
+    recipes = recipes.filter(Q(id_Cliente__isnull=True) | Q(id_Cliente=cliente))
+
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
 
@@ -429,7 +439,8 @@ def name_search(request):
     return render(request, 'flavourit/name_search.html')
 
 def search_by_name(request):
-    query = request.GET.get('name', '')  # Get the search query from the GET request
+    query = request.GET.get('name')  # Get the search query from the GET request
+    print(query)         
 
     if query:
         # Filter recipes based on the name containing the query string (case-insensitive)
@@ -437,7 +448,11 @@ def search_by_name(request):
     else:
         recipes = receita.objects.all()  # If no query, show all recipes
 
-    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes, 'query': query})
+
+    cliente=client.objects.get(id=request.user.id);
+    recipes = recipes.filter(Q(id_Cliente__isnull=True) | Q(id_Cliente=cliente))
+
+    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
 def tool_filter(request):
     utensilios = utensilio.objects.all()
@@ -474,6 +489,10 @@ def search_by_tools(request):
     else:
         recipes = receita.objects.all()  # Show all recipes if no tools are selected
 
+
+    cliente=client.objects.get(id=request.user.id);
+    recipes = recipes.filter(Q(id_Cliente__isnull=True) | Q(id_Cliente=cliente))
+
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
 ### funciona kkkkkkkkk
@@ -493,6 +512,9 @@ def search_by_time(request):
         recipes = receita.objects.filter(tempo__lte=user_time_formatted)
     else:
         recipes = receita.objects.all()  # Show all recipes if no time specified
+
+    cliente=client.objects.get(id=request.user.id);
+    recipes = recipes.filter(Q(id_Cliente__isnull=True) | Q(id_Cliente=cliente))
 
     return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
 
