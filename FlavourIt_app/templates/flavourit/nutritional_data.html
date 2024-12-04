@@ -13,31 +13,29 @@
     </div>
 
     <div class="header_recipe">
-        <div class="header_line"><p>{{ recipe.nome }}</p>
-            <div class="dropdown"></div>
-            <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
-            <div id="myDropdown" class="dropdown-content">
-                <form action="{% url 'favoritar' %}" method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="id_receita" value="{{ recipe.id }}">
-                    <button type="submit">{%if results == true%}<img src="{% static 'graphics/heart-filled_brown.svg' %}" alt="{{ recipe.nome }}">{%else%}<img src="{% static 'graphics/heart.svg' %}" alt="{{ recipe.nome }}">{%endif%}Favorite</button>
-                </form>
-                <form action="" method="post">
-                    <button type="submit">Export</button>
-                </form>
-                <form action="" method="post">
-                    <button type="submit">Share</button>
-                </form>
+        <div class="header_line">
+            <p>{{ recipe.nome }}</p>
+            <div class="dropdown">
+                <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <form action="{% url 'favoritar' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="id_receita" value="{{ recipe.id }}">
+                        <button type="submit">Favorite</button>
+                    </form>
+                    <form action="" method="post">
+                        <button type="submit">Export</button>
+                    </form>
+                    <form action="" method="post">
+                        <button type="submit">Share</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="img-recipe">
-            <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}"> 
-        </div>
-    </div>
 
     <div class="recipe-info">
         <div class="nutritional-info">
-            <table id="nutrition-table">
+            <table>
                 <thead>
                     <tr>
                         <th class="title"></th>
@@ -54,22 +52,13 @@
                     <tr>
                         <td class="title">{{ ingredient.nutrition_info.nome }}</td>
                         <td>{{ ingredient.quantidade }} {{ ingredient.unidade }}</td>
-                        <td class="fat">{{ ingredient.nutrition_info.gordura }}</td>
-                        <td class="carbs">{{ ingredient.nutrition_info.carboidrato }}</td>
-                        <td class="protein">{{ ingredient.nutrition_info.proteina }}</td>
+                        <td>{{ ingredient.nutrition_info.gordura }}</td>
+                        <td>{{ ingredient.nutrition_info.carboidrato }}</td>
+                        <td>{{ ingredient.nutrition_info.proteina }}</td>
                         <td></td>
                         <td></td>
                     </tr>
                     {% endfor %}
-                    <tr id="totals-row">
-                        <td class="title"><strong>Total</strong></td>
-                        <td></td>
-                        <td id="total-fat">0.00</td>
-                        <td id="total-carbs">0.00</td>
-                        <td id="total-protein">0.00</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -77,36 +66,22 @@
 </div>
 
 <script>
-    function calculateTotals() {
-        let totalFat = 0, totalCarbs = 0, totalProtein = 0;
-        const rows = document.querySelectorAll("#nutrition-table tbody tr:not(#totals-row)");
-
-        rows.forEach(row => {
-            totalFat += parseFloat(row.querySelector(".fat")?.textContent || 0);
-            totalCarbs += parseFloat(row.querySelector(".carbs")?.textContent || 0);
-            totalProtein += parseFloat(row.querySelector(".protein")?.textContent || 0);
-        });
-        document.getElementById("total-fat").textContent = totalFat.toFixed(2);
-        document.getElementById("total-carbs").textContent = totalCarbs.toFixed(2);
-        document.getElementById("total-protein").textContent = totalProtein.toFixed(2);
-    }
-    window.onload = calculateTotals;
-
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
     window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
         }
     }
-</script>
+    }
+    </script>
 
 {% endblock %}
