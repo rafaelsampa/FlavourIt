@@ -21,7 +21,7 @@ from django.urls import reverse
 
 def registerView(request):
     if request.method == "POST":
-        name = request.POST['name']
+        # name = request.POST['name']
         username = request.POST['username']
         birthDate = request.POST['birth_date']
         email = request.POST['email']
@@ -50,7 +50,7 @@ def registerView(request):
                 password=password
             )
             user = client(
-                nome = name,
+                # nome = name,
                 Birth_Date = birthDate,
                 altura = height,
                 peso = weight
