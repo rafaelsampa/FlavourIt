@@ -62,7 +62,7 @@
                 background-color: var(--tertiary);
             }
             input:focus + .slider {
-                box-shadow: 0 0 1px --tertiary;
+                box-shadow: 0 0 1px var(--tertiary);
             }
             input:checked + .slider:before {
                 -webkit-transform: translateX(3vh);
@@ -493,7 +493,7 @@
             }
 
             .ingredient-list{
-                width: 3;
+                width: 3vh;
             }
 
             .top-panel {

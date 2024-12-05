@@ -1,0 +1,41 @@
+
+{% extends 'flavourit/base.html' %}
+{% block conteudo %}
+{% load static %}
+<div class="filter-frame">
+  <div class="tabs-bar">
+    <div class="tab current">
+      <a href="{% url 'ingredient_filter' %}">Favourite Recipes</a>
+    </div>
+  </div>
+
+  <div class="middle-section">
+    <div class="header"></div>
+    <div class="results-section">
+    {% if recipes %}
+        {% for recipe in recipes %}
+        <div class="result">
+            <div class="img-container">
+                <!-- Dynamically link to recipe_card view -->
+                <a href="{% url 'recipe_card' recipe.id %}">
+                    <img src="{{ recipe.image_url }}" alt="{{ recipe.nome }}">
+                </a>
+            </div>
+            <p>{{ recipe.nome }}</p>
+            <div class="result-info">
+                <p>{{ recipe.tempo|slice:":5" }}</p>
+                <img src="{% static 'graphics/clock.svg' %}" alt="Time">
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No recipes found.</p>
+    {% endif %}
+</div>
+
+</div>
+
+  </div>
+  </div>
+</div>
+{% endblock %}

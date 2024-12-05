@@ -314,7 +314,7 @@ def receitas_favoritadas(request):
     id_user=member.id
     recipes = receita.objects.filter(favoritado__id_Cliente=id_user)
     
-    return render(request, 'flavourit/recipe_results.html', {'recipes': recipes})
+    return render(request, 'flavourit/receitas_favoritadas.html', {'recipes': recipes})
 
 def recipeCardFavorite(request):
     receita_id = request.GET['receita_id']
