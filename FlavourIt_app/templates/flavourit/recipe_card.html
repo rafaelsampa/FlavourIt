@@ -53,8 +53,8 @@
             {% endif %}
             <img src="{% static 'graphics/bowl-spoon.svg' %}" alt="Portion">
         </div>
-
-        <div class="slow-info">
+    
+        <div class="scrollable-content">
             <div class="ingredient-list">
                 <ul>
                     {% for ingredient in ingredients %}
@@ -64,14 +64,16 @@
                     {% endfor %}
                 </ul>
             </div>
-
-            <div class="">
+    
+            <div class="instructions">
                 <ol>
                     {{ recipe.instructions|safe }}
                 </ol>
             </div>
         </div>
     </div>
+    
+    
 </div>
 <script>
 
@@ -92,12 +94,12 @@
     }
     }
     </script>
-    
+
     <style>
     .back-button a img {
-        filter: brightness(40%); 
+        filter: brightness(40%);
     }
     </style>
 
-    
+
 {% endblock %}
