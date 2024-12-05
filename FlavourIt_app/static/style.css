@@ -581,3 +581,14 @@
             }
 
             /* ====== FIM DE MEDIA QUERIES PARA AJUSTES DE PROPORÇÃO DE TELA ====== */
+
+
+.auth-page .top-panel {
+    background-color: transparent !important;
+}
+
+@media (orientation: landscape) and (min-width: 915px) {
+    .auth-page .top-panel {
+        background-color: transparent !important;
+    }
+}
