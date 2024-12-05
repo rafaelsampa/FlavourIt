@@ -372,7 +372,6 @@ def Account_View(request):
         id_client = request.user.id
         getInfoTableClient = client.objects.get(id=id_client)
         getinfoTableUser = User.objects.get(id=id_client)
-        name = getInfoTableClient.nome
         altura = getInfoTableClient.altura
         peso = getInfoTableClient.peso
         birthDate = getInfoTableClient.Birth_Date
@@ -384,7 +383,7 @@ def Account_View(request):
         else:
             fav = ""
         
-    return render(request, "flavourit/account_view.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
+    return render(request, "flavourit/account_view.html", {'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
         
 # ======== Fim de views para URLs ========
 
