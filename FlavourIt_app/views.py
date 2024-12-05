@@ -107,17 +107,18 @@ def add_recipe(request):
         selected_ingredients = request.POST.getlist('ingredients')
         imagem = request.FILES.get('imagem')
 
-        # Define the folder path where the image will be saved
-        folder_path = os.path.join(settings.BASE_DIR, 'FlavourIt_app/static/graphics/img_recipes/')
-        # Create the folder if it doesn't exist
-        os.makedirs(folder_path, exist_ok=True)
-        # Save the file
-        fs = FileSystemStorage(location=folder_path)
-        file_name = fs.save(nome+".png", imagem)  # Save the file with its original name
-        file_path = fs.path(file_name)  # Get the full path to the saved file
-
-        #print(nome)
-        #print(file_path)
+        if(imagem):
+            # Define the folder path where the image will be saved
+            folder_path = os.path.join(settings.BASE_DIR, 'FlavourIt_app/static/graphics/img_recipes/')
+            # Create the folder if it doesn't exist
+            os.makedirs(folder_path, exist_ok=True)
+            # Save the file
+            fs = FileSystemStorage(location=folder_path)
+            file_name = fs.save(nome+".png", imagem)  # Save the file with its original name
+            file_path = fs.path(file_name)  # Get the full path to the saved file
+    
+            #print(nome)
+            #print(file_path)
 
         # Check if a recipe with the same name already exists
         if receita.objects.filter(nome=nome).exists():
@@ -366,7 +367,7 @@ def configAccount(request):
     return render(request, 'flavourit/account.html')
 
 
-def menuUser(request):
+def Account_View(request):
     if request.method == "GET":
         id_client = request.user.id
         getInfoTableClient = client.objects.get(id=id_client)
@@ -383,7 +384,7 @@ def menuUser(request):
         else:
             fav = ""
         
-    return render(request, "flavourit/menuUser.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
+    return render(request, "flavourit/account_view.html", {'name':name, 'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
         
 # ======== Fim de views para URLs ========
 
