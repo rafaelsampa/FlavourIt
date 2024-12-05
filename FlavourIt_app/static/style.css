@@ -640,3 +640,9 @@
     list-style-position: inside;
 }
 
+.results-section2{
+    height: 85vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+

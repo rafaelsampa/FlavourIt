@@ -107,6 +107,7 @@ def add_recipe(request):
         tempo = request.POST.get('tempo')
         instructions = request.POST.get('instructions')
         selected_ingredients = request.POST.getlist('ingredients')
+        selected_utensilios = request.POST.getlist('utensilios')
         imagem = request.FILES.get('imagem')
 
         if(imagem):
@@ -173,9 +174,16 @@ def add_recipe(request):
             #print(i.id_val_Nutri)
 
 
-        #for utensilio1 in utensilios:
-        #    utensilio_obj, created= utensilio.objects.get_or_create(nome=utensilio1['nome'])
-        #    receita_utensilio.objects.create(id_receita=receita1, id_utensilio=utensilio_obj)
+        for utensilios in selected_utensilios:
+
+            idint=int(utensilios)
+            utensilio1 = utensilio.objects.get(id=idint)
+            utensilio_id=utensilio.objects.get(id=utensilio1.id)
+
+            receita_utensilio.objects.create(
+                id_receita=receita1,
+                id_utensilio=utensilio_id
+            )
 
 
     recipes=receita.objects.all()
