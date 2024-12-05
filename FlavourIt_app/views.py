@@ -28,6 +28,7 @@ def registerView(request):
         password = request.POST['password']
         weight = request.POST['weight']
         height = request.POST['height']
+        activity = request.POST['activity']
         
         user_data_has_error = False
         
@@ -53,7 +54,8 @@ def registerView(request):
                 # nome = name,
                 Birth_Date = birthDate,
                 altura = height,
-                peso = weight
+                peso = weight,
+                Atividade = activity
             )
             user.save()
             messages.success(request, 'Account created. Login now')
