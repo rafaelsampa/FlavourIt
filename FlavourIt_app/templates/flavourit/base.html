@@ -9,7 +9,7 @@
         <meta name="description" content="Create incredible dishes with ingredients you already have at home.">
         <meta name="author" content="G">
     </head>
-    <body>
+    <body class="{% if not user.is_authenticated %}auth-page{% endif %}">
         <div class="top-panel">
             {% if user.is_authenticated %}
                 <a href="{% url 'menu' %}" class="panel-button">
