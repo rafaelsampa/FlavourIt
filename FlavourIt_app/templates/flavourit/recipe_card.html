@@ -14,6 +14,11 @@
 
     <div class="header_recipe">
         <div class="header_line">
+            <div class="back-button">
+                <a href="{{ return_url }}">
+                    <img src="{% static 'graphics/arrow-left.svg' %}" alt="Back">
+                </a>
+            </div>
             <p>{{ recipe.nome }}</p>
             <div class="dropdown">
                 <button type="button" onclick="myFunction()" class="dropbtn">⋮</button>
@@ -87,5 +92,12 @@
     }
     }
     </script>
+    
+    <style>
+    .back-button a img {
+        filter: brightness(40%); 
+    }
+    </style>
 
+    
 {% endblock %}
