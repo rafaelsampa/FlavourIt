@@ -20,11 +20,15 @@
             }
 
             /*se a altura for maior que a largura*/
-            .mobile-frame{
-                width: 93vw; /*100 -7 por causa do padding*/
-                height: 93vh; /*100 -7 por causa do padding*/
+.mobile-frame {
+    width: 100vw;  /* Increased from 93vw */
+    height: 93vh;
+    padding: 3.5vh 3.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-            }
             .landscape-mobile-warning{
                 visibility: hidden; /*esconde o aviso para virar o dispositivo*/
                 width: 0;
@@ -334,18 +338,20 @@
                 object-fit: cover;
             }
 
-            .recipe-info{
+            .recipe-info {
                 margin-top: -3.5vh;
                 flex-grow: 1;
                 background-color: var(--surface);
                 width: 100%;
-                overflow: scroll;
+                max-height: 60vh;
+                overflow-y: scroll;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 border-radius: 0 0 24px 24px;
             }
+            
 
             .quick-info{
                 margin-top: 3.5vh;
@@ -358,12 +364,20 @@
                 width: 100%;
             }
 
-            .slow-info{
-                display: flex;
-                flex-direction: row;
-                justify-content:center;
-                align-items: center;
+            .instructions-list {
+                height: 50vh;
+                overflow: hidden;
+                overflow-y: auto;
+                padding: 0 3.5vh;
             }
+            
+            .slow-info {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 3.5vh;
+            }
+            
 
             .result-info{
                 flex-grow: 1;
@@ -592,3 +606,37 @@
         background-color: transparent !important;
     }
 }
+
+.scrollable-content {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    overflow-y: auto;
+    padding: 2vh;
+}
+
+.ingredient-list {
+    width: 40%;
+    padding-right: 2vh;
+}
+
+.instructions {
+    width: 60%;
+    padding-left: 2vh;
+    
+}
+
+.ingredient-list ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.ingredient-list li {
+    white-space: nowrap;
+    padding: 0.5vh 0;
+    line-height: 1.5;
+    list-style-position: inside;
+}
+
