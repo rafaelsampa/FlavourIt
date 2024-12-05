@@ -17,6 +17,7 @@ from django.conf import settings
 from django.db.models import Q
 import os
 from django.core.files.storage import FileSystemStorage
+from django.urls import reverse
 
 def registerView(request):
     if request.method == "POST":
@@ -235,6 +236,13 @@ def recipe_card(request, recipe_id):
     ingredients = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
     utensils = utensilio.objects.filter(receita_utensilio__id_receita=recipe)
 
+    fallback_url = reverse('menu')
+
+    if 'nutritional_data' in request.META.get('HTTP_REFERER', ''):
+        return_url = fallback_url
+    else:
+        return_url = request.META.get('HTTP_REFERER', fallback_url)
+
     recipe_ingredients = ingredient.objects.filter(id_receita=recipe)
 
     portions=-1
@@ -289,6 +297,7 @@ def recipe_card(request, recipe_id):
         'ingredients': ingredient_data,
         'utensils': utensils,
         'portions': portions,
+         'return_url': return_url
     })
 
 def receitas_favoritadas(request):
@@ -531,6 +540,13 @@ def nutritional_data(request, recipe_id):
 
     ingredientes = ingredient.objects.filter(id_receita=recipe).select_related('id_val_Nutri')
 
+    fallback_url = reverse('recipe_card', args=[recipe_id])
+
+    if 'recipe_card' in request.META.get('HTTP_REFERER', ''):
+        return_url = fallback_url
+    else:
+        return_url = request.META.get('HTTP_REFERER', fallback_url)
+
     ingredient_data = []
     for ing in ingredientes:
         ingredient_data.append({
@@ -549,6 +565,7 @@ def nutritional_data(request, recipe_id):
     return render(request, 'flavourit/nutritional_data.html', {
         'recipe': recipe,
         'ingredientes': ingredient_data,
+        'return_url': return_url
     })
 
     def recipeCardFavorite(request):
