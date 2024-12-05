@@ -11,15 +11,11 @@
     </head>
     <body>
 
-        {% if messages %}
-            {% for message in messages%}
-                {% if message.tags == 'error' %}
-                    <center><h4 style="color: firebrick;">{{message}}</h4></center>
-                {% else %}
-                <center><h4 style="color: dodgerblue;">{{message}}</h4></center>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
+{% if messages %}
+    {% for message in messages%}
+        <h1 style="color: firebrick;">{{message}}</h1>
+    {% endfor %}
+{% endif %}
 
         <div class="signup_div">
             <form method="post">
