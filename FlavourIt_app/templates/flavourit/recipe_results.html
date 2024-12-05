@@ -10,7 +10,19 @@
   </div>
 
   <div class="middle-section">
-    <div class="header"><!--TODO: ordenação das receitas--></div>
+        <div class="header"><!--TODO: ordenação das receitas-->
+                <div class="back-button">
+            <a href="javascript:void(0);" onclick="goBack()">
+                <img src="{% static 'graphics/arrow-left.svg' %}" alt="Back">
+            </a>
+        </div>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
+
+    </div>
     <div class="results-section">
     {% if recipes %}
         {% for recipe in recipes %}
@@ -38,4 +50,10 @@
   </div>
   </div>
 </div>
+    
+    <style>
+    .back-button a img {
+        filter: brightness(40%);
+    }
+    </style>
 {% endblock %}

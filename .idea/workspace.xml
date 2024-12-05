@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94bf8b7c-d559-4c26-91df-d99994639570" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/FlavourIt_app/templates/flavourit/recipe_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flavourit.db" beforeDir="false" afterPath="$PROJECT_DIR$/Flavourit.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,7 @@
       <workItem from="1733325995325" duration="7342000" />
       <workItem from="1733348617097" duration="10000" />
       <workItem from="1733348648280" duration="5640000" />
-      <workItem from="1733414172080" duration="8522000" />
+      <workItem from="1733414172080" duration="9885000" />
     </task>
     <task id="LOCAL-00001" summary="Add imagens utensilios,receitas e ingredientes e exibindo">
       <option name="closed" value="true" />
@@ -228,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733417737557</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Making receitas_favoritadas.html real">
+      <option name="closed" value="true" />
+      <created>1733424002081</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733424002081</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +255,7 @@
     <MESSAGE value=" Nutritional data com total correto falta: sendo dinâmico para usuário" />
     <MESSAGE value="Imagens de novo" />
     <MESSAGE value="back button on recipe_card.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="back button on recipe_card.html" />
+    <MESSAGE value="Making receitas_favoritadas.html real" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making receitas_favoritadas.html real" />
   </component>
 </project>
