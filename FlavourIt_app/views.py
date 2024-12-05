@@ -374,16 +374,12 @@ def Account_View(request):
         getinfoTableUser = User.objects.get(id=id_client)
         altura = getInfoTableClient.altura
         peso = getInfoTableClient.peso
+        atividade = getInfoTableClient.Atividade
         birthDate = getInfoTableClient.Birth_Date
         username = getinfoTableUser.username
         dateJoin = getinfoTableUser.date_joined
         
-        if favoritado.objects.filter(id_Cliente_id=id_client).exists():
-            fav = favoritado.id_Receita_id.filter(id_Cliente_id=id_client)
-        else:
-            fav = ""
-        
-    return render(request, "flavourit/account_view.html", {'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin, 'favoritados':fav})
+    return render(request, "flavourit/account_view.html", {'atividade':atividade,'altura':altura, 'peso':peso, 'birthDate':birthDate, 'user': username, 'dataEntrada':dateJoin})
         
 # ======== Fim de views para URLs ========
 

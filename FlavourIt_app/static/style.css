@@ -33,7 +33,7 @@
 
             /*TAGS HTML*/
 
-            p{
+            p, h1{
                 margin: 0;
                 text-align: center;
             }
@@ -299,7 +299,7 @@
                 flex-grow: 1;
             }
 
-            .header_recipe p{
+            .header_recipe p, .header_recipe h1{
                 margin: 0;
             }
 

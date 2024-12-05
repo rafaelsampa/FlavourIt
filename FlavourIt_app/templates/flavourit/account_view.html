@@ -2,29 +2,27 @@
 {% extends "flavourit/base.html" %}
 {% block conteudo %}
 {% block content %}
-
-<html lang="pt-br" div="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Menu Usuario</title>
-    </head>
-    <body>
-
-        <div>
-            <center><h4>Username: {{user}}</h4></center>
-            <center><h4>Date Joined: {{dataEntrada}}</h4></center>
-            <center><h4>Altura: {{altura}}</h4></center>
-            <center><h4>Peso: {{peso}}</h4></center>
-            <center><h4>Birth Date: {{birthDate}}</h4></center>
-        </div>
-
-        <div>
-            <h4>Receitas Favoritadas: </h4>
-            {% for i in Favoritadas %}
-                {{ i }}
-            {% endfor %}
-        </div>
-    </body>
-</html>
+<div class="filter-frame">
+    <div class="header_recipe"><h1>{{user}}</h1></div>
+    <div class="recipe-info">
+        <table>
+            <tr>
+                <td><strong>Altura:</strong></td><td>{{altura}}</td>
+            </tr>
+            <tr>
+                <td><strong>Peso:</strong></td><td>{{peso}}</td>
+            </tr>
+            <tr>
+                <td><strong>Atividade:</strong></td><td>{{atividade}}</td>
+            </tr>
+            <tr>
+                <td><strong>Birth Date:</strong></td><td>{{birthDate}}</td>
+            </tr>
+            <tr>
+                <td><strong>Date Joined:</strong></td><td>{{dataEntrada}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
 {% endblock %}
 {% endblock %}
