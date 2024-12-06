@@ -4,10 +4,12 @@ from .models import receita, valores_nutricionais, utensilio, ingredient,client
 from datetime import datetime
 from math import floor
 from decimal import Decimal
+'''
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Frame, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
+'''
 from django.utils.html import strip_tags
 from django.http import HttpResponse
 from django.contrib import messages
