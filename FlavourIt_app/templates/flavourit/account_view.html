@@ -2,9 +2,16 @@
 {% extends "flavourit/base.html" %}
 {% block conteudo %}
 {% block content %}
+
 <div class="filter-frame">
+    <div class="tabs-bar">
+        <div class="tab current">
+            <a href="">View Personal Information</a>
+        </div>
+    </div>
     <div class="header_recipe"><h1>{{user}}</h1></div>
     <div class="recipe-info">
+
         <table>
             <tr>
                 <td><strong>Altura:</strong></td><td>{{altura}}</td>
@@ -23,6 +30,12 @@
             </tr>
         </table>
     </div>
+    <div class="bottom-section">
+        <form action="{% url 'account' %}" method="get">
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+      
 </div>
 {% endblock %}
 {% endblock %}
