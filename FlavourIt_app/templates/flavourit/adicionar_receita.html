@@ -1,16 +1,6 @@
-<!DOCTYPE html>
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<html lang="en">
-
-
-<head>
-
-    <meta charset="utf-8">
-    <title>Add Your Own Recipe</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-
     <style>
         /* Add styles to hide the sections by default */
         .hidden {
@@ -23,21 +13,20 @@
     </style>
 </head>
 
-<body>
+    <div class="tabs-bar">
+        <div class="tab current">
+            <a href="">Add Recipe</a>
+        </div>
+    </div>
+
+    <div style='flex-grow: 0.25;' class="header_recipe"></div>
 
     <div class= "recipe-info">
     <form method="post" action="{% url 'add_recipe' %}" enctype="multipart/form-data">
-        <div class="header_recipe">
-            <h1>Add Your Own Recipe</h1>
-        </div>
-      
-        
-        
+
     <div class="recipe_form_div">
         {% if error_message %}
-        <center>
-            <h4 style="color: firebrick;">{{ error_message }}</h4>
-        </center>
+            <p style="text-decoration: underline;">{{ error_message }}</p>
         {% endif %}
             {% csrf_token %}
             <button type="submit">Add Recipe</button>
@@ -84,7 +73,9 @@
                         <option value="g">g</option>
                         <option value="kg">kg</option>
                     </select>
-                    <input type="checkbox" id="ingredient_{{ ingredient.id }}" name="ingredients"value="{{ ingredient.id }}">
+                </body>
+
+                </html><!DOCTYPE html>           <input type="checkbox" id="ingredient_{{ ingredient.id }}" name="ingredients"value="{{ ingredient.id }}">
                 </div>
                 {% endfor %}
             </div>
@@ -120,7 +111,4 @@
             document.getElementById('ingredients-section').classList.add('hidden');
         });
     </script>
-</body>
-
-</html>
 {% endblock %}

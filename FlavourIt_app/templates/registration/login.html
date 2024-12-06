@@ -1,19 +1,10 @@
-<!DOCTYPE html>
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% load static %}
-<html lang="pt-br" div="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-        <link rel="sytlesheet" href="{% static 'styles.css' %}"
-    </head>
-    <body>
-
       {% if messages %}
-        {% for message in messages%}
-          <h1 style="color: firebrick;">{{message}}</h1>
-        {% endfor %}
+          {% for message in messages%}
+              <p style="text-decoration:underline;">{{message}}</p>
+          {% endfor %}
       {% endif %}
       
       <div class="login_div">
@@ -33,11 +24,9 @@
 
           <button type="submit">Login</button>
           <div class="signup_link">
-            <p> <a href="#">Reset Password</p></a>
+            <p>Don't have an account? <a href="{% url 'signup'%}">Sign Up</p></a>
           </div>
 
         </form>
     </div>
-  </body>
-</html>
 {% endblock %}

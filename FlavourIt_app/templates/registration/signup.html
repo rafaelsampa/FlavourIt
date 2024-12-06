@@ -1,19 +1,11 @@
-<!DOCTYPE html>
 {% extends 'flavourit/base.html' %}
 {% block conteudo %}
 {% block content %}
 {% load static %}
-<html lang="pt-br" div="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Register</title>
-        <link rel="sytlesheet" href="{% static 'styles.css' %}"
-    </head>
-    <body>
 
 {% if messages %}
     {% for message in messages%}
-        <h1 style="color: firebrick;">{{message}}</h1>
+        <p style="text-decoration:underline;">{{message}}</p>
     {% endfor %}
 {% endif %}
 
@@ -49,16 +41,6 @@
                         </select>
                     </div>
                 
-                <label class="label_account" for="email">E-mail</label>
-                    <div class="container_account">
-                        <input name="email" type="email" required placeholder="Email">
-                    </div>
-
-                <label class="label_account" for="password">Password</label>
-                    <div class="container_account">
-                        <input name="password" type="password" required placeholder="Password">
-                    </div>
-                
                 <label class="label_account" class="label_account" for="activity">Activity</label>
                     <div class="container_account">
                         <div name="activity" class="select_wrapper">
@@ -70,10 +52,18 @@
                             </select>
                         </div>
                     </div>
+                
+                <label class="label_account" for="email">E-mail</label>
+                    <div class="container_account">
+                        <input name="email" type="email" required placeholder="Email">
+                    </div>
+
+                <label class="label_account" for="password">Password</label>
+                    <div class="container_account">
+                        <input name="password" type="password" required placeholder="Password">
+                    </div>
                 <button type="submit">Sign Up</button>
             </form>
         </div>
-    </body>
-</html>
 {% endblock %}
 {% endblock %}

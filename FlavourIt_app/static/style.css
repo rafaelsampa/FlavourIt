@@ -640,9 +640,9 @@
     list-style-position: inside;
 }
 
-.results-section2{
-    height: 85vh;
-    overflow: hidden;
-    overflow-y: auto;
+.results-section2, .recipe_form_div, .toggle-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
-
