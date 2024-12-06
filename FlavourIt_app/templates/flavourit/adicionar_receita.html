@@ -8,9 +8,20 @@
     <meta charset="utf-8">
     <title>Add Your Own Recipe</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        /* Add styles to hide the sections by default */
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
+    <form method="post" action="{% url 'add_recipe' %}" enctype="multipart/form-data">
     <div class="recipe_form_div">
         <h2>Add Your Own Recipe</h2>
         {% if error_message %}
@@ -18,64 +29,84 @@
             <h4 style="color: firebrick;">{{ error_message }}</h4>
         </center>
         {% endif %}
-        <form method="post" action="{% url 'add_recipe' %}" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="results-section2">
-                <label class="label_recipe" for="nome">Recipe Name</label>
-                <div class="container_recipe">
-                    <input name="nome" id="nome" type="text" required placeholder="Enter recipe name">
-                </div>
-                <label class="label_recipe" for="tempo">Preparation Time</label>
-                <div class="container_recipe">
-                    <input name="tempo" id="tempo" type="time" required placeholder="00:00">
-                </div>
-                <label class="label_recipe" for="instructions">Instructions</label>
-                <div class="container_recipe">
-                    <textarea name="instructions" id="instructions" required placeholder="Enter preparation instructions" rows="5"></textarea>
-                </div>
-                <label class="label_recipe" for="imagem">Recipe Image (optional)</label>
-                <div class="container_recipe">
-                    <input type="file" name="imagem" id="imagem" accept="image/*">
-                </div>
-                <div class="results-section">
-                    <p>Ingredients</p>
-                    {% for ingredient in ingredients %}
-                    <div class="result">
-                        <div class="img-container">
-                            <img src="{{ ingredient.image_url }}" alt="{{ ingredient.nome }}">
-                        </div>
-                        <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
-                        <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id}}">
-                        <select name="unit_{{ ingredient.id }}">
-                            <option value="ml">ml</option>
-                            <option value="l">l</option>
-                            <option value="tsp">tsp</option>
-                            <option value="tbsp">tbsp</option>
-                            <option value="cup">cup</option>
-                            <option value="g">g</option>
-                            <option value="kg">kg</option>
-                        </select>
-                        <input type="checkbox" id="ingredient_{{ ingredient.id }}" name="ingredients"value="{{ ingredient.id }}">
-                    </div>
-                    {% endfor %}
-                </div>
-
-                <div class="results-section">
-                    <p>Tools</p>
-                    {% for utensilio in utensilios %}
-                    <div class="result">
-                        <div class="img-container">
-                            <img src="{{utensilio.image_url }}">
-                        </div>
-                        <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
-                        <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
             <button type="submit">Add Recipe</button>
-        </form>
     </div>
+    <div class="results-section2">
+        <label class="label_recipe" for="nome">Recipe Name</label>
+        <div class="container_recipe">
+            <input name="nome" id="nome" type="text" required placeholder="Enter recipe name">
+        </div>
+        <label class="label_recipe" for="tempo">Preparation Time</label>
+        <div class="container_recipe">
+            <input name="tempo" id="tempo" type="time" required placeholder="00:00">
+        </div>
+        <label class="label_recipe" for="instructions">Instructions</label>
+        <div class="container_recipe">
+            <textarea name="instructions" id="instructions" required placeholder="Enter preparation instructions" rows="5"></textarea>
+        </div>
+        <label class="label_recipe" for="imagem">Recipe Image (optional)</label>
+        <div class="container_recipe">
+            <input type="file" name="imagem" id="imagem" accept="image/*">
+        </div>
+
+        <div class="toggle-buttons">
+            <button type="button" id="show-ingredients">Show Ingredients</button>
+            <button type="button" id="show-tools">Show Tools</button>
+        </div>
+        <div class="results-section hidden" id="ingredients-section">
+            <p>Ingredients</p>
+            {% for ingredient in ingredients %}
+            <div class="result">
+                <div class="img-container">
+                    <img src="{{ ingredient.image_url }}" alt="{{ ingredient.nome }}">
+                </div>
+                <label for="ingredient_{{ ingredient.id }}">{{ ingredient.nome }}</label>
+                <input type="number" min="0" placeholder="0" name="quantity_{{ ingredient.id}}">
+                <select name="unit_{{ ingredient.id }}">
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="tsp">tsp</option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="cup">cup</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+                <input type="checkbox" id="ingredient_{{ ingredient.id }}" name="ingredients"value="{{ ingredient.id }}">
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="results-section hidden" id="tools-section">
+            <p>Tools</p>
+            {% for utensilio in utensilios %}
+            <div class="result">
+                <div class="img-container">
+                    <img src="{{utensilio.image_url }}">
+                </div>
+                <label for="utensilio_{{ utensilio.id }}">{{ utensilio.nome }}</label>
+                <input type="checkbox"id="utensilio_{{ utensilio.id }}" name="utensilios" value="{{ utensilio.id }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </form>
+
+    <script>
+        document.getElementById('show-ingredients').addEventListener('click', () => {
+            document.getElementById('ingredients-section').classList.remove('hidden');
+            document.getElementById('ingredients-section').classList.add('visible');
+            document.getElementById('tools-section').classList.remove('visible');
+            document.getElementById('tools-section').classList.add('hidden');
+        });
+
+        document.getElementById('show-tools').addEventListener('click', () => {
+            document.getElementById('tools-section').classList.remove('hidden');
+            document.getElementById('tools-section').classList.add('visible');
+            document.getElementById('ingredients-section').classList.remove('visible');
+            document.getElementById('ingredients-section').classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>
